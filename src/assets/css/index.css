@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/public/fonts/inter/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kameron";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/public/fonts/kameron/Kameron-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kameron";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/public/fonts/kameron/Kameron-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Karantina";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/public/fonts/karantina/Karantina-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Karantina";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/public/fonts/karantina/Karantina-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/public/fonts/kaushan-script/KaushanScript-Regular.ttf")
+    format("truetype");
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Kameron";
+  font-size: 20px;
+  color: white;
+  background-color: #0d0d0d;
+}

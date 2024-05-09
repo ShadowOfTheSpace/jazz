@@ -2,8 +2,19 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "jz-main": "#0D0D0D",
+        "jz-white": "#FFFFFF",
+        "jz-gold": "#B57400",
+      },
+    },
+    fontFamily: {
+      inter: ["Inter"],
+      kameron: ["Kameron"],
+      karantina: ["Karantina"],
+      kaushan: ["Kaushan Script"],
+    },
   },
   plugins: [],
-}
-
+};
