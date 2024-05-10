@@ -6,42 +6,42 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("/public/fonts/inter/Inter-Regular.ttf") format("truetype");
+  src: url("/fonts/inter/Inter-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Kameron";
   font-style: normal;
   font-weight: 400;
-  src: url("/public/fonts/kameron/Kameron-Regular.ttf") format("truetype");
+  src: url("/fonts/kameron/Kameron-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Kameron";
   font-style: normal;
   font-weight: 700;
-  src: url("/public/fonts/kameron/Kameron-Bold.ttf") format("truetype");
+  src: url("/fonts/kameron/Kameron-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Karantina";
   font-style: normal;
   font-weight: 400;
-  src: url("/public/fonts/karantina/Karantina-Regular.ttf") format("truetype");
+  src: url("/fonts/karantina/Karantina-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Karantina";
   font-style: normal;
   font-weight: 700;
-  src: url("/public/fonts/karantina/Karantina-Bold.ttf") format("truetype");
+  src: url("/fonts/karantina/Karantina-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Kaushan Script";
   font-style: normal;
   font-weight: 400;
-  src: url("/public/fonts/kaushan-script/KaushanScript-Regular.ttf")
+  src: url("/fonts/kaushan-script/KaushanScript-Regular.ttf")
     format("truetype");
 }
 
