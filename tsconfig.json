@@ -24,7 +24,8 @@
     "paths": {
       "~/*": ["./src/*"],
       "~assets/*": ["./src/assets/*"],
-      "~components/*": ["./src/libs/components/*"]
+      "~components/*": ["./src/libs/components/*"],
+      "~utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src"],
