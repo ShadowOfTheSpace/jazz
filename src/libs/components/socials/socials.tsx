@@ -1,29 +1,32 @@
+import { cn } from "~/libs/utils/utils";
 import { Icon, Link } from "../components";
+import { SOCIAL_NETWORKS } from "./libs/constants/constants";
 
-const Socials: React.FC = () => {
+type Properties = {
+  className?: string;
+  iconClassName?: string;
+};
+
+const Socials: React.FC<Properties> = ({ className, iconClassName }) => {
   return (
-    <div className="flex gap-[24px]">
-      <Link
-        href="https://www.instagram.com/pavelarakelian"
-        className="hover:text-jz-gold"
-        isOpenInNewPage
-      >
-        <Icon name="instagram" />
-      </Link>
-      <Link
-        href="https://facebook.com/pavel.arakelian"
-        className="hover:text-jz-gold"
-        isOpenInNewPage
-      >
-        <Icon name="facebook" />
-      </Link>
-      <Link
-        href="https://www.youtube.com/@pavelarakelian"
-        className="hover:text-jz-gold"
-        isOpenInNewPage
-      >
-        <Icon name="youtube" />
-      </Link>
+    <div className={cn("flex items-center gap-[24px]", className)}>
+      {SOCIAL_NETWORKS.map((socialNetwork) => {
+        return (
+          <Link
+            href={socialNetwork.href}
+            isOpenInNewPage
+            title={socialNetwork.title}
+          >
+            <Icon
+              className={cn(
+                "has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors",
+                iconClassName
+              )}
+              name={socialNetwork.icon}
+            />
+          </Link>
+        );
+      })}
     </div>
   );
 };
