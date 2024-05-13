@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
       </div>
       <div className="flex items-center gap-[20px] sm:gap-[36px] px-[16px] sm:px-[32px]">
         <Button
-          className="bg-jz-gold sm:p-0 rounded-full sm:size-[72px] size-[56px]"
+          className="bg-jz-gold rounded-full sm:size-[72px] size-[56px]"
           iconName={isAudioPlay ? "pause" : "play"}
           onClick={handleAudioToggle}
           title={isAudioPlay ? "Pause" : "Play"}
