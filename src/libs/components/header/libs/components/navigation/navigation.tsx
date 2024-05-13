@@ -4,12 +4,12 @@ import { NAVIGATION_ITEMS } from "./libs/constants/constants";
 const Navigation: React.FC = () => {
   return (
     <nav>
-      <ul className="flex gap-[24px] font-inter">
+      <ul className="flex md:flex-row flex-col gap-[24px] font-inter">
         {NAVIGATION_ITEMS.map((navigationItem) => {
           return (
-            <li>
+            <li key={navigationItem.label}>
               <Link
-                className="hover:text-jz-gold"
+                className="has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors"
                 href={navigationItem.href}
                 title={navigationItem.label}
               >

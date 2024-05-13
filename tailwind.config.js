@@ -8,6 +8,10 @@ export default {
         "jz-white": "#FFFFFF",
         "jz-gold": "#B57400",
       },
+      screens: {
+        "has-hover": { raw: "(hover: hover)" },
+        "no-hover": { raw: "(hover: none)" },
+      },
     },
     fontFamily: {
       inter: ["Inter"],
