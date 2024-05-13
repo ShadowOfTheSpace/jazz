@@ -15,6 +15,7 @@ const Socials: React.FC<Properties> = ({ className, iconClassName }) => {
           <Link
             href={socialNetwork.href}
             isOpenInNewPage
+            key={socialNetwork.title}
             title={socialNetwork.title}
           >
             <Icon
