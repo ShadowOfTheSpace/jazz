@@ -9,8 +9,8 @@ export default {
         "jz-gold": "#B57400",
       },
       screens: {
-        "has-hover": { raw: "(hover: hover)" },
-        "no-hover": { raw: "(hover: none)" },
+        "has-hover": { raw: "(hover: hover) and (pointer: fine)" },
+        "no-hover": { raw: "(hover: none) or (pointer: coarse)" },
       },
     },
     fontFamily: {

@@ -1,6 +1,8 @@
 import BurgerIcon from "~assets/icons/burger.svg?react";
 import FacebookIcon from "~assets/icons/facebook.svg?react";
 import InstagramIcon from "~assets/icons/instagram.svg?react";
+import PauseIcon from "~assets/icons/pause.svg?react";
+import PlayIcon from "~assets/icons/play.svg?react";
 import YouTubeIcon from "~assets/icons/youtube.svg?react";
 
 import { IconName } from "~/libs/types/types";
@@ -12,6 +14,8 @@ const iconNameToSvg: Record<
   burger: BurgerIcon,
   facebook: FacebookIcon,
   instagram: InstagramIcon,
+  pause: PauseIcon,
+  play: PlayIcon,
   youtube: YouTubeIcon,
 };
 

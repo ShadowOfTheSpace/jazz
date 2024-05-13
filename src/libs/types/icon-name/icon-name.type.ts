@@ -1,3 +1,3 @@
-type IconName = "burger" | "facebook" | "instagram" | "youtube";
+type IconName = "burger" | "facebook" | "instagram" | "pause" | "play" | "youtube";
 
 export { type IconName };
