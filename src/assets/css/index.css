@@ -41,8 +41,7 @@
   font-family: "Kaushan Script";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/kaushan-script/KaushanScript-Regular.ttf")
-    format("truetype");
+  src: url("/fonts/kaushan-script/KaushanScript-Regular.ttf") format("truetype");
 }
 
 #root {
@@ -57,4 +56,24 @@ body {
   font-size: 20px;
   color: white;
   background-color: #0d0d0d;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #282828;
+  border-radius: 50px;
+  transition: color 0.15s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #353535;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
