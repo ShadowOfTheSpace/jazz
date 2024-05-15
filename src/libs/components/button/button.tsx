@@ -1,5 +1,5 @@
 import { IconName } from "~/libs/types/types";
-import { cn } from "~/libs/utils/utils";
+import { cn } from "~utils/utils";
 import { Icon } from "~components/components";
 
 type Properties = {
