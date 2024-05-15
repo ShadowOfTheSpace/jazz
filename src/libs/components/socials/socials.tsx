@@ -1,4 +1,4 @@
-import { cn } from "~/libs/utils/utils";
+import { cn } from "~utils/utils";
 import { Icon, Link } from "../components";
 import { SOCIAL_NETWORKS } from "./libs/constants/constants";
 
