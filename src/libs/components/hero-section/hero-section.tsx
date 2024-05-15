@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
   }, [audioRef, isAudioPlay]);
 
   return (
-    <section className="flex flex-col gap-y-[16px] sm:gap-y-[36px] xl:mt-[20px] w-full max-w-[1400px]">
+    <section className="flex flex-col gap-y-[16px] sm:gap-y-[36px] xl:mt-[20px] w-full max-w-[1400px] self-center">
       <div className="relative flex xl:flex-row flex-col gap-[8px] sm:gap-[24px] bg-[url('/src/assets/images/notes-hero-background.svg')] px-[16px] sm:px-[32px]">
         <div className="xl:flex flex-col gap-y-[36px] p-[8px] xl:basis-[688px] basis-[600px] contents shrink-0">
           <h1 className="flex xl:flex-col flex-wrap sm:gap-[10px] lg:gap-0 order-2 font-karantina text-[32px] sm:text-[70px] xl:text-[100px] tracking-[0.05em]">
