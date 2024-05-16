@@ -5,6 +5,7 @@ import { Icon } from "~components/components";
 type Properties = {
   className?: string;
   iconName?: IconName;
+  isDisabled?: boolean;
   label?: string;
   onClick?: () => void;
   title?: string;
@@ -13,19 +14,21 @@ type Properties = {
 const Button: React.FC<Properties> = ({
   className,
   iconName,
+  isDisabled = false,
   label,
   onClick,
   title,
 }) => {
-  const hasOnlyIcon = Boolean(iconName && !label);
-
   return (
     <button
       className={cn(
-        "flex gap-x-[5px] border-[3px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent  rounded-[40px] font-inter sm:font-bold text-[16px] text-jz-main sm:text-[18px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors justify-center items-center",
-        !hasOnlyIcon && "px-[15px] sm:px-[32px] py-[5px] sm:py-[10px]",
+        "flex justify-center items-center gap-x-[5px] border-[3px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent rounded-[40px] font-inter sm:font-bold text-[16px] text-jz-main sm:text-[18px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors",
+        isDisabled &&
+          "disabled:text-jz-main/50 disabled:pointer-events-none disabled:opacity-75",
+        label && "px-[15px] sm:px-[32px] py-[5px] sm:py-[10px]",
         className
       )}
+      disabled={isDisabled}
       onClick={onClick}
       title={title}
     >
