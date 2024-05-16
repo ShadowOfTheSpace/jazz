@@ -37,7 +37,7 @@ const Header: React.FC = () => {
             onAnimationComplete={handleScrollUnlock}
           >
             <Button
-              className="top-[50px] right-[32px] absolute flex border-0 lg:hidden bg-transparent text-jz-white size-auto"
+              className="top-[36px] sm:top-[50px] right-[16px] sm:right-[32px] absolute flex border-0 lg:hidden bg-transparent text-jz-white size-auto"
               iconName="close"
               onClick={handleSidebarClose}
             />
