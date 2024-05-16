@@ -3,8 +3,10 @@ type IconName =
   | "close"
   | "facebook"
   | "instagram"
+  | "leftArrow"
   | "pause"
   | "play"
+  | "rightArrow"
   | "youtube";
 
 export { type IconName };
