@@ -7,7 +7,8 @@ type Properties = {
 
 const CarouselControls: React.FC<Properties> = ({ children, className }) => {
   const { api } = useCarousel();
-  const hasEnoughSlides = api && api.scrollSnapList().length >= 1;
+  const hasEnoughSlides = api && api.scrollSnapList().length > 1;
+
   return <div className={className}>{hasEnoughSlides && children}</div>;
 };
 

@@ -4,6 +4,7 @@ import {
   CarouselContent,
   CarouselContext,
   CarouselControls,
+  CarouselDots,
   CarouselItem,
 } from "./libs/components/components";
 
@@ -23,6 +24,7 @@ const Carousel: React.FC<Properties> & {
   Button: typeof CarouselButton;
   Controls: typeof CarouselControls;
   Content: typeof CarouselContent;
+  Dots: typeof CarouselDots;
   Item: typeof CarouselItem;
 } = ({ children, className, opts, plugins }) => {
   const [carouselReference, api] = useEmblaCarousel(
@@ -98,7 +100,8 @@ const Carousel: React.FC<Properties> & {
 
 Carousel.Button = CarouselButton;
 Carousel.Content = CarouselContent;
-Carousel.Item = CarouselItem;
 Carousel.Controls = CarouselControls;
+Carousel.Dots = CarouselDots;
+Carousel.Item = CarouselItem;
 
 export { Carousel };
