@@ -16,6 +16,7 @@ import { cn } from "~utils/utils";
 type Properties = {
   children: React.ReactNode;
   className?: string;
+  isLoading?: boolean;
   opts?: Parameters<typeof useEmblaCarousel>[0];
   plugins?: Parameters<typeof useEmblaCarousel>[1];
 };
@@ -26,7 +27,7 @@ const Carousel: React.FC<Properties> & {
   Content: typeof CarouselContent;
   Dots: typeof CarouselDots;
   Item: typeof CarouselItem;
-} = ({ children, className, opts, plugins }) => {
+} = ({ children, className, isLoading = false, opts, plugins }) => {
   const [carouselReference, api] = useEmblaCarousel(
     {
       ...opts,
@@ -82,6 +83,7 @@ const Carousel: React.FC<Properties> & {
         canScrollNext,
         canScrollPrevious,
         carouselReference,
+        isLoading,
         scrollNext,
         scrollPrevious,
         scrollTo,

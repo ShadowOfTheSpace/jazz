@@ -6,6 +6,7 @@ type Properties = {
   carouselReference: ReturnType<typeof useEmblaCarousel>[0];
   canScrollPrevious: boolean;
   canScrollNext: boolean;
+  isLoading: boolean;
   scrollPrevious: () => void;
   scrollNext: () => void;
   scrollTo: (index: number) => void;
