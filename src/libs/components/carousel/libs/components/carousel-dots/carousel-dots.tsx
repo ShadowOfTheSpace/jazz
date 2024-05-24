@@ -63,6 +63,7 @@ const CarouselDots: React.FC<Properties> = ({
             return (
               <Button
                 className={cn(dotClassName, isActive && activeDotClassName)}
+                key={index}
                 onClick={handleDotClick(index)}
                 title={`Slide ${index + 1}`}
               />
