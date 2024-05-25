@@ -2,7 +2,7 @@ import { ACHIEVEMENTS } from "./libs/constants/constants";
 
 const AchievementsSection: React.FC = () => {
   return (
-    <section className="flex justify-center bg-[url('/src/assets/images/achievements-background.png')] bg-no-repeat md:bg-center bg-right mt-[30px] sm:mt-[80px] lg:mt-[150px] lg:py-[90px] p-[16px] sm:p-[32px] w-full max-w-[100vw]">
+    <section className="flex justify-center bg-[url('/src/assets/images/achievements-background.png')] bg-no-repeat md:bg-center bg-right lg:py-[90px] p-[16px] sm:p-[32px] w-full max-w-[100vw]">
       <div className="flex justify-center bg-jz-main/80 backdrop-blur-[10px] rounded-[16px] w-full max-w-[1400px]">
         <div className="box-content flex md:flex-row flex-col justify-between gap-[32px] p-[16px] sm:p-[32px] w-full max-w-[1024px]">
           {ACHIEVEMENTS.map((achievement) => {
