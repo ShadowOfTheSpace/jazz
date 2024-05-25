@@ -4,6 +4,7 @@ import FacebookIcon from "~assets/icons/facebook.svg?react";
 import InstagramIcon from "~assets/icons/instagram.svg?react";
 import LeftArrowIcon from "~assets/icons/left-arrow.svg?react";
 import PauseIcon from "~assets/icons/pause.svg?react";
+import PhoneIcon from "~assets/icons/phone.svg?react";
 import PlayIcon from "~assets/icons/play.svg?react";
 import RightArrowIcon from "~assets/icons/right-arrow.svg?react";
 import YouTubeIcon from "~assets/icons/youtube.svg?react";
@@ -20,6 +21,7 @@ const iconNameToSvg: Record<
   instagram: InstagramIcon,
   leftArrow: LeftArrowIcon,
   pause: PauseIcon,
+  phone: PhoneIcon,
   play: PlayIcon,
   rightArrow: RightArrowIcon,
   youtube: YouTubeIcon,

@@ -5,6 +5,7 @@ type IconName =
   | "instagram"
   | "leftArrow"
   | "pause"
+  | "phone"
   | "play"
   | "rightArrow"
   | "youtube";
