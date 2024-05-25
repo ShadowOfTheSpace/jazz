@@ -1,16 +1,19 @@
-import { Ticket } from "~types/types";
+import { TicketResponseDto } from "~types/types";
 import { convertCsvToJson } from "~utils/utils";
 import { TICKETS_URL } from "../../constants/constants";
+import { ticketResponseDtoToTicket } from "../../mappers/mappers";
 
 const getTickets = async () => {
   try {
-    const ticketsCsv = await fetch(TICKETS_URL).then((tickets) => {
-      return tickets.text();
-    });
+    const response = await fetch(TICKETS_URL);
 
-    return convertCsvToJson<Ticket>(ticketsCsv);
+    const ticketsCsv = await response.text();
+
+    return convertCsvToJson<TicketResponseDto>(ticketsCsv).map(
+      ticketResponseDtoToTicket
+    );
   } catch (error) {
-    console.log(error);
+    return [];
   }
 };
 

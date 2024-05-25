@@ -25,6 +25,7 @@
       "~/*": ["./src/*"],
       "~assets/*": ["./src/assets/*"],
       "~components/*": ["./src/libs/components/*"],
+      "~modules/*": ["./src/libs/modules/*"],
       "~types/*": ["./src/libs/types/*"],
       "~utils/*": ["./src/libs/utils/*"]
     }
