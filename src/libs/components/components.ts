@@ -9,3 +9,4 @@ export { Image } from "./image/image";
 export { Link } from "./link/link";
 export { Skeleton } from "./skeleton/skeleton";
 export { Socials } from "./socials/socials";
+export { TicketsSection } from "./tickets-section/tickets-section";
