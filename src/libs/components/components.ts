@@ -5,6 +5,7 @@ export { Carousel } from "./carousel/carousel";
 export { Header } from "./header/header";
 export { HeroSection } from "./hero-section/hero-section";
 export { Icon } from "./icon/icon";
+export { Image } from "./image/image";
 export { Link } from "./link/link";
 export { Skeleton } from "./skeleton/skeleton";
 export { Socials } from "./socials/socials";
