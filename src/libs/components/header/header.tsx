@@ -1,9 +1,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { RemoveScroll } from "react-remove-scroll";
-import { Button, Link, Socials } from "~/libs/components/components";
+import {
+  Button,
+  Link,
+  Navigation,
+  Socials,
+} from "~/libs/components/components";
 import logo from "~assets/images/logo.png";
-import { Navigation } from "./libs/components/components";
 
 const Header: React.FC = () => {
   const [isSidebarShown, setIsSidebarShown] = useState<boolean>(false);
