@@ -1,4 +1,9 @@
-import { AchievementsSection, Header, HeroSection } from "../components";
+import {
+  AchievementsSection,
+  Footer,
+  Header,
+  HeroSection,
+} from "../components";
 
 const App: React.FC = () => {
   return (
@@ -8,6 +13,7 @@ const App: React.FC = () => {
         <HeroSection />
         <AchievementsSection />
       </main>
+      <Footer />
     </>
   );
 };

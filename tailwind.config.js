@@ -8,6 +8,7 @@ export default {
         "jz-white": "#FFFFFF",
         "jz-gold": "#B57400",
         "jz-gray": "#171717",
+        "jz-light-gray": "#808080",
       },
       screens: {
         "has-hover": { raw: "(hover: hover) and (pointer: fine)" },
