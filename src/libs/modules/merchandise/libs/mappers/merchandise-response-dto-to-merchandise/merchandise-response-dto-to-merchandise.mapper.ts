@@ -9,9 +9,13 @@ const merchandiseResponseDtoToMerchandise = (
     : null;
 
   return {
+    id: merchandiseResponseDto.ID,
     imageUrl: imageId ? `${IMAGE_API_LINK}?id=${imageId}` : "",
     title: merchandiseResponseDto.Title,
     price: merchandiseResponseDto.Price,
+    sizes: merchandiseResponseDto.Sizes
+      ? merchandiseResponseDto.Sizes.split(", ")
+      : null,
   };
 };
 

@@ -1,4 +1,4 @@
-import { TicketResponseDto } from "~types/types";
+import { MerchandiseResponseDto } from "~types/types";
 import { convertCsvToJson } from "~utils/utils";
 import { MERCHANDISE_URL } from "../../constants/constants";
 import { merchandiseResponseDtoToMerchandise } from "../../mappers/mappers";
@@ -9,7 +9,7 @@ const getMerchandise = async () => {
 
     const merchandiseCsv = await response.text();
 
-    return convertCsvToJson<TicketResponseDto>(merchandiseCsv).map(
+    return convertCsvToJson<MerchandiseResponseDto>(merchandiseCsv).map(
       merchandiseResponseDtoToMerchandise
     );
   } catch (error) {
