@@ -1,7 +1,7 @@
 import { EmblaCarouselType } from "embla-carousel";
 import { useCallback, useEffect, useState } from "react";
 import { useCarousel } from "../../hooks/use-carousel/use-carousel";
-import { Button } from "~components/components";
+import { Button, Skeleton } from "~components/components";
 import { cn } from "~utils/utils";
 
 type Properties = {
@@ -15,7 +15,7 @@ const CarouselDots: React.FC<Properties> = ({
   className,
   dotClassName,
 }) => {
-  const { api, scrollTo } = useCarousel();
+  const { api, isLoading, scrollTo } = useCarousel();
   const [slides, setSlides] = useState<number[]>([]);
   const [selectedSlide, setSelectedSlide] = useState(0);
 
@@ -48,23 +48,30 @@ const CarouselDots: React.FC<Properties> = ({
     [scrollTo]
   );
 
-  if (slides.length <= 1) {
+  if (slides.length <= 1 && !isLoading) {
     return null;
   }
 
   return (
-    <div className={cn("flex", className)}>
-      {slides.map((_, index) => {
-        const isActive = selectedSlide === index;
-        return (
-          <Button
-            className={cn(dotClassName, isActive && activeDotClassName)}
-            onClick={handleDotClick(index)}
-            title={`Slide ${index + 1}`}
-          />
-        );
-      })}
-    </div>
+    <>
+      {isLoading ? (
+        <Skeleton className="rounded-[10px] w-[200px] h-[16px]" />
+      ) : (
+        <div className={cn("flex", className)}>
+          {slides.map((_, index) => {
+            const isActive = selectedSlide === index;
+            return (
+              <Button
+                className={cn(dotClassName, isActive && activeDotClassName)}
+                key={index}
+                onClick={handleDotClick(index)}
+                title={`Slide ${index + 1}`}
+              />
+            );
+          })}
+        </div>
+      )}
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ type Ticket = {
   place: string;
   ticketUrl: string;
   time: string;
+  title: string;
 };
 
 export { type Ticket };

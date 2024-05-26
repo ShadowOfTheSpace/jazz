@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
             admirers in person over a glass of bourbon!
           </p>
         </div>
-        <div className="order-1 xl:self-end mb-[5px] xs:mb-0 self-center lg:self-start">
+        <div className="order-1 xl:self-end mb-[5px] sm:mb-0 self-center lg:self-start">
           <img
             src={heroImage}
             alt="Pavel Arakelian portrait"
