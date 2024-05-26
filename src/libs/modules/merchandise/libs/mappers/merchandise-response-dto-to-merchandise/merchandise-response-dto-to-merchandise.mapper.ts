@@ -11,6 +11,7 @@ const merchandiseResponseDtoToMerchandise = (
   return {
     imageUrl: imageId ? `${IMAGE_API_LINK}?id=${imageId}` : "",
     title: merchandiseResponseDto.Title,
+    price: merchandiseResponseDto.Price,
   };
 };
 
