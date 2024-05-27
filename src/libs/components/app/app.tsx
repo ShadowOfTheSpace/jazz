@@ -2,6 +2,7 @@ import {
   AchievementsSection,
   Header,
   HeroSection,
+  MerchandiseSection,
   TicketsSection,
 } from "../components";
 
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <HeroSection />
         <TicketsSection />
         <AchievementsSection />
+        <MerchandiseSection />
       </main>
     </>
   );
