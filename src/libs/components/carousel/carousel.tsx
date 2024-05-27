@@ -31,6 +31,9 @@ const Carousel: React.FC<Properties> & {
   const [carouselReference, api] = useEmblaCarousel(
     {
       ...opts,
+      watchDrag: (api) => {
+        return api.scrollSnapList().length > 1;
+      },
     },
     plugins
   );
