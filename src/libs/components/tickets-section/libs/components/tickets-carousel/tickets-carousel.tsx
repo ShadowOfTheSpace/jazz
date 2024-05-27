@@ -2,7 +2,7 @@ import { Carousel } from "~components/components";
 import { cn } from "~utils/utils";
 
 import { Ticket as TTicket } from "~types/types";
-import { Ticket } from "../components";
+import { Ticket, TicketSkeleton } from "../components";
 
 type Properties = {
   isLoading?: boolean;
@@ -20,7 +20,7 @@ const TicketsCarousel: React.FC<Properties> = ({ tickets, isLoading }) => {
       <Carousel.Content
         className="flex -ml-[30px]"
         skeletonWrapperClassName="pl-[30px] basis-full xl:basis-1/2"
-        skeletonClassName="h-[491px] sm:h-[290px] rounded-[20px]"
+        skeletonItem={TicketSkeleton}
         skeletonItemsCount={2}
       >
         {tickets.map((ticket, index) => {
