@@ -1,4 +1,4 @@
-import logo from "~assets/images/logo.png";
+import Logo from "~assets/images/logo.svg?react";
 import {
   Button,
   Link,
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         <div className="flex justify-between p-[32px] w-full">
           <div className="flex flex-col gap-[40px]">
             <Link href="" className="shrink-0">
-              <img alt="logo" className="w-[75px] lg:w-[100px]" src={logo} />
+                <Logo className="w-[136px] h-[108px]" />
             </Link>
             <Socials
               className="gap-[17px]"
