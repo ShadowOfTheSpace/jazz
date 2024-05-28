@@ -1,26 +1,34 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, AnimationDefinition, motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { RemoveScroll } from "react-remove-scroll";
-import { Button, Link, Socials } from "~/libs/components/components";
 import logo from "~assets/images/logo.png";
+import { Button, Link, Socials } from "~components/components";
+import { useScrollLock } from "~hooks/hooks";
 import { Navigation } from "./libs/components/components";
 
 const Header: React.FC = () => {
+  const { handleScrollLock, handleScrollUnlock, isScrollLock } =
+    useScrollLock();
+
   const [isSidebarShown, setIsSidebarShown] = useState<boolean>(false);
-  const [isScrollLock, setIsScrollLock] = useState<boolean>(false);
 
   const handleSidebarOpen = useCallback(() => {
     setIsSidebarShown(true);
-    setIsScrollLock(true);
+    handleScrollLock();
   }, []);
 
   const handleSidebarClose = useCallback(() => {
     setIsSidebarShown(false);
   }, []);
 
-  const handleScrollUnlock = useCallback(() => {
-    setIsScrollLock(isSidebarShown);
-  }, [isSidebarShown]);
+  const handleSidebarAnimationComplete = useCallback(
+    (animation: AnimationDefinition) => {
+      if (animation === "close") {
+        handleScrollUnlock();
+      }
+    },
+    []
+  );
 
   return (
     <header className="flex justify-center w-full">
@@ -28,20 +36,28 @@ const Header: React.FC = () => {
         <Link href="" className="shrink-0">
           <img alt="logo" className="w-[75px] lg:w-[100px]" src={logo} />
         </Link>
-        <RemoveScroll enabled={isScrollLock} forwardProps>
+        <RemoveScroll forwardProps enabled={isScrollLock}>
           <motion.div
-            initial={{ x: "100%" }}
-            animate={isSidebarShown ? { x: 0 } : {}}
+            variants={{
+              open: {
+                x: 0,
+              },
+              close: {
+                x: "100%",
+              },
+            }}
+            initial="close"
+            animate={isSidebarShown ? "open" : "close"}
             transition={{ bounce: 0 }}
             className="top-0 right-0 z-20 fixed bg-jz-gray w-[min(100vw,250px)] h-[100dvh] overflow-y-auto lg:contents"
-            onAnimationComplete={handleScrollUnlock}
+            onAnimationComplete={handleSidebarAnimationComplete}
           >
             <Button
               className="top-[36px] sm:top-[50px] right-[16px] sm:right-[32px] absolute flex border-0 lg:hidden bg-transparent text-jz-white size-auto"
               iconName="close"
               onClick={handleSidebarClose}
             />
-            <div className="flex lg:flex-row flex-col justify-between gap-[24px] lg:m-0 mt-[120px] px-[20px] w-full max-w-[764px] lg-[150px]">
+            <div className="flex lg:flex-row flex-col justify-between gap-[24px] lg:m-0 mt-[120px] mb-[36px] px-[20px] w-full max-w-[764px] lg-[150px]">
               <Navigation onClick={handleSidebarClose} />
               <Socials />
             </div>
