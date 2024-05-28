@@ -37,7 +37,7 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
         <p className="text-[16px] sm:text-[20px]">{time}</p>
         <Link
           href={ticketUrl}
-          className="border-[3px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent mt-[20px] sm:mt-auto px-[30px] py-[8px] rounded-[40px] w-max font-inter sm:font-bold text-[16px] text-center text-jz-gray sm:text-[18px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors"
+          className="border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent mt-[20px] sm:mt-auto px-[30px] py-[8px] rounded-[40px] w-max font-inter sm:font-bold text-[16px] text-center text-jz-gray sm:text-[18px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors"
           isOpenInNewPage
         >
           Tickets
