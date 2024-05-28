@@ -14,7 +14,12 @@ const SOCIAL_NETWORKS: SocialNetwork[] = [
   {
     href: "https://www.youtube.com/@pavelarakelian",
     icon: "youtube",
-    title: "Pavel's YouTube"
+    title: "Pavel's YouTube",
+  },
+  {
+    href: "",
+    icon: "tinder",
+    title: "Pavel's Tinder",
   },
 ];
 

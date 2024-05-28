@@ -9,7 +9,7 @@ type Properties = {
 
 const Socials: React.FC<Properties> = ({ className, iconClassName }) => {
   return (
-    <div className={cn("flex items-center gap-[24px]", className)}>
+    <div className={cn("flex items-center gap-[16px]", className)}>
       {SOCIAL_NETWORKS.map((socialNetwork) => {
         return (
           <Link
