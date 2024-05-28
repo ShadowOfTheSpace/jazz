@@ -32,7 +32,7 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
       </h3>
       <Link
         className="border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent mt-[16px] sm:mt-[32px] py-[8px] rounded-[40px] font-bold font-inter text-[16px] text-center text-jz-main sm:text-[20px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors grow"
-        href={`jazz/products/${id}`}
+        href={`/products/${id}`}
       >
         Order now
       </Link>
