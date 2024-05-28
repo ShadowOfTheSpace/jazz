@@ -10,6 +10,7 @@ import PhoneIcon from "~assets/icons/phone.svg?react";
 import PlayIcon from "~assets/icons/play.svg?react";
 import RightArrowIcon from "~assets/icons/right-arrow.svg?react";
 import TinderIcon from "~assets/icons/tinder.svg?react";
+import VinylIcon from "~assets/icons/vinyl.svg?react";
 import YouTubeIcon from "~assets/icons/youtube.svg?react";
 
 import { IconName } from "~/libs/types/types";
@@ -30,6 +31,7 @@ const iconNameToSvg: Record<
   play: PlayIcon,
   rightArrow: RightArrowIcon,
   tinder: TinderIcon,
+  vinyl: VinylIcon,
   youtube: YouTubeIcon,
 };
 

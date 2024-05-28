@@ -11,6 +11,7 @@ type IconName =
   | "play"
   | "rightArrow"
   | "tinder"
+  | "vinyl"
   | "youtube";
 
 export { type IconName };
