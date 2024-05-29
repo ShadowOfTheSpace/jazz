@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import { Skeleton } from "../components";
+import { useCallback, useContext, useEffect, useState } from "react";
+import { ImageCacheContext, Skeleton } from "../components";
 
 type Properties = {
   alt: string;
@@ -8,13 +8,22 @@ type Properties = {
 };
 
 const Image: React.FC<Properties> = ({ alt, imageUrl, className }) => {
+  const imageCache = useContext(ImageCacheContext);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [image, setImage] = useState<string | undefined>();
 
   const handleImageDownload = useCallback(async () => {
-    const response = await fetch(imageUrl);
-    const base64Image = await response.text();
-    setImage(`data:image;base64,${base64Image}`);
+    const id = new URL(imageUrl).searchParams.get("id") as string;
+    const cachedImage = imageCache?.getImage(id);
+
+    if (cachedImage) {
+      setImage(`data:image;base64,${cachedImage}`);
+    } else {
+      const response = await fetch(imageUrl);
+      const base64Image = await response.text();
+      setImage(`data:image;base64,${base64Image}`);
+      imageCache?.addImage(id, base64Image);
+    }
     setIsLoading(false);
   }, []);
 

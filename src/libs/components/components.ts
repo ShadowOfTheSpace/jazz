@@ -5,6 +5,7 @@ export { Carousel } from "./carousel/carousel";
 export { Header } from "./header/header";
 export { HeroSection } from "./hero-section/hero-section";
 export { Icon } from "./icon/icon";
+export { ImageCacheContext } from "./image-cache-context/image-cache-context";
 export { Image } from "./image/image";
 export { Link } from "./link/link";
 export { MerchandiseSection } from "./merchandise-section/merchandise-section";
