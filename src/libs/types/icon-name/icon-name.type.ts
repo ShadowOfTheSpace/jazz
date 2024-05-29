@@ -4,8 +4,10 @@ type IconName =
   | "facebook"
   | "instagram"
   | "leftArrow"
+  | "minus"
   | "pause"
   | "play"
+  | "plus"
   | "rightArrow"
   | "youtube";
 
