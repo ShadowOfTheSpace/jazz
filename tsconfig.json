@@ -27,6 +27,7 @@
       "~components/*": ["./src/libs/components/*"],
       "~constants/*": ["./src/libs/constants/*"],
       "~enums/*": ["./src/libs/enums/*"],
+      "~helpers/*": ["./src/libs/helpers/*"],
       "~hooks/*": ["./src/libs/hooks/*"],
       "~modules/*": ["./src/libs/modules/*"],
       "~types/*": ["./src/libs/types/*"],
