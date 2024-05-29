@@ -13,4 +13,5 @@ export { Navigation } from "./navigation/navigation";
 export { Placeholder } from "./placeholder/placeholder";
 export { Skeleton } from "./skeleton/skeleton";
 export { Socials } from "./socials/socials";
+export { SubscribeSection } from "./subscribe-section/subscribe-section";
 export { TicketsSection } from "./tickets-section/tickets-section";

@@ -3,6 +3,7 @@ import {
   Footer,
   Header,
   HeroSection,
+  SubscribeSection,
   TicketsSection,
 } from "../components";
 
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <HeroSection />
         <TicketsSection />
         <AchievementsSection />
+        <SubscribeSection />
       </main>
       <Footer />
     </>

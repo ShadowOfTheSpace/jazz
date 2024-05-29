@@ -11,6 +11,7 @@ type Properties = {
   label?: string;
   onClick?: () => void;
   title?: string;
+  type?: "button" | "submit";
 };
 
 const Button: React.FC<Properties> = ({
@@ -21,6 +22,7 @@ const Button: React.FC<Properties> = ({
   label,
   onClick,
   title,
+  type = "button",
 }) => {
   return (
     <button
@@ -34,19 +36,20 @@ const Button: React.FC<Properties> = ({
       disabled={isDisabled}
       onClick={onClick}
       title={title}
+      type={type}
     >
       <motion.div
         animate={{ opacity: isLoading ? 0 : 1 }}
         className="flex gap-x-[5px]"
         initial={{ opacity: 1 }}
-    >
-      {iconName && (
+      >
+        {iconName && (
           <Icon
             name={iconName}
             className="shrink-0 size-[20px] sm:size-[24px] self-center"
           />
-      )}
-      {label && <span>{label}</span>}
+        )}
+        {label && <span>{label}</span>}
       </motion.div>
       <AnimatePresence>
         {isLoading && (
