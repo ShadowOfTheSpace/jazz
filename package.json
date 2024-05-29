@@ -10,15 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "3.3.4",
+    "@types/react-input-mask": "^3.0.5",
     "clsx": "^2.1.1",
     "convert-csv-to-json": "^2.47.0",
     "embla-carousel-react": "^8.0.4",
     "framer-motion": "^11.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "7.49.3",
+    "react-input-mask": "^2.0.4",
     "react-remove-scroll": "^2.5.10",
     "tailwind-merge": "^2.3.0",
-    "vite-plugin-svgr": "^4.2.0"
+    "vite-plugin-svgr": "^4.2.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
