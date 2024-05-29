@@ -7,6 +7,7 @@ export { Header } from "./header/header";
 export { HeroSection } from "./hero-section/hero-section";
 export { Icon } from "./icon/icon";
 export { Image } from "./image/image";
+export { Input } from "./input/input";
 export { Link } from "./link/link";
 export { Navigation } from "./navigation/navigation";
 export { Placeholder } from "./placeholder/placeholder";
