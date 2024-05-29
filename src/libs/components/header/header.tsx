@@ -1,10 +1,14 @@
 import { AnimatePresence, AnimationDefinition, motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { RemoveScroll } from "react-remove-scroll";
-import logo from "~assets/images/logo.png";
-import { Button, Link, Socials } from "~components/components";
+import {
+  Button,
+  Link,
+  Navigation,
+  Socials,
+} from "~/libs/components/components";
+import Logo from "~assets/images/logo.svg?react";
 import { useScrollLock } from "~hooks/hooks";
-import { Navigation } from "./libs/components/components";
 
 const Header: React.FC = () => {
   const { handleScrollLock, handleScrollUnlock, isScrollLock } =
@@ -34,7 +38,7 @@ const Header: React.FC = () => {
     <header className="flex justify-center w-full">
       <div className="flex justify-between items-center p-[16px] sm:p-[32px] w-full max-w-[1400px]">
         <Link href="" className="shrink-0">
-          <img alt="logo" className="w-[75px] lg:w-[100px]" src={logo} />
+          <Logo />
         </Link>
         <RemoveScroll forwardProps enabled={isScrollLock}>
           <motion.div
@@ -57,7 +61,7 @@ const Header: React.FC = () => {
               iconName="close"
               onClick={handleSidebarClose}
             />
-            <div className="flex lg:flex-row flex-col justify-between gap-[24px] lg:m-0 mt-[120px] mb-[36px] px-[20px] w-full max-w-[764px] lg-[150px]">
+            <div className="flex lg:flex-row flex-col justify-between gap-[24px] lg:m-0 mt-[120px] mb-[36px] px-[20px] lg:px-0 w-full max-w-[764px] lg-[150px]">
               <Navigation onClick={handleSidebarClose} />
               <Socials />
             </div>

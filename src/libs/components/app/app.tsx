@@ -1,10 +1,12 @@
 import { useImageCache } from "~hooks/hooks";
 import {
   AchievementsSection,
+  Footer,
   Header,
   HeroSection,
   ImageCacheContext,
   MerchandiseSection,
+  SubscribeSection,
   TicketsSection,
 } from "../components";
 
@@ -23,7 +25,9 @@ const App: React.FC = () => {
         <TicketsSection />
         <AchievementsSection />
         <MerchandiseSection />
+        <SubscribeSection />
       </main>
+      <Footer />
     </ImageCacheContext.Provider>
   );
 };

@@ -16,6 +16,7 @@ export default {
         "jz-gold": "#B57400",
         "jz-gray": "#171717",
         "jz-light-gray": "#808080",
+        "jz-red": "#BC381F",
       },
       keyframes: {
         skeleton: {
