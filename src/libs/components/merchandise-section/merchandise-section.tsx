@@ -2,7 +2,10 @@ import { useCallback, useEffect, useState } from "react";
 import { getMerchandise } from "~modules/merchandise/merchandise";
 import { Merchandise } from "~types/types";
 import { Placeholder } from "../components";
-import { MerchandiseCarousel } from "./libs/components/components";
+import {
+  MerchandiseCarousel,
+  MerchandiseModal,
+} from "./libs/components/components";
 
 import merchandiseImage from "~assets/images/jazz-merchandise.png";
 
@@ -58,6 +61,10 @@ const MerchandiseSection: React.FC = () => {
           />
         )}
       </div>
+      <MerchandiseModal
+        merchandises={merchandises}
+        isLoading={isMerchandisesLoading}
+      />
     </section>
   );
 };
