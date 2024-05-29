@@ -23,7 +23,7 @@ const Navigation: React.FC<Properties> = ({
       >
         {NAVIGATION_ITEMS.map((navigationItem) => {
           return (
-            <li key={navigationItem.label}>
+            <li className="leading-none" key={navigationItem.label}>
               <Link
                 className={cn(
                   "has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors",

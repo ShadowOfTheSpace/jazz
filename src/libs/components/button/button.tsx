@@ -43,7 +43,7 @@ const Button: React.FC<Properties> = ({
       {iconName && (
           <Icon
             name={iconName}
-            className="shrink-0 size-[20px] sm:size-[24px]"
+            className="shrink-0 size-[20px] sm:size-[24px] self-center"
           />
       )}
       {label && <span>{label}</span>}
