@@ -1,3 +1,5 @@
+import { Link as ReactLink } from "react-router-dom";
+
 type Properties = {
   children: React.ReactNode;
   className?: string;
@@ -15,17 +17,34 @@ const Link: React.FC<Properties> = ({
   onClick,
   title,
 }) => {
+  const isLinkHasHashtag = href.includes("#");
+
   return (
-    <a
-      className={className}
-      href={href}
-      target={isOpenInNewPage ? "_blank" : undefined}
-      rel="noreferrer"
-      onClick={onClick}
-      title={title}
-    >
-      {children}
-    </a>
+    <>
+      {isLinkHasHashtag ? (
+        <a
+          className={className}
+          href={href}
+          target={isOpenInNewPage ? "_blank" : undefined}
+          rel="noreferrer"
+          onClick={onClick}
+          title={title}
+        >
+          {children}
+        </a>
+      ) : (
+        <ReactLink
+          className={className}
+          to={href}
+          target={isOpenInNewPage ? "_blank" : undefined}
+          rel="noreferrer"
+          onClick={onClick}
+          title={title}
+        >
+          {children}
+        </ReactLink>
+      )}
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ export default {
       },
       backgroundImage: {
         skeleton:
-          "linear-gradient(-45deg, #171717 0%, #171717 40%, #1B1B1B 50%, #1B1B1B 55%, #171717 65%, #171717 100%)",
+          "linear-gradient(-45deg, #131313 0%, #131313 40%, #181818 50%, #181818 55%, #131313 65%, #131313 100%)",
       },
       colors: {
         "jz-main": "#0D0D0D",

@@ -4,10 +4,12 @@ import CloseIcon from "~assets/icons/close.svg?react";
 import FacebookIcon from "~assets/icons/facebook.svg?react";
 import InstagramIcon from "~assets/icons/instagram.svg?react";
 import LeftArrowIcon from "~assets/icons/left-arrow.svg?react";
+import MinusIcon from "~assets/icons/minus.svg?react";
 import PatreonIcon from "~assets/icons/patreon.svg?react";
 import PauseIcon from "~assets/icons/pause.svg?react";
 import PhoneIcon from "~assets/icons/phone.svg?react";
 import PlayIcon from "~assets/icons/play.svg?react";
+import PlusIcon from "~assets/icons/plus.svg?react";
 import RightArrowIcon from "~assets/icons/right-arrow.svg?react";
 import TinderIcon from "~assets/icons/tinder.svg?react";
 import VinylIcon from "~assets/icons/vinyl.svg?react";
@@ -25,10 +27,12 @@ const iconNameToSvg: Record<
   facebook: FacebookIcon,
   instagram: InstagramIcon,
   leftArrow: LeftArrowIcon,
+  minus: MinusIcon,
   patreon: PatreonIcon,
   pause: PauseIcon,
   phone: PhoneIcon,
   play: PlayIcon,
+  plus: PlusIcon,
   rightArrow: RightArrowIcon,
   tinder: TinderIcon,
   vinyl: VinylIcon,

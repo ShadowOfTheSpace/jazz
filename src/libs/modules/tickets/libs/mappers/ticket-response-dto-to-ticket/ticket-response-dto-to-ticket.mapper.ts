@@ -1,6 +1,13 @@
+import { IMAGE_API_LINK } from "~constants/constants";
 import { type Ticket, type TicketResponseDto } from "~types/types";
 
-const ticketResponseDtoToTicket = (ticketResponse: TicketResponseDto): Ticket => {
+const ticketResponseDtoToTicket = (
+  ticketResponse: TicketResponseDto
+): Ticket => {
+  const imageId = ticketResponse.Image
+    ? new URL(ticketResponse.Image).searchParams.get("id")
+    : null;
+
   return {
     city: ticketResponse.City,
     country: ticketResponse.Country,
@@ -8,11 +15,7 @@ const ticketResponseDtoToTicket = (ticketResponse: TicketResponseDto): Ticket =>
     place: ticketResponse.Place,
     ticketUrl: ticketResponse.TicketURL,
     time: ticketResponse.Time.substring(0, 5),
-    imageUrl: ticketResponse.Image
-      ? `https://script.google.com/macros/s/AKfycbwHZ8s5txFxEfl-e3ixOWQ-0Y9-lTKlrgddMSnLwT4dLYeIp4iMM2TKdIZs8NDL3yaj/exec?id=${new URL(
-          ticketResponse.Image
-        ).searchParams.get("id")}`
-      : "",
+    imageUrl: imageId ? `${IMAGE_API_LINK}?id=${imageId}` : "",
     title: ticketResponse.Title,
   };
 };
