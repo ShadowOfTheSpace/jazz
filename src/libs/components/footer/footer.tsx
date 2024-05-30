@@ -27,14 +27,14 @@ const Footer: React.FC = () => {
                 Support Pavel on
               </h3>
               <Link
-                className="flex items-center gap-[10px] max-w-max text-[16px] text-jz-light-gray lg:text-[20px] hover:text-jz-gold"
+                className="flex items-center gap-[10px] max-w-max text-[16px] text-jz-light-gray lg:text-[20px] hover:text-jz-gold transition-colors"
                 href=""
               >
                 <Icon className="shrink-0" name="buyMeACoffee" />
                 <p>Buy Me a Coffee</p>
               </Link>
               <Link
-                className="flex items-center gap-[10px] max-w-max text-[16px] text-jz-light-gray lg:text-[20px] hover:text-jz-gold"
+                className="flex items-center gap-[10px] max-w-max text-[16px] text-jz-light-gray lg:text-[20px] hover:text-jz-gold transition-colors"
                 href=""
               >
                 <Icon className="shrink-0" name="patreon" />
