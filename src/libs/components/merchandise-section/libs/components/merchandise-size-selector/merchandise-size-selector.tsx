@@ -16,7 +16,7 @@ const MerchandiseSizeSelector: React.FC<Properties> = ({
 
   return (
     <div className="flex flex-col gap-y-[10px]">
-      <h4 className="text-[16px] text-jz-light-gray sm:text-[20px]">Sizes</h4>
+      <h4 className="text-[16px] text-jz-light-gray sm:text-[20px] leading-none">Sizes</h4>
       <div className="flex flex-wrap -ml-[10px]">
         {SIZES.map((size, index) => {
           const isAvailable = availableSizes.includes(size);
@@ -27,7 +27,7 @@ const MerchandiseSizeSelector: React.FC<Properties> = ({
               key={index}
               href={`${pathname}?size=${size}`}
               className={cn(
-                "px-[10px] uppercase w-[40px] text-center box-content has-hover:hover:text-jz-gold/75 no-hover:active:text-jz-gold/75 transition-colors font-inter",
+                "px-[5px] uppercase w-[35px] text-center box-content has-hover:hover:text-jz-gold/75 no-hover:active:text-jz-gold/75 transition-colors font-inter",
                 !isAvailable &&
                   "pointer-events-none line-through text-jz-light-gray",
                 isSelected &&

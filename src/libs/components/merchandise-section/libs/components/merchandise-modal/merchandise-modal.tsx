@@ -5,13 +5,14 @@ import {
   useParams,
   useSearchParams,
 } from "react-router-dom";
+import { SIZES } from "~/libs/constants/constants";
 import defaultImage from "~assets/images/tickets-placeholder.png";
 import { Button, Image, Modal } from "~components/components";
-import { AppRoute } from "~enums/enums";
+import { AppRoute, StorageItemName } from "~enums/enums";
 import { checkIfPathMatchingPattern } from "~helpers/helpers";
-import { Merchandise } from "~types/types";
+import { getItemFromStorage, setItemToStorage } from "~modules/storage/storage";
+import { type Merchandise } from "~types/types";
 import { MerchandiseItemsCount, MerchandiseSizeSelector } from "../components";
-import { SIZES } from "~/libs/constants/constants";
 
 type Properties = {
   isLoading?: boolean;
@@ -73,20 +74,29 @@ const MerchandiseModal: React.FC<Properties> = ({
     navigate(AppRoute.ROOT);
   }, []);
 
+  const handleAddItemToCart = useCallback(() => {
+    if (isAvailable && merchandiseById) {
+      const itemsInCart =
+        getItemFromStorage<Merchandise[]>(StorageItemName.CART) ?? [];
+
+      setItemToStorage(StorageItemName.CART, [...itemsInCart, merchandiseById]);
+    }
+  }, [isAvailable, merchandiseById]);
+
   return (
     <Modal isOpen={isMerchandiseModalOpen} onClose={handleCloseModal}>
       <div className="p-[30px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)] text-jz-white">
-        <div className="flex lg:flex-row flex-col gap-[20px] sm:gap-[30px] -mr-[5px] pr-[5px] h-full overflow-y-auto">
+        <div className="flex lg:flex-row flex-col gap-[20px] sm:gap-[30px] -mr-[10px] pr-[10px] h-full max-h-full lg:max-h-[calc(100dvh-120px)] overflow-y-auto">
           {merchandiseById?.imageUrl ? (
             <Image
               alt="Item"
-              className="rounded-[6px] w-full lg:w-[50%] lg:h-auto max-h-[60%] lg:max-h-auto aspect-square object-cover shrink-0"
+              className="rounded-[6px] w-full lg:w-[50%] lg:h-auto max-h-full lg:max-h-auto aspect-square object-cover shrink-0"
               imageUrl={merchandiseById.imageUrl}
             />
           ) : (
             <img
               alt="Item"
-              className="rounded-[6px] w-full lg:w-[50%] lg:h-auto max-h-[60%] aspect-square object-cover shrink-0"
+              className="rounded-[6px] w-full lg:w-[50%] lg:h-auto max-h-full lg:max-h-auto aspect-square object-cover shrink-0"
               src={defaultImage}
             />
           )}
@@ -114,6 +124,7 @@ const MerchandiseModal: React.FC<Properties> = ({
                 label={isAvailable ? "Add to cart" : "Not available"}
                 isDisabled={!isAvailable}
                 className="w-full sm:w-[50%] self-end"
+                onClick={handleAddItemToCart}
               />
             </div>
           </div>

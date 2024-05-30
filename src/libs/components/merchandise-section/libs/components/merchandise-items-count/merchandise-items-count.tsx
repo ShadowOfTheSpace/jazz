@@ -38,7 +38,7 @@ const MerchandiseItemsCount: React.FC<Properties> = ({
 
   return (
     <div className="flex flex-col gap-y-[10px]">
-      <h4 className="text-[16px] text-jz-light-gray sm:text-[20px]">Quantity</h4>
+      <h4 className="text-[16px] text-jz-light-gray sm:text-[20px] leading-none">Quantity</h4>
       <div className="flex items-center">
         <Button
           iconName="minus"
