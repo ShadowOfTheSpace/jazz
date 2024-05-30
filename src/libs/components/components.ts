@@ -3,6 +3,7 @@ export { App } from "./app/app";
 export { Button } from "./button/button";
 export { Carousel } from "./carousel/carousel";
 export { Footer } from "./footer/footer";
+export { GallerySection } from "./gallery-section/gallery-section";
 export { Header } from "./header/header";
 export { HeroSection } from "./hero-section/hero-section";
 export { Icon } from "./icon/icon";

@@ -1,6 +1,7 @@
 import {
   AchievementsSection,
   Footer,
+  GallerySection,
   Header,
   HeroSection,
   SubscribeSection,
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <HeroSection />
         <TicketsSection />
         <AchievementsSection />
+        <GallerySection />
         <SubscribeSection />
       </main>
       <Footer />
