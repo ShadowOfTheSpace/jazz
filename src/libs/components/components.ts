@@ -14,6 +14,7 @@ export { Link } from "./link/link";
 export { MerchandiseSection } from "./merchandise-section/merchandise-section";
 export { Modal } from "./modal/modal";
 export { Navigation } from "./navigation/navigation";
+export { NewsSection } from "./news-section/news-section";
 export { Placeholder } from "./placeholder/placeholder";
 export { Skeleton } from "./skeleton/skeleton";
 export { Socials } from "./socials/socials";

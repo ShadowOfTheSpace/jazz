@@ -7,6 +7,7 @@ import {
   HeroSection,
   ImageCacheContext,
   MerchandiseSection,
+  NewsSection,
   SubscribeSection,
   TicketsSection,
 } from "../components";
@@ -24,6 +25,7 @@ const App: React.FC = () => {
       <main className="flex flex-col gap-y-[50px] sm:gap-y-[100px] lg:gap-y-[150px] w-full">
         <HeroSection />
         <TicketsSection />
+        <NewsSection />
         <AchievementsSection />
         <MerchandiseSection />
         <GallerySection />
