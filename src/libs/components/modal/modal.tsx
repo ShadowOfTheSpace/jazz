@@ -29,6 +29,7 @@ const Modal: React.FC<Properties> = ({ children, isOpen, onClose }) => {
                 iconName="close"
                 className="top-[20px] lg:top-[30px] right-[20px] lg:right-[30px] z-10 absolute flex border-0 bg-transparent text-jz-white size-auto"
                 onClick={onClose}
+                title="Close"
               />
               <>{children}</>
             </motion.dialog>
