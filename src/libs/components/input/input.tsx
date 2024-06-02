@@ -1,6 +1,5 @@
 import { cn } from "~utils/utils";
 import {
-  Controller,
   useController,
   type Control,
   type FieldErrors,
@@ -8,7 +7,6 @@ import {
   type FieldValues,
 } from "react-hook-form";
 
-import InputMask from "react-input-mask";
 
 type Properties<T extends FieldValues> = {
   className?: string;
@@ -18,8 +16,6 @@ type Properties<T extends FieldValues> = {
   placeholder?: string;
   rows?: number;
   type?: "email" | "text";
-  mask?: string;
-  maskChar?: string;
 };
 
 const Input = <T extends FieldValues>({
@@ -30,8 +26,6 @@ const Input = <T extends FieldValues>({
   placeholder = "",
   rows,
   type = "text",
-  mask,
-  maskChar,
 }: Properties<T>): JSX.Element => {
   const { field } = useController({ control, name });
 
@@ -39,14 +33,13 @@ const Input = <T extends FieldValues>({
 
   const hasError = Boolean(error);
   const isTextArea = Boolean(rows);
-  const hasMask = Boolean(mask && maskChar);
 
   return (
-    <div className="relative w-full">
+    <div className="relative flex w-full">
       {isTextArea ? (
         <textarea
           className={cn(
-            "border-[2px] border-jz-gold/50 focus:border-jz-gold bg-transparent p-[10px] rounded-[10px] w-full font-bold placeholder:font-normal text-[14px] text-jz-white lg:text-[16px] focus:placeholder:text-transparent placeholder:text-jz-light-gray tracking-[0.05em] transition-colors outline-none resize-none",
+            "border-[2px] border-jz-gold/50 focus:border-jz-gold bg-transparent p-[10px] rounded-[10px] w-full font-bold placeholder:font-normal text-[14px] text-jz-white lg:text-[16px] focus:placeholder:text-transparent placeholder:text-jz-light-gray tracking-[0.05em] transition-colors outline-none resize-none font-inter",
             hasError && "border-jz-red",
             className
           )}
@@ -55,43 +48,19 @@ const Input = <T extends FieldValues>({
           rows={rows}
         />
       ) : (
-        <>
-          {hasMask ? (
-            <Controller
-              name={name}
-              control={control}
-              render={({ field: { ref, ...rest } }) => {
-                return (
-                  <InputMask
-                    mask={mask as string}
-                    maskChar={maskChar}
-                    placeholder={placeholder}
-                    className={cn(
-                      "border-[2px] border-jz-gold/50 focus:border-jz-gold bg-transparent px-[10px] sm:px-[20px] rounded-[40px] w-full font-bold font-inter placeholder:font-normal text-[14px] text-jz-white lg:text-[16px] focus:placeholder:text-transparent placeholder:text-jz-light-gray tracking-[0.05em] transition-colors outline-none",
-                      hasError && "border-jz-red",
-                      className
-                    )}
-                    {...rest}
-                  />
-                );
-              }}
-            />
-          ) : (
-            <input
-              className={cn(
-                "border-[2px] border-jz-gold/50 focus:border-jz-gold bg-transparent px-[10px] sm:px-[20px] rounded-[40px] w-full font-bold font-inter placeholder:font-normal text-[14px] text-jz-white lg:text-[16px] focus:placeholder:text-transparent placeholder:text-jz-light-gray tracking-[0.05em] transition-colors outline-none",
-                hasError && "border-jz-red",
-                className
-              )}
-              {...field}
-              placeholder={placeholder}
-              type={type}
-            />
+        <input
+          className={cn(
+            "border-[2px] border-jz-gold/50 focus:border-jz-gold bg-transparent px-[10px] sm:px-[20px] rounded-[40px] w-full font-bold font-inter placeholder:font-normal text-[14px] text-jz-white lg:text-[16px] focus:placeholder:text-transparent placeholder:text-jz-light-gray tracking-[0.05em] transition-colors outline-none",
+            hasError && "border-jz-red",
+            className
           )}
-        </>
+          {...field}
+          placeholder={placeholder}
+          type={type}
+        />
       )}
       {hasError && (
-        <span className="top-full left-[20px] absolute mt-[5px] font-bold font-inter text-[12px] text-jz-red tracking-[0.05em]">
+        <span className="top-full left-[20px] absolute mt-[5px] font-bold font-inter text-[10px] text-jz-red md:text-[12px] leading-3 tracking-[0.05em]">
           {error as string}
         </span>
       )}
