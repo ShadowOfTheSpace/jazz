@@ -13,6 +13,7 @@ type IconName =
   | "plus"
   | "rightArrow"
   | "tinder"
+  | "trash"
   | "vinyl"
   | "youtube";
 

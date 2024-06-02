@@ -1,3 +1,4 @@
+import TrashIcon from "~/assets/icons/trash.svg?react";
 import BurgerIcon from "~assets/icons/burger.svg?react";
 import BuyMeACoffeeIcon from "~assets/icons/buy-me-a-coffee.svg?react";
 import CloseIcon from "~assets/icons/close.svg?react";
@@ -35,6 +36,7 @@ const iconNameToSvg: Record<
   plus: PlusIcon,
   rightArrow: RightArrowIcon,
   tinder: TinderIcon,
+  trash: TrashIcon,
   vinyl: VinylIcon,
   youtube: YouTubeIcon,
 };
