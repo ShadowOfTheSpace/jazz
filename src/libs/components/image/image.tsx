@@ -25,7 +25,7 @@ const Image: React.FC<Properties> = ({ alt, imageUrl, className }) => {
       imageCache?.addImage(id, base64Image);
     }
     setIsLoading(false);
-  }, []);
+  }, [imageCache, imageUrl]);
 
   useEffect(() => {
     handleImageDownload();

@@ -17,14 +17,16 @@ const SubscribeSection: React.FC = () => {
     validationSchema: emailValidationSchema,
   });
 
-  const handleSubscribe = useCallback(async ({ email }: { email: string }) => {
-    setSubscriptionInProgress(true);
-    fetch(`${SUBSCRIPTION_URL}${email}`, { method: "POST" }).then(() => {
+  const handleSubscribe = useCallback(
+    async ({ email }: { email: string }) => {
+      setSubscriptionInProgress(true);
+      await fetch(`${SUBSCRIPTION_URL}${email}`, { method: "POST" });
       setSubscriptionInProgress(false);
       setIsSubscribed(true);
       reset();
-    });
-  }, []);
+    },
+    [reset]
+  );
 
   return (
     <>

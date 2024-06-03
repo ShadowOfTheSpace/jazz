@@ -19,7 +19,7 @@ const Header: React.FC = () => {
   const handleSidebarOpen = useCallback(() => {
     setIsSidebarShown(true);
     handleScrollLock();
-  }, []);
+  }, [handleScrollLock]);
 
   const handleSidebarClose = useCallback(() => {
     setIsSidebarShown(false);
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
         handleScrollUnlock();
       }
     },
-    []
+    [handleScrollUnlock]
   );
 
   return (

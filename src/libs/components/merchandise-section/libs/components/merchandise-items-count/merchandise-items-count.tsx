@@ -18,13 +18,13 @@ const MerchandiseItemsCount: React.FC<Properties> = ({
     if (count + 1 <= max) {
       setCount(count + 1);
     }
-  }, [count, max]);
+  }, [count, max, setCount]);
 
   const handleDecreaseCount = useCallback(() => {
     if (count - 1 >= min) {
       setCount(count - 1);
     }
-  }, [count, min]);
+  }, [count, min, setCount]);
 
   const handleInputChange = useCallback(
     ({ target }: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,7 +33,7 @@ const MerchandiseItemsCount: React.FC<Properties> = ({
         setCount(value);
       }
     },
-    [min, max]
+    [min, max, setCount]
   );
 
   return (
