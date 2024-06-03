@@ -22,7 +22,7 @@ const CheckoutPreview: React.FC = () => {
     clearCart();
   }, [clearCart]);
 
-  if (!isCartIsNotEmpty) {
+  if (!isCartIsNotEmpty && !isOrderCompleted) {
     return (
       <motion.div
         initial={{ opacity: 0 }}
