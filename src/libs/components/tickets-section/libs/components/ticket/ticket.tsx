@@ -11,7 +11,7 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
     ticket;
 
   return (
-    <div className="flex sm:flex-row flex-col gap-x-[50px] gap-y-[20px] bg-jz-gray p-[20px] rounded-[20px] sm:h-auto">
+    <div className="flex sm:flex-row flex-col gap-x-[50px] gap-y-[20px] bg-jz-gray p-[20px] rounded-[10px] sm:h-auto">
       {imageUrl ? (
         <Image
           imageUrl={imageUrl as string}

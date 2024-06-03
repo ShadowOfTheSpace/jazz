@@ -10,7 +10,7 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
   const { id, imageUrl, price, title } = merchandise;
 
   return (
-    <div className="flex flex-col gap-y-[15px] bg-jz-gray p-[20px] rounded-[20px]">
+    <div className="flex flex-col gap-y-[15px] bg-jz-gray p-[20px] rounded-[10px]">
       {imageUrl ? (
         <Image
           alt="Item"
