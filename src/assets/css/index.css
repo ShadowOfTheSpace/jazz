@@ -44,6 +44,11 @@
   src: url("/fonts/kaushan-script/KaushanScript-Regular.ttf") format("truetype");
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
 #root {
   min-height: 100vh;
   display: flex;
