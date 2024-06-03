@@ -1,6 +1,7 @@
 type IconName =
   | "burger"
   | "buyMeACoffee"
+  | "cart"
   | "close"
   | "facebook"
   | "instagram"

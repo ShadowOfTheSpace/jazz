@@ -1,6 +1,7 @@
 import TrashIcon from "~/assets/icons/trash.svg?react";
 import BurgerIcon from "~assets/icons/burger.svg?react";
 import BuyMeACoffeeIcon from "~assets/icons/buy-me-a-coffee.svg?react";
+import CartIcon from "~assets/icons/cart.svg?react";
 import CloseIcon from "~assets/icons/close.svg?react";
 import FacebookIcon from "~assets/icons/facebook.svg?react";
 import InstagramIcon from "~assets/icons/instagram.svg?react";
@@ -24,6 +25,7 @@ const iconNameToSvg: Record<
 > = {
   burger: BurgerIcon,
   buyMeACoffee: BuyMeACoffeeIcon,
+  cart: CartIcon,
   close: CloseIcon,
   facebook: FacebookIcon,
   instagram: InstagramIcon,
