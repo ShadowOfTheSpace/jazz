@@ -29,10 +29,10 @@ const SubscribeSection: React.FC = () => {
   );
 
   return (
-    <>
+    <section className="flex justify-center">
       <AnimatePresence mode="popLayout">
         {!isSubscribed && (
-          <motion.section
+          <motion.div
             className="flex md:flex-row flex-col justify-end md:items-center gap-y-[10px] md:gap-x-[26px] lg:gap-x-[50px] px-[16px] sm:px-[32px] w-full max-w-[1400px] self-center"
             exit={{ opacity: 0 }}
             initial={{ opacity: 1 }}
@@ -60,11 +60,11 @@ const SubscribeSection: React.FC = () => {
                 type="submit"
               />
             </form>
-          </motion.section>
+          </motion.div>
         )}
       </AnimatePresence>
       {isSubscribed && (
-        <motion.section
+        <motion.div
           animate={{ opacity: 1 }}
           className="flex justify-center items-center px-[16px] sm:px-[32px] h-[84px] sm:h-[94px] md:h-[45px] lg:h-[48px] xl:h-[54px]"
           initial={{ opacity: 0 }}
@@ -73,9 +73,9 @@ const SubscribeSection: React.FC = () => {
             Thank you for subscribing to our newsletters{" "}
             <span className="text-jz-gold">❤</span>
           </h3>
-        </motion.section>
+        </motion.div>
       )}
-    </>
+    </section>
   );
 };
 
