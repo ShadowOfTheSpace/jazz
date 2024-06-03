@@ -6,6 +6,7 @@ import {
   Navigation,
   Socials,
 } from "~components/components";
+import { AppRoute } from "~enums/enums";
 
 const Footer: React.FC = () => {
   return (
@@ -28,14 +29,16 @@ const Footer: React.FC = () => {
               </h3>
               <Link
                 className="flex items-center gap-[10px] max-w-max text-[16px] text-jz-light-gray lg:text-[20px] hover:text-jz-gold transition-colors"
-                href=""
+                href={AppRoute.ROOT}
+                isOpenInNewPage
               >
                 <Icon className="shrink-0" name="buyMeACoffee" />
                 <p>Buy Me a Coffee</p>
               </Link>
               <Link
                 className="flex items-center gap-[10px] max-w-max text-[16px] text-jz-light-gray lg:text-[20px] hover:text-jz-gold transition-colors"
-                href=""
+                href={AppRoute.ROOT}
+                isOpenInNewPage
               >
                 <Icon className="shrink-0" name="patreon" />
                 <p>Patreon</p>
@@ -64,7 +67,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="flex sm:flex-col justify-between sm:justify-normal sm:gap-y-[40px] md:order-1">
-              <Link href="" className="shrink-0">
+              <Link href={AppRoute.ROOT} className="shrink-0">
                 <Logo className="w-[75px] sm:w-[136px] h-[60px] sm:h-[108px]" />
               </Link>
               <Socials iconClassName="size-[22px] text-jz-gold has-hover:hover:text-jz-white no-hover:active:text-jz-white" />

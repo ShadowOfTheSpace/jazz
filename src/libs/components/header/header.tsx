@@ -1,13 +1,9 @@
 import { AnimatePresence, AnimationDefinition, motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { RemoveScroll } from "react-remove-scroll";
-import {
-  Button,
-  Link,
-  Navigation,
-  Socials,
-} from "~/libs/components/components";
 import Logo from "~assets/images/logo.svg?react";
+import { Button, Link, Navigation, Socials } from "~components/components";
+import { AppRoute } from "~enums/enums";
 import { useScrollLock } from "~hooks/hooks";
 
 const Header: React.FC = () => {
@@ -37,7 +33,7 @@ const Header: React.FC = () => {
   return (
     <header className="flex justify-center w-full">
       <div className="flex justify-between items-center p-[16px] sm:p-[32px] w-full max-w-[1400px]">
-        <Link href="" className="shrink-0">
+        <Link href={AppRoute.ROOT} className="shrink-0">
           <Logo />
         </Link>
         <RemoveScroll forwardProps enabled={isScrollLock}>

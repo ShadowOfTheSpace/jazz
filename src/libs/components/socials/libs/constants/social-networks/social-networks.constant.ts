@@ -17,7 +17,7 @@ const SOCIAL_NETWORKS: SocialNetwork[] = [
     title: "Pavel's YouTube",
   },
   {
-    href: "",
+    href: "/",
     icon: "tinder",
     title: "Pavel's Tinder",
   },
