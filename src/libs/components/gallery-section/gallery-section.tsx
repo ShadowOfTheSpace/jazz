@@ -6,7 +6,10 @@ import galleryImage5 from "~assets/images/gallery-image-5.webp";
 
 const GallerySection: React.FC = () => {
   return (
-    <section className="flex flex-col gap-y-[8px] sm:gap-y-[16px] xl:gap-y-[32px] px-[16px] sm:px-[32px] w-full max-w-[1400px] self-center">
+    <section
+      id="gallery"
+      className="flex flex-col gap-y-[8px] sm:gap-y-[16px] xl:gap-y-[32px] px-[16px] sm:px-[32px] w-full max-w-[1400px] self-center"
+    >
       <h1 className="font-karantina text-[32px] sm:text-[70px] xl:text-[100px] leading-none tracking-[0.05em]">
         Welcome to Jazz Brilliance
       </h1>

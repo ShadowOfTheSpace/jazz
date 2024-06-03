@@ -29,7 +29,7 @@ const SubscribeSection: React.FC = () => {
   );
 
   return (
-    <section className="flex justify-center">
+    <section id="subscription" className="flex justify-center">
       <AnimatePresence mode="popLayout">
         {!isSubscribed && (
           <motion.div

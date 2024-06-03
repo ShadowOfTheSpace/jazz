@@ -30,7 +30,10 @@ const MerchandiseSection: React.FC = () => {
     merchandises.length > 0 || isMerchandisesLoading;
 
   return (
-    <section className="flex flex-col px-[16px] sm:px-[32px] max-w-[1400px] md:self-center">
+    <section
+      id="merchandise"
+      className="flex flex-col px-[16px] sm:px-[32px] max-w-[1400px] md:self-center"
+    >
       <div className="flex justify-between items-center gap-x-[50px]">
         <div className="flex flex-col gap-y-[16px] lg:gap-y-[36px]">
           <h1 className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[100px] leading-none tracking-[0.05em]">

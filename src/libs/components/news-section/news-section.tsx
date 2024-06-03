@@ -3,7 +3,10 @@ import newsImage from "~assets/images/news-image.png";
 
 const NewsSection: React.FC = () => {
   return (
-    <section className="flex md:flex-row flex-col justify-between gap-y-[16px] md:gap-x-[50px] md:gap-y-0 px-[16px] sm:px-[32px] w-full max-w-[1400px] self-center">
+    <section
+      id="news"
+      className="flex md:flex-row flex-col justify-between gap-y-[16px] md:gap-x-[50px] md:gap-y-0 px-[16px] sm:px-[32px] w-full max-w-[1400px] self-center"
+    >
       <h1 className="md:hidden font-karantina text-[32px] sm:text-[70px] leading-none tracking-[0.05em]">
         News in social networks
       </h1>

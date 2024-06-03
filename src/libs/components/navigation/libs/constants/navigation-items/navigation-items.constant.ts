@@ -1,11 +1,11 @@
 import { NavigationItem } from "../../types/types";
 
 const NAVIGATION_ITEMS: NavigationItem[] = [
-  { href: "#home", label: "Home" },
-  { href: "#announcement", label: "Announcement" },
+  { href: "#events", label: "Events" },
   { href: "#news", label: "News" },
-  { href: "#achievements", label: "Achievements" },
-  { href: "#feedback", label: "Feedback" },
+  { href: "#merchandise", label: "Merchandise" },
+  { href: "#gallery", label: "Gallery" },
+  { href: "#subscription", label: "Subscription" },
 ];
 
 export { NAVIGATION_ITEMS };
