@@ -82,3 +82,25 @@ body {
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-internal-autofill-selected,
+input:-internal-autofill-selected:focus,
+input:-internal-autofill-selected:active {
+  transition: background-color 1s 999999s;
+  color: white;
+  text-decoration-color: white;
+  fill: white;
+  -webkit-text-fill-color: white;
+  border-color: #B57400;
+  caret-color: white;
+}
+
+input:-internal-autofill-selected,
+input:-internal-autofill-previewed {
+  background-image: none;
+  background-color: transparent;
+  color: white;
+}
