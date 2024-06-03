@@ -24,7 +24,7 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
           src={defaultImage}
         />
       )}
-      <h2 className="text-[26px] sm:text-[32px] truncate" title={title}>
+      <h2 className="line-clamp-2 h-[calc(1.25*1em*2)] font-bold font-kaushan text-[26px] text-jz-gold sm:text-[32px] leading-tight" title={title}>
         {title}
       </h2>
       <h3 className="font-bold text-[20px] text-end text-jz-light-gray sm:text-[26px]">

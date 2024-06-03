@@ -25,16 +25,22 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
           src={defaultImage}
         />
       )}
-      <div className="flex flex-col select-none grow">
-        <h3 className="font-bold font-kaushan text-[26px] text-jz-gold sm:text-[32px]">
+      <div className="flex flex-col overflow-hidden select-none grow">
+        <h3
+          className="mb-2 line-clamp-2 h-[calc(1.25*1em*2)] font-bold font-kaushan text-[26px] text-jz-gold sm:text-[32px] leading-tight"
+          title={title}
+        >
           {title}
         </h3>
-        <p className="text-[16px] sm:text-[20px]">
+        <p className="text-[16px] sm:text-[20px]" title={`${city}, ${country}`}>
           {city}, {country}
         </p>
-        <p className="text-[16px] sm:text-[20px]">{date}</p>
-        <p className="text-[16px] sm:text-[20px]">{place}</p>
-        <p className="text-[16px] sm:text-[20px]">{time}</p>
+        <p className="text-[16px] sm:text-[20px] truncate" title={place}>
+          {place}
+        </p>
+        <p className="text-[16px] sm:text-[20px]" title={`${date}⠀–⠀${time}`}>
+          {date}⠀–⠀{time}
+        </p>
         <Link
           href={ticketUrl}
           className="border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent mt-[20px] sm:mt-auto px-[30px] py-[8px] rounded-[40px] w-max font-bold font-inter text-[16px] text-center text-jz-gray sm:text-[18px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors"

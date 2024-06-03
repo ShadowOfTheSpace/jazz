@@ -30,8 +30,13 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
           src={defaultImage}
         />
       )}
-      <div className="flex flex-col justify-between text-[14px] md:text-[16px] leading-4">
-        <h3 className="text-[18px] md:text-[20px]">{title}</h3>
+      <div className="flex flex-col justify-between text-[14px] md:text-[16px] leading-4 overflow-hidden">
+        <h3
+          className="font-bold font-kaushan text-[18px] text-jz-gold md:text-[20px] truncate"
+          title={title}
+        >
+          {title}
+        </h3>
         <p className="text-jz-light-gray">
           Size:⠀<span className="font-bold text-jz-gold">{selectedSize}</span>
         </p>

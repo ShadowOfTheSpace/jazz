@@ -97,7 +97,7 @@ const ItemPreview: React.FC<Properties> = ({
           />
         )}
         <div className="flex flex-col gap-[20px] lg:gap-y-[50px] grow">
-          <h2 className="lg:mt-[50px] lg:mb-auto text-[26px] lg:text-[32px]">
+          <h2 className="lg:mt-[50px] lg:mb-auto font-bold font-kaushan text-[26px] text-jz-gold lg:text-[32px]">
             {merchandiseById?.title}
           </h2>
           {merchandiseById?.sizes && (
