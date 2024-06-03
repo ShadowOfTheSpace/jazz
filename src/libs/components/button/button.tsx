@@ -27,7 +27,7 @@ const Button: React.FC<Properties> = ({
   return (
     <button
       className={cn(
-        "flex justify-center items-center border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent rounded-[40px] font-inter sm:font-bold text-[16px] text-jz-main sm:text-[18px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors",
+        "flex justify-center items-center border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent rounded-[40px] font-inter font-bold text-[16px] text-jz-main sm:text-[18px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors",
         isDisabled &&
           "disabled:text-jz-main/50 disabled:pointer-events-none disabled:opacity-75",
         label && "px-[15px] sm:px-[32px] py-[5px] sm:py-[10px]",
