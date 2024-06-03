@@ -3,6 +3,7 @@ import { getMerchandise } from "~modules/merchandise/merchandise";
 import { Merchandise } from "~types/types";
 import { Placeholder } from "../components";
 import {
+  CartButton,
   MerchandiseCarousel,
   MerchandiseModal,
 } from "./libs/components/components";
@@ -65,6 +66,7 @@ const MerchandiseSection: React.FC = () => {
         merchandises={merchandises}
         isLoading={isMerchandisesLoading}
       />
+      <CartButton />
     </section>
   );
 };
