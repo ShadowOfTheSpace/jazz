@@ -2,6 +2,7 @@ export { AchievementsSection } from "./achievements-section/achievements-section
 export { App } from "./app/app";
 export { Button } from "./button/button";
 export { Carousel } from "./carousel/carousel";
+export { CartContext } from "./cart-context/cart-context";
 export { Footer } from "./footer/footer";
 export { Header } from "./header/header";
 export { HeroSection } from "./hero-section/hero-section";
