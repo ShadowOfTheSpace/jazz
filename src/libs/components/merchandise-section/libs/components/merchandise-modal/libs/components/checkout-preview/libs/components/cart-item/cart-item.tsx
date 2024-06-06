@@ -1,7 +1,7 @@
+import { useCallback } from "react";
+import defaultImage from "~assets/images/default-item-image.png";
 import { Button, Image } from "~components/components";
 import { type CartItem as TCartItem } from "~types/types";
-import defaultImage from "~assets/images/tickets-placeholder.png";
-import { useCallback } from "react";
 
 type Properties = {
   cartItem: TCartItem;

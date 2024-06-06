@@ -1,6 +1,6 @@
+import defaultImage from "~assets/images/default-item-image.png";
 import { Image, Link } from "~components/components";
 import { type Ticket as TTicket } from "~types/types";
-import defaultImage from "~assets/images/tickets-placeholder.png";
 
 type Properties = {
   ticket: TTicket;
