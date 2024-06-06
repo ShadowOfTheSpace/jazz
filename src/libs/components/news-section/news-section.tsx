@@ -1,5 +1,7 @@
-import { Button } from "~components/components";
+import { AppRoute } from "~enums/enums";
 import newsImage from "~assets/images/news-image.png";
+import { Link } from "~components/components";
+import { SocialNewsModal } from "./libs/components/components";
 
 const NewsSection: React.FC = () => {
   return (
@@ -28,8 +30,14 @@ const NewsSection: React.FC = () => {
           Follow my social media pages where I share news, photos, and exclusive
           content from my musical journey.
         </p>
-        <Button className="max-w-max" label="Review" />
+        <Link
+          className="flex justify-center items-center border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent px-[15px] sm:px-[32px] py-[5px] sm:py-[10px] rounded-[40px] max-w-max font-bold font-inter text-[16px] text-jz-main sm:text-[18px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors"
+          href={AppRoute.SOCIAL_NEWS}
+        >
+          Review
+        </Link>
       </div>
+      <SocialNewsModal />
     </section>
   );
 };

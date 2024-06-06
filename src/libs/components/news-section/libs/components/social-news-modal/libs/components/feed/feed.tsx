@@ -1,0 +1,52 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Icon } from "~components/components";
+
+type Properties = {
+  feedId: string;
+};
+
+const Feed: React.FC<Properties> = ({ feedId }) => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = `https://cdn.curator.io/published/${feedId}.js`;
+    document.body.appendChild(script);
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [feedId]);
+
+  return (
+    <>
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            animate={{ opacity: 1 }}
+            className="absolute w-full h-full min-h-[600px]"
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+          >
+            <Icon
+              className="relative top-[calc(50%-50px)] m-auto text-jz-gold animate-spin size-[100px]"
+              name="vinyl"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoading ? 0 : 1 }}
+        data-crt-feed-id={feedId}
+        id="curator-feed-default-feed-layout"
+      />
+    </>
+  );
+};
+
+export { Feed };
