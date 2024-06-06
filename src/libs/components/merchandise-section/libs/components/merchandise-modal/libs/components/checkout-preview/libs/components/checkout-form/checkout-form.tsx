@@ -46,7 +46,12 @@ const CheckoutForm: React.FC<Properties> = ({
           email,
           fullName,
           items: cartItems.map(({ price, quantity, selectedSize, title }) => {
-            return { price, quantity, selectedSize, title };
+            return {
+              price,
+              quantity,
+              selectedSize: selectedSize ?? "–",
+              title,
+            };
           }),
           phoneNumber,
           shippingAddress,

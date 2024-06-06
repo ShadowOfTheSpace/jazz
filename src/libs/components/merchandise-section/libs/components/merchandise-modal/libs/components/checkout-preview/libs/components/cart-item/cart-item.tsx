@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { cn } from "~/libs/utils/utils";
 import defaultImage from "~assets/images/default-item-image.png";
 import { Button, Image } from "~components/components";
 import { type CartItem as TCartItem } from "~types/types";
@@ -37,7 +38,7 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
         >
           {title}
         </h3>
-        <p className="text-jz-light-gray">
+        <p className={cn("text-jz-light-gray", !selectedSize && "opacity-0")}>
           Size:⠀<span className="font-bold text-jz-gold">{selectedSize}</span>
         </p>
         <p className="text-jz-light-gray">

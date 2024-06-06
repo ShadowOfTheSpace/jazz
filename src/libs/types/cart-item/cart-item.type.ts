@@ -4,7 +4,7 @@ type CartItem = {
   title: string;
   price: number;
   quantity: number;
-  selectedSize: string;
+  selectedSize: string | null;
 };
 
 export { type CartItem };

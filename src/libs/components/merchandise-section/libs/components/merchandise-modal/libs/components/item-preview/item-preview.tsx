@@ -59,12 +59,18 @@ const ItemPreview: React.FC<Properties> = ({
 
   const handleAddItemToCart = useCallback(() => {
     if (isAvailable && merchandiseById) {
+      const selectedSize = merchandiseById.sizes
+        ? isSizeFromQueryValid
+          ? sizeFromQuery
+          : "S"
+        : null;
+
       addItemToCart({
         id: merchandiseById.id,
         imageUrl: merchandiseById.imageUrl,
         price: merchandiseById.price,
         quantity: quantity,
-        selectedSize: isSizeFromQueryValid ? sizeFromQuery : "S",
+        selectedSize,
         title: merchandiseById.title,
       });
 
