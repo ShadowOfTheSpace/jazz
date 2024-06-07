@@ -69,7 +69,7 @@ const Header: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="z-10 fixed inset-0 bg-jz-main/20 backdrop-blur-[2px]"
+              className="z-10 fixed inset-0 bg-jz-main/20 backdrop-blur-[3px]"
               onClick={handleSidebarClose}
             />
           )}
