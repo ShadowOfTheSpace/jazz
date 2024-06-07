@@ -41,10 +41,10 @@ const CartButton: React.FC = () => {
             stiffness: 150,
             duration: 0.3,
           }}
-          className="bottom-[20px] sm:bottom-[50px] z-10 fixed [--cart-button-position:calc(100vw-60px)] sm:[--cart-button-position:calc(100vw-150px)]"
+          className="bottom-[20px] sm:bottom-[50px] z-10 fixed [--cart-button-position:calc(100vw-60px)] lg:[--cart-button-position:calc(100vw-150px)]"
         >
           <Link
-            className="flex justify-center items-center border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-jz-main no-hover:active:bg-jz-main p-[5px] sm:p-[10px] rounded-full text-jz-main has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors 1size-[40px] size-[50px] sm:[--cart-button-position]"
+            className="flex justify-center items-center border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-jz-main no-hover:active:bg-jz-main shadow-jz-main p-[5px] sm:p-[10px] rounded-full text-jz-main has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors animate-bounce size-[50px] sm:[--cart-button-position] shadow-lg"
             href={AppRoute.CHECKOUT}
             title="Open Cart"
           >
