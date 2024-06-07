@@ -33,7 +33,7 @@ const Feed: React.FC<Properties> = ({ feedId }) => {
             initial={{ opacity: 0 }}
           >
             <Icon
-              className="relative top-[calc(50%-50px)] m-auto text-jz-gold animate-spin size-[100px]"
+              className="relative top-[calc(50%-50px)] m-auto text-jz-gold/50 animate-spin size-[100px]"
               name="vinyl"
             />
           </motion.div>
