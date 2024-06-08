@@ -35,24 +35,23 @@ const MerchandiseSection: React.FC = () => {
       className="flex flex-col px-[16px] sm:px-[32px] max-w-[1400px] md:self-center"
     >
       <div className="flex justify-between items-center gap-x-[50px]">
-        <div className="flex flex-col gap-y-[16px] lg:gap-y-[36px]">
-          <h1 className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[100px] leading-none tracking-[0.05em]">
-            Pavel Arakelian's Exclusive Merchandise
+        <div className="flex flex-col gap-y-[16px] lg:gap-y-[36px] md:max-w-[50%]">
+          <h1 className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
+            Exclusive Merch
           </h1>
           <p className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]">
-            Brace yourself for a symphony of style and sophistication, inspired
-            by Pavel's unparalleled talent. Stay tuned for a harmonious blend of
-            fashion and music that transcends boundaries. The countdown begins -
-            jazz up your wardrobe with a touch of elegance, coming soon!
+            Long-awaited exquisite fashion brand line inspired and designed by
+            Pavel Arakelian. Flavored with unique music vibes. Jack Daniels
+            edition. For real fans and jazz connoisseurs only!
           </p>
         </div>
         <img
           src={merchandiseImage}
           alt="Pavel Arakelian - jazz"
-          className="md:flex hidden w-[300px] xl:w-[410px] h-[245px] xl:h-[336px]"
+          className="md:flex hidden w-[300px] h-[245px] shrink-0"
         />
       </div>
-      <div className="mt-[30px] sm:mt-[80px] max-w-[950px] xl:max-w-[1400px] md:self-center w-full">
+      <div className="mt-[30px] sm:mt-[50px] max-w-[950px] xl:max-w-[1400px] md:self-center w-full">
         {isMerchandisesPresent ? (
           <MerchandiseCarousel
             merchandises={merchandises}
