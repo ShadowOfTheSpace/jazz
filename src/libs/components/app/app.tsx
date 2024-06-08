@@ -1,6 +1,5 @@
 import { useCart, useImageCache } from "~hooks/hooks";
 import {
-  AchievementsSection,
   CartContext,
   Footer,
   GallerySection,
@@ -10,7 +9,7 @@ import {
   MerchandiseSection,
   NewsSection,
   SubscribeSection,
-  TicketsSection,
+  TicketsSection
 } from "../components";
 
 const App: React.FC = () => {
@@ -27,7 +26,6 @@ const App: React.FC = () => {
           <HeroSection />
           <TicketsSection />
           <NewsSection />
-          <AchievementsSection />
           <MerchandiseSection />
           <GallerySection />
           <SubscribeSection />
