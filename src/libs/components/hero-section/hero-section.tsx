@@ -13,26 +13,38 @@ const HeroSection: React.FC = () => {
     } else {
       audioRef.current?.play();
     }
-    setIsAudioPlay((isAudioPlayPrev) => !isAudioPlayPrev);
+    setIsAudioPlay((isAudioPlayPrev) => {
+      return !isAudioPlayPrev;
+    });
   }, [audioRef, isAudioPlay]);
 
   return (
     <section className="flex flex-col gap-y-[16px] sm:gap-y-[36px] xl:mt-[20px] w-full max-w-[1400px] self-center">
       <div className="relative flex xl:flex-row flex-col gap-[8px] sm:gap-[24px] bg-[url('/src/assets/images/notes-hero-background.svg')] px-[16px] sm:px-[32px]">
         <div className="xl:flex flex-col gap-y-[36px] p-[8px] xl:basis-[688px] basis-[600px] contents shrink-0">
-          <h1 className="flex xl:flex-col flex-wrap sm:gap-[10px] lg:gap-0 order-2 font-karantina text-[32px] sm:text-[70px] xl:text-[100px] tracking-[0.05em]">
-            Music is the Language
+          <h1 className="order-2 font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-tight tracking-[0.05em]">
+            Thinking Jazz – <span className="text-jz-gold">Meaning</span>
+            <br />
             <span className="font-kaushan text-jz-gold capitalize">
-              of hearts
+              Pavel Arakelian
             </span>
           </h1>
-          <p className="order-3 text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]">
-            Apart from his secret jam sessions in various European cities, where
-            Pavel is happy to share his mastery with his young
-            colleagues-performers, the musician has already become a welcome
-            guest at wider music events. Pavel is always happy to meet his
-            admirers in person over a glass of bourbon!
-          </p>
+          <div className="flex flex-col order-3">
+            <p className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]">
+              Met Pavel Arakelian and The Outsiders at a secret jam session or
+              at a crowdy performance?
+              <br />
+              Have a cooperation proposal, idea for collaboration, look for an
+              opportunity to make your event unforgettable or just want to keep
+              your promise to share a glass of bourbon with Pavel?
+            </p>
+            <Link
+              className="order-4 font-bold font-kaushan text-[14px] text-jz-gold sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
+              href=""
+            >
+              Say HI now!
+            </Link>
+          </div>
         </div>
         <div className="order-1 xl:self-end mb-[5px] sm:mb-0 self-center lg:self-start">
           <img
