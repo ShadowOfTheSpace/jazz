@@ -3,9 +3,10 @@ import { NavigationItem } from "../../types/types";
 const NAVIGATION_ITEMS: NavigationItem[] = [
   { href: "#events", label: "Events" },
   { href: "#news", label: "News" },
-  { href: "#merchandise", label: "Merchandise" },
+  { href: "#merch", label: "Merch" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#subscription", label: "Subscription" },
+  { href: "#support", label: "Support" },
+  { href: "#contacts", label: "Contacts" },
 ];
 
 export { NAVIGATION_ITEMS };
