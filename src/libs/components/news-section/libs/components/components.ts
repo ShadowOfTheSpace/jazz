@@ -1,1 +1,1 @@
-export { SocialNewsModal } from "./social-news-modal/social-news-modal";
+export { Feed } from "./feed/feed";
