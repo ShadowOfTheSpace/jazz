@@ -26,8 +26,8 @@ const TicketsSection: React.FC = () => {
       id="events"
       className="flex flex-col gap-y-[16px] lg:gap-y-[36px] px-[16px] sm:px-[32px] w-full max-w-[950px] xl:max-w-[1400px] self-center"
     >
-      <h1 className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[100px] leading-none tracking-[0.05em]">
-        Events Announcement
+      <h1 className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
+        Upcoming Events
       </h1>
       {isTicketsPresent ? (
         <TicketsCarousel tickets={tickets} isLoading={isTicketsLoading} />
