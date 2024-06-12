@@ -10,7 +10,7 @@ const GallerySection: React.FC = () => {
       id="gallery"
       className="flex flex-col gap-y-[8px] sm:gap-y-[16px] xl:gap-y-[32px] px-[16px] sm:px-[32px] w-full max-w-[1400px] self-center"
     >
-      <h1 className="font-karantina text-[32px] sm:text-[70px] xl:text-[100px] leading-none tracking-[0.05em]">
+      <h1 className="font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
         Welcome to Jazz Brilliance
       </h1>
       <div className="gap-[16px] xl:gap-[32px] grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-2">
