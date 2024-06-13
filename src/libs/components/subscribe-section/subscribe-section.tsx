@@ -1,8 +1,8 @@
-import { useAppForm } from "~hooks/hooks";
-import { emailValidationSchema } from "~validation-schemas/validation-schemas";
-import { Button, Input } from "~components/components";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useState } from "react";
+import { Button, Input } from "~components/components";
+import { useAppForm } from "~hooks/hooks";
+import { emailValidationSchema } from "~validation-schemas/validation-schemas";
 import { SUBSCRIPTION_URL } from "./libs/constants/constants";
 
 const SubscribeSection: React.FC = () => {
@@ -38,7 +38,7 @@ const SubscribeSection: React.FC = () => {
             initial={{ opacity: 1 }}
           >
             <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
-              Subscribe to our newsletters
+              Subscribe to secret updates
             </h3>
             <form
               className="flex md:w-[400px] lg:w-[500px]"
