@@ -1,4 +1,5 @@
 export { type CartItem } from "./cart-item/cart-item.type";
+export { type Contact } from "./contact/contact.type";
 export { type IconName } from "./icon-name/icon-name.type";
 export { type MerchandiseResponseDto } from "./merchandise-response-dto/merchandise-response-dto.type";
 export { type Merchandise } from "./merchandise/merchandise.type";

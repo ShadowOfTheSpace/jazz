@@ -12,6 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path={AppRoute.ROOT} element={<App />} />
         <Route path={AppRoute.PRODUCTS_$ID} element={<App />} />
         <Route path={AppRoute.CHECKOUT} element={<App />} />
+        <Route path={AppRoute.CONTACT} element={<App />} />
         <Route path={AppRoute.SOCIAL_NEWS} element={<App />} />
         <Route path={AppRoute.ANY} element={<Navigate to={AppRoute.ROOT} />} />
       </Routes>
