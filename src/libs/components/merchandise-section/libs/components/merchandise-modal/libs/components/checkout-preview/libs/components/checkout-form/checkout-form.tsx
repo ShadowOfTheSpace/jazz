@@ -76,6 +76,7 @@ const CheckoutForm: React.FC<Properties> = ({
         name="fullName"
         placeholder="Full name"
         className="rounded-[8px] h-[35px] md:h-[54px]"
+        hasLabel
       />
       <Input
         control={control}
@@ -83,6 +84,7 @@ const CheckoutForm: React.FC<Properties> = ({
         name="email"
         placeholder="Email"
         className="rounded-[8px] h-[35px] md:h-[54px]"
+        hasLabel
       />
       <Input
         control={control}
@@ -90,6 +92,7 @@ const CheckoutForm: React.FC<Properties> = ({
         name="phoneNumber"
         placeholder="Phone"
         className="rounded-[8px] h-[35px] md:h-[54px]"
+        hasLabel
       />
       <Input
         control={control}
@@ -97,6 +100,7 @@ const CheckoutForm: React.FC<Properties> = ({
         name="shippingAddress"
         placeholder="Shipping address"
         className="rounded-[8px] h-[35px] md:h-[54px]"
+        hasLabel
       />
       <Input
         control={control}
@@ -104,6 +108,7 @@ const CheckoutForm: React.FC<Properties> = ({
         name="comments"
         placeholder="Additional comments"
         rows={3}
+        hasLabel
       />
       <div className="flex flex-col gap-y-[10px] w-full self-start">
         <p className="text-[18px] md:text-[22px]">

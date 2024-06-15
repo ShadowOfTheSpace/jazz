@@ -45,7 +45,7 @@ const SubscribeSection: React.FC = () => {
               onSubmit={handleSubmit(handleSubscribe)}
             >
               <Input
-                className="border-r-0 rounded-r-none h-full"
+                className="sm:px-[20px] border-r-0 rounded-r-none h-full"
                 control={control}
                 errors={errors}
                 name="email"
