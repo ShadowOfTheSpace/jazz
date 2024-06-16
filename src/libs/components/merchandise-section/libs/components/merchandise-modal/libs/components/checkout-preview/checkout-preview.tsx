@@ -27,7 +27,7 @@ const CheckoutPreview: React.FC = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="p-[30px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)]"
+        className="p-[16px] sm:p-[32px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)]"
       >
         <div className="flex items-center w-full h-full lg:h-[590px] *:grow">
           <Placeholder
@@ -45,9 +45,10 @@ const CheckoutPreview: React.FC = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="p-[30px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)]"
+          className="p-[16px] sm:p-[32px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)]"
+          key="placeholder"
         >
-          <div className="flex items-center w-full lg:h-[590px] *:grow">
+          <div className="flex items-center w-full h-full lg:h-[590px] *:grow">
             <Placeholder
               description="We will contact with you soon"
               title="Order completed"
@@ -57,7 +58,8 @@ const CheckoutPreview: React.FC = () => {
       ) : (
         <motion.div
           exit={{ opacity: 0 }}
-          className="p-[30px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)] text-jz-white"
+          className="p-[16px] sm:p-[32px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)] text-jz-white"
+          key="checkout-form"
         >
           <div className="flex lg:flex-row flex-col gap-[20px] sm:gap-[30px] -mr-[10px] lg:-mr-[5px] pr-[10px] lg:pr-[5px] h-full overflow-y-auto">
             <div className="flex flex-col -mr-[10px] pr-[10px] divide-y divide-jz-light-gray lg:w-[50%] max-w-full lg:h-[590px] lg:overflow-y-scroll lg:aspect-square w-[min(600px,100%)] self-center">

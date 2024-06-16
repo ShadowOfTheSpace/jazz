@@ -87,7 +87,7 @@ const ItemPreview: React.FC<Properties> = ({
   ]);
 
   return (
-    <div className="p-[30px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)] text-jz-white">
+    <div className="p-[16px] sm:p-[32px] pt-[60px] sm:pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)] text-jz-white">
       <div className="flex lg:flex-row flex-col gap-[20px] sm:gap-[30px] -mr-[10px] pr-[10px] h-full max-h-full lg:max-h-[calc(100dvh-120px)] overflow-y-auto">
         {merchandiseById?.imageUrl ? (
           <Image
@@ -125,7 +125,7 @@ const ItemPreview: React.FC<Properties> = ({
             <Button
               label={isAvailable ? "Add to cart" : "Not available"}
               isDisabled={!isAvailable}
-              className="w-full sm:w-[max(170px,50%)] self-end"
+              className="w-full sm:w-[max(170px,50%)] text-nowrap self-end"
               onClick={handleAddItemToCart}
             />
           </div>
