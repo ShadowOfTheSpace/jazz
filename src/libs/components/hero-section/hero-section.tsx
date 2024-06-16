@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
             </p>
             <Link
               className="order-4 font-bold font-kaushan text-[14px] text-jz-gold sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
-              href=""
+              href="#contacts"
             >
               Say HI now!
             </Link>
