@@ -8,6 +8,7 @@ import {
 import { cn } from "~utils/utils";
 
 type Properties<T extends FieldValues> = {
+  autocomplete?: "tel";
   className?: string;
   control: Control<T, null>;
   errors: FieldErrors<T>;
@@ -19,6 +20,7 @@ type Properties<T extends FieldValues> = {
 };
 
 const Input = <T extends FieldValues>({
+  autocomplete,
   className,
   control,
   errors,
@@ -50,8 +52,9 @@ const Input = <T extends FieldValues>({
         />
       ) : (
         <input
+          autoComplete={autocomplete}
           className={cn(
-            "border-[2px] border-jz-gold/50 focus:border-jz-gold bg-transparent px-[10px] lg:px-[20px] rounded-[40px] w-full font-bold font-inter placeholder:font-normal text-[14px] text-jz-white lg:text-[16px] focus:placeholder:text-transparent placeholder:text-jz-light-gray tracking-[0.05em] transition-colors outline-none peer",
+            "border-[2px] border-jz-gold/50 autofill:border-jz-gold/50 focus:border-jz-gold bg-transparent px-[10px] lg:px-[20px] rounded-[40px] w-full font-bold font-inter placeholder:font-normal text-[14px] text-jz-white lg:text-[16px] focus:placeholder:text-transparent placeholder:text-jz-light-gray tracking-[0.05em] transition-colors outline-none peer",
             hasError && "border-jz-red",
             className
           )}
@@ -63,7 +66,7 @@ const Input = <T extends FieldValues>({
       {hasLabel && (
         <label
           className={cn(
-            "top-[calc(-1em/2)] md:peer-focus:top-[calc(-1em/2)] peer-focus:top-[calc(-1em/2)] peer-placeholder-shown:top-[calc(50%-1em/2)] left-[calc(10px+2px-4px)] lg:left-[calc(20px+2px-4px)] absolute bg-jz-gray px-[4px] font-bold font-inter peer-focus:font-bold peer-placeholder-shown:font-normal text-[14px] text-jz-gold/50 lg:text-[16px] peer-focus:text-jz-gold peer-placeholder-shown:text-jz-light-gray !leading-none tracking-[0.05em] origin-left transition-all pointer-events-none scale-75 peer-focus:scale-75 peer-placeholder-shown:scale-100",
+            "top-[calc(-1em/2)] md:peer-focus:top-[calc(-1em/2)] peer-focus:top-[calc(-1em/2)] peer-placeholder-shown:top-[calc(50%-1em/2)] left-[calc(10px+2px-4px)] lg:left-[calc(20px+2px-4px)] absolute bg-jz-gray px-[4px] font-bold font-inter peer-focus:font-bold peer-placeholder-shown:font-normal text-[14px] text-jz-gold/50 peer-autofill:text-jz-gold/50 lg:text-[16px] peer-focus:text-jz-gold peer-placeholder-shown:text-jz-light-gray !leading-none tracking-[0.05em] origin-left transition-all pointer-events-none scale-75 peer-focus:scale-75 peer-placeholder-shown:scale-100",
             isTextArea &&
               "md:peer-placeholder-shown:top-[calc(20px)] peer-placeholder-shown:top-[calc(10px+3px)]",
             hasError && "text-jz-red"

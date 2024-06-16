@@ -87,6 +87,7 @@ const CheckoutForm: React.FC<Properties> = ({
         hasLabel
       />
       <Input
+        autocomplete="tel"
         control={control}
         errors={errors}
         name="phoneNumber"

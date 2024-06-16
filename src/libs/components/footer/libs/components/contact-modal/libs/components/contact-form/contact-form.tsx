@@ -58,6 +58,7 @@ const ContactForm: React.FC<Properties> = ({ afterSubmit }) => {
         hasLabel
       />
       <Input
+        autocomplete="tel"
         control={control}
         errors={errors}
         name="phoneNumber"
