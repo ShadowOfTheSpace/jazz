@@ -4,12 +4,14 @@ import { cn } from "~/libs/utils/utils";
 
 type Properties = {
   className?: string;
+  displayVariant?: "flex" | "grid";
   itemClassName?: string;
   onClick?: () => void;
 };
 
 const Navigation: React.FC<Properties> = ({
   className,
+  displayVariant = "flex",
   itemClassName,
   onClick,
 }) => {
@@ -17,7 +19,10 @@ const Navigation: React.FC<Properties> = ({
     <nav>
       <ul
         className={cn(
-          "flex lg:flex-row flex-col gap-[24px] font-inter",
+          "gap-[24px] font-inter",
+          displayVariant === "flex"
+            ? "flex lg:flex-row flex-col"
+            : "grid sm:grid-cols-2 grid-cols-1",
           className
         )}
       >

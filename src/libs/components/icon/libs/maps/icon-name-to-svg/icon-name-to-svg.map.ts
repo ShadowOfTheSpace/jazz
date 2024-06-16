@@ -11,7 +11,6 @@ import MinusIcon from "~assets/icons/minus.svg?react";
 import PatreonIcon from "~assets/icons/patreon.svg?react";
 import PauseIcon from "~assets/icons/pause.svg?react";
 import PayPalIcon from "~assets/icons/paypal.svg?react";
-import PhoneIcon from "~assets/icons/phone.svg?react";
 import PlayIcon from "~assets/icons/play.svg?react";
 import PlusIcon from "~assets/icons/plus.svg?react";
 import RightArrowIcon from "~assets/icons/right-arrow.svg?react";
@@ -37,7 +36,6 @@ const iconNameToSvg: Record<
   patreon: PatreonIcon,
   pause: PauseIcon,
   paypal: PayPalIcon,
-  phone: PhoneIcon,
   play: PlayIcon,
   plus: PlusIcon,
   rightArrow: RightArrowIcon,

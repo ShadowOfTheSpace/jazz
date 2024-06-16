@@ -11,7 +11,6 @@ type IconName =
   | "patreon"
   | "pause"
   | "paypal"
-  | "phone"
   | "play"
   | "plus"
   | "rightArrow"

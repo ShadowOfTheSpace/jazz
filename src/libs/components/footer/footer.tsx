@@ -1,17 +1,15 @@
 import Logo from "~assets/images/logo.svg?react";
-import {
-  Button,
-  Icon,
-  Link,
-  Navigation,
-  Socials,
-} from "~components/components";
+import { Link, Navigation, Socials } from "~components/components";
 import { AppRoute } from "~enums/enums";
+import { ContactModal, DonationPlatforms } from "./libs/components/components";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col items-center mt-[32px] w-full">
-      <div className="flex justify-center bg-jz-gray border-b border-b-jz-gold w-full">
+    <footer
+      id="contacts"
+      className="flex flex-col items-center bg-jz-gray mt-[32px] w-full"
+    >
+      <div className="flex justify-center mb-[16px] sm:mb-[32px] border-b border-b-jz-gold w-full">
         <div className="flex md:flex-row flex-col justify-between gap-[32px] p-[16px] sm:p-[32px] w-full max-w-[1400px]">
           <div className="flex justify-between gap-x-[32px] md:contents">
             <div className="flex flex-col gap-y-[10px] md:order-2">
@@ -20,50 +18,32 @@ const Footer: React.FC = () => {
               </h3>
               <Navigation
                 className="lg:flex-col gap-y-[5px] lg:gap-y-[10px]"
+                displayVariant="grid"
                 itemClassName="text-[16px] lg:text-[20px] font-kameron text-jz-light-gray"
               />
             </div>
-            <div className="flex flex-col gap-y-[10px] md:order-3 sm:mr-[40px] md:mr-0">
+            <div className="flex flex-col gap-y-[10px] md:order-3">
               <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
                 Support Pavel on
               </h3>
-              <Link
-                className="flex items-center gap-[10px] max-w-max text-[16px] text-jz-light-gray lg:text-[20px] hover:text-jz-gold transition-colors"
-                href={AppRoute.ROOT}
-                isOpenInNewPage
-              >
-                <Icon className="shrink-0" name="buyMeACoffee" />
-                <p>Buy Me a Coffee</p>
-              </Link>
-              <Link
-                className="flex items-center gap-[10px] max-w-max text-[16px] text-jz-light-gray lg:text-[20px] hover:text-jz-gold transition-colors"
-                href={AppRoute.ROOT}
-                isOpenInNewPage
-              >
-                <Icon className="shrink-0" name="patreon" />
-                <p>Patreon</p>
-              </Link>
+              <DonationPlatforms />
             </div>
           </div>
           <div className="sm:flex sm:flex-row-reverse sm:justify-between contents md:contents">
-            <div className="flex flex-col gap-y-[10px] md:order-4">
+            <div className="flex flex-col gap-y-[10px] md:order-4 w-max sm:w-[157px] md:w-max">
               <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
-                Hours of work
+                Contact with us
               </h3>
-              <div className="flex sm:contents items-end gap-x-[32px]">
-                <div className="flex flex-col gap-y-[5px] lg:gap-y-[10px]">
-                  <p className="text-[16px] text-jz-light-gray lg:text-[20px]">
-                    7AM - 5 PM⠀Mon - Sat
-                  </p>
-                  <p className="text-[16px] text-jz-light-gray lg:text-[20px]">
-                    We are waiting for your call
-                  </p>
-                </div>
-                <Button
-                  className="max-w-max text-[14px] sm:text-[14px] lg:text-[16px] shrink-0"
-                  iconName="phone"
-                  label="Call us"
-                />
+              <div className="flex sm:contents items-center gap-x-[32px]">
+                <p className="text-[16px] text-jz-light-gray lg:text-[20px]">
+                  You can say HI here!
+                </p>
+                <Link
+                  className="border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent px-[15px] sm:px-[32px] py-[5px] sm:py-[10px] rounded-[40px] font-bold font-inter text-[14px] text-center text-jz-main lg:text-[16px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors shrink-0"
+                  href={AppRoute.CONTACT}
+                >
+                  Contact
+                </Link>
               </div>
             </div>
             <div className="flex sm:flex-col justify-between sm:justify-normal sm:gap-y-[40px] md:order-1">
@@ -75,11 +55,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center bg-jz-gray w-full">
-        <p className="py-[10px] font-bold text-[14px] text-jz-gold">
-          ♪ the heart is jazz ♪
-        </p>
-      </div>
+      <ContactModal />
     </footer>
   );
 };
