@@ -5,10 +5,7 @@ import { ContactModal, DonationPlatforms } from "./libs/components/components";
 
 const Footer: React.FC = () => {
   return (
-    <footer
-      id="contacts"
-      className="flex flex-col items-center bg-jz-gray mt-[32px] w-full"
-    >
+    <footer className="flex flex-col items-center bg-jz-gray mt-[32px] w-full">
       <div className="flex justify-center mb-[16px] sm:mb-[32px] border-b border-b-jz-gold w-full">
         <div className="flex md:flex-row flex-col justify-between gap-[32px] p-[16px] sm:p-[32px] w-full max-w-[1400px]">
           <div className="flex justify-between gap-x-[32px] md:contents">
@@ -22,7 +19,7 @@ const Footer: React.FC = () => {
                 itemClassName="text-[16px] lg:text-[20px] font-kameron text-jz-light-gray"
               />
             </div>
-            <div className="flex flex-col gap-y-[10px] md:order-3">
+            <div id="support" className="flex flex-col gap-y-[10px] md:order-3">
               <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
                 Support Pavel on
               </h3>
@@ -30,7 +27,10 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div className="sm:flex sm:flex-row-reverse sm:justify-between contents md:contents">
-            <div className="flex flex-col gap-y-[10px] md:order-4 w-max sm:w-[157px] md:w-max">
+            <div
+              id="contacts"
+              className="flex flex-col gap-y-[10px] md:order-4 w-max sm:w-[157px] md:w-max"
+            >
               <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
                 Contact with us
               </h3>

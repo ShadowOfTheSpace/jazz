@@ -31,7 +31,7 @@ const MerchandiseSection: React.FC = () => {
 
   return (
     <section
-      id="merchandise"
+      id="merch"
       className="flex flex-col px-[16px] sm:px-[32px] max-w-[1400px] md:self-center"
     >
       <div className="flex justify-between items-center gap-x-[50px]">
