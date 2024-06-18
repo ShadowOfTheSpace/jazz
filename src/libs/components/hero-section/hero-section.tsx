@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
   }, [audioRef, isAudioPlay]);
 
   return (
-    <section className="flex flex-col gap-y-[16px] sm:gap-y-[36px] xl:mt-[20px] w-full max-w-[1400px] self-center">
+    <section className="flex flex-col gap-y-[16px] sm:gap-y-[36px] xl:mt-[80px] w-full max-w-[1400px] self-center">
       <div className="relative flex xl:flex-row flex-col gap-[8px] sm:gap-[24px] bg-[url('/src/assets/images/notes-hero-background.svg')] px-[16px] sm:px-[32px]">
         <div className="xl:flex flex-col gap-y-[36px] p-[8px] xl:basis-[688px] basis-[600px] contents shrink-0">
           <h1 className="order-2 font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-tight tracking-[0.05em]">
@@ -29,21 +29,20 @@ const HeroSection: React.FC = () => {
               Pavel Arakelian
             </span>
           </h1>
-          <div className="flex flex-col order-3">
+          <div className="flex 1flex-col order-3">
             <p className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]">
               Met Pavel Arakelian and The Outsiders at a secret jam session or
-              at a crowdy performance?
-              <br />
-              Have a cooperation proposal, idea for collaboration, look for an
-              opportunity to make your event unforgettable or just want to keep
-              your promise to share a glass of bourbon with Pavel?
+              at a crowdy performance? Have a cooperation proposal, idea for
+              collaboration, look for an opportunity to make your event
+              unforgettable or just want to keep your promise to share a glass
+              of bourbon with Pavel?{" "}
+              <Link
+                className="order-4 font-bold font-kaushan text-[14px] text-jz-gold sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
+                href="#contacts"
+              >
+                Say HI now!
+              </Link>
             </p>
-            <Link
-              className="order-4 font-bold font-kaushan text-[14px] text-jz-gold sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
-              href="#contacts"
-            >
-              Say HI now!
-            </Link>
           </div>
         </div>
         <div className="order-1 xl:self-end mb-[5px] sm:mb-0 self-center lg:self-start">
