@@ -34,17 +34,12 @@ const Footer: React.FC = () => {
               <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
                 Contact with us
               </h3>
-              <div className="flex sm:contents items-center gap-x-[32px]">
-                <p className="text-[16px] text-jz-light-gray lg:text-[20px]">
-                  You can say HI here!
-                </p>
-                <Link
-                  className="border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent px-[15px] sm:px-[32px] py-[5px] sm:py-[10px] rounded-[40px] font-bold font-inter text-[14px] text-center text-jz-main lg:text-[16px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors shrink-0"
-                  href={AppRoute.CONTACT}
-                >
-                  Contact
-                </Link>
-              </div>
+              <Link
+                className="border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent px-[15px] sm:px-[32px] py-[5px] sm:py-[10px] rounded-[40px] font-bold font-inter text-[14px] text-center text-jz-main lg:text-[16px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors shrink-0"
+                href={AppRoute.CONTACT}
+              >
+                Contact
+              </Link>
             </div>
             <div className="flex sm:flex-col justify-between sm:justify-normal sm:gap-y-[40px] md:order-1">
               <Link href={AppRoute.ROOT} className="shrink-0">
