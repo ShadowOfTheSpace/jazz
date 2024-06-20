@@ -41,7 +41,9 @@ const Feed: React.FC<Properties> = ({ feedId }) => {
       </AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: isLoading ? 0 : 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, margin: "0px 0px -30% 0px" }}
+        whileInView={{ opacity: isLoading ? 0 : 1 }}
         data-crt-feed-id={feedId}
         id="curator-feed-default-feed-layout"
       />
