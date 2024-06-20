@@ -37,7 +37,7 @@ const TicketsCarousel: React.FC<Properties> = ({ tickets, isLoading }) => {
           );
         })}
       </Carousel.Content>
-      <Carousel.Controls className="flex flex-wrap justify-center sm:justify-between items-center my-[20px]">
+      <Carousel.Controls className="flex flex-wrap justify-center sm:justify-between items-center mt-[20px] min-h-[14px] sm:min-h-[42px]">
         <div className="sm:flex gap-x-[10px] hidden">
           <Carousel.Button variant="previous" className="size-[42px]" />
           <Carousel.Button variant="next" className="size-[42px]" />

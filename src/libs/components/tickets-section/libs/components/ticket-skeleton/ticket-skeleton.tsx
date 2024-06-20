@@ -2,7 +2,7 @@ import { Skeleton } from "~/libs/components/components";
 
 const TicketSkeleton: React.FC = () => {
   return (
-    <div className="flex sm:flex-row flex-col gap-x-[50px] gap-y-[20px] bg-jz-gray p-[20px] rounded-[20px] sm:h-auto">
+    <div className="flex sm:flex-row flex-col gap-x-[50px] gap-y-[20px] bg-jz-gray p-[20px] rounded-[10px] sm:h-auto">
       <Skeleton className="rounded-[6px] sm:w-[250px] h-[270px] sm:h-auto sm:aspect-square" />
       <div className="flex flex-col grow">
         <Skeleton className="mb-[4px] rounded-[6px] w-full h-[calc(1.5em_-_4px)] text-[26px] sm:text-[32px]" />
