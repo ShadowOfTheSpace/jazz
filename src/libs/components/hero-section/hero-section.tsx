@@ -1,7 +1,15 @@
 import { useCallback, useRef, useState } from "react";
 import heroAudio from "~assets/audio/pavel-audio.mp3";
 import heroImage from "~assets/images/hero-image.png";
-import { Button, Link } from "~components/components";
+import {
+  AnimatedContent,
+  AnimatedHighlightedText,
+  AnimatedImage,
+  AnimatedText,
+  AnimatedTitle,
+  Button,
+  Link,
+} from "~components/components";
 
 const HeroSection: React.FC = () => {
   const [isAudioPlay, setIsAudioPlay] = useState<boolean>(false);
@@ -22,15 +30,27 @@ const HeroSection: React.FC = () => {
     <section className="flex flex-col gap-y-[16px] sm:gap-y-[36px] xl:mt-[80px] w-full max-w-[1400px] self-center">
       <div className="relative flex xl:flex-row flex-col gap-[8px] sm:gap-[24px] bg-[url('/src/assets/images/notes-hero-background.svg')] px-[16px] sm:px-[32px]">
         <div className="xl:flex flex-col gap-y-[36px] p-[8px] xl:basis-[688px] basis-[600px] contents shrink-0">
-          <h1 className="order-2 font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-tight tracking-[0.05em]">
-            Thinking Jazz – <span className="text-jz-gold">Meaning</span>
+          <AnimatedTitle
+            className="order-2 font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-tight tracking-[0.05em]"
+            duration={0.7}
+          >
+            Thinking Jazz –{" "}
+            <AnimatedHighlightedText className="text-jz-gold" delay={0.6}>
+              Meaning
+            </AnimatedHighlightedText>
             <br />
-            <span className="font-kaushan text-jz-gold capitalize">
+            <AnimatedHighlightedText
+              className="font-kaushan text-jz-gold capitalize"
+              delay={1}
+            >
               Pavel Arakelian
-            </span>
-          </h1>
-          <div className="flex 1flex-col order-3">
-            <p className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]">
+            </AnimatedHighlightedText>
+          </AnimatedTitle>
+          <div className="flex order-3">
+            <AnimatedText
+              className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
+              delay={1.3}
+            >
               Met Pavel Arakelian and The Outsiders at a secret jam session or
               at a crowdy performance? Have a cooperation proposal, idea for
               collaboration, look for an opportunity to make your event
@@ -42,18 +62,22 @@ const HeroSection: React.FC = () => {
               >
                 Say HI now!
               </Link>
-            </p>
+            </AnimatedText>
           </div>
         </div>
         <div className="order-1 xl:self-end mb-[5px] sm:mb-0 self-center lg:self-start">
-          <img
+          <AnimatedImage
             src={heroImage}
             alt="Pavel Arakelian portrait"
-            className="w-[688px] object-contain"
+            className="aspect-[624/377] object-contain"
+            duration={0.7}
           />
         </div>
       </div>
-      <div className="flex items-center gap-[20px] sm:gap-[36px] px-[16px] sm:px-[32px]">
+      <AnimatedContent
+        className="flex items-center gap-[20px] sm:gap-[36px] px-[16px] sm:px-[32px]"
+        delay={2}
+      >
         <Button
           className="bg-jz-gold rounded-full sm:size-[72px] size-[56px]"
           iconName={isAudioPlay ? "pause" : "play"}
@@ -70,7 +94,7 @@ const HeroSection: React.FC = () => {
         <audio preload="none" className="hidden" ref={audioRef}>
           <source src={heroAudio} />
         </audio>
-      </div>
+      </AnimatedContent>
     </section>
   );
 };

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { getTickets } from "~modules/tickets/tickets";
 import { Ticket } from "~types/types";
 import { TicketsCarousel } from "./libs/components/components";
-import { Placeholder } from "../components";
+import { AnimatedContent, AnimatedTitle, Placeholder } from "../components";
 
 const TicketsSection: React.FC = () => {
   const [isTicketsLoading, setIsTicketsLoading] = useState<boolean>(true);
@@ -26,19 +26,21 @@ const TicketsSection: React.FC = () => {
       id="events"
       className="flex flex-col gap-y-[16px] lg:gap-y-[36px] px-[16px] sm:px-[32px] w-full max-w-[950px] xl:max-w-[1400px] self-center"
     >
-      <h1 className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
+      <AnimatedTitle className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
         Upcoming Events
-      </h1>
-      {isTicketsPresent ? (
-        <TicketsCarousel tickets={tickets} isLoading={isTicketsLoading} />
-      ) : (
-        <Placeholder
-          description="We apologize, but there are currently no tickets available for
+      </AnimatedTitle>
+      <AnimatedContent margin="0px 0px -20% 0px">
+        {isTicketsPresent ? (
+          <TicketsCarousel tickets={tickets} isLoading={isTicketsLoading} />
+        ) : (
+          <Placeholder
+            description="We apologize, but there are currently no tickets available for
           purchase. Please check back later for updates or subscribe to our
           newsletter to be the first to know when tickets go on sale."
-          title="Tickets not available"
-        />
-      )}
+            title="Tickets not available"
+          />
+        )}
+      </AnimatedContent>
     </section>
   );
 };

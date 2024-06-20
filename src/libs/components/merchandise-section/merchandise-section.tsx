@@ -1,7 +1,13 @@
 import { useCallback, useEffect, useState } from "react";
 import { getMerchandise } from "~modules/merchandise/merchandise";
 import { Merchandise } from "~types/types";
-import { Placeholder } from "../components";
+import {
+  AnimatedContent,
+  AnimatedImage,
+  AnimatedText,
+  AnimatedTitle,
+  Placeholder,
+} from "../components";
 import {
   CartButton,
   MerchandiseCarousel,
@@ -36,22 +42,30 @@ const MerchandiseSection: React.FC = () => {
     >
       <div className="flex justify-between items-center gap-x-[50px]">
         <div className="flex flex-col gap-y-[16px] lg:gap-y-[36px] md:max-w-[50%]">
-          <h1 className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
+          <AnimatedTitle className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
             Exclusive Merch
-          </h1>
-          <p className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]">
+          </AnimatedTitle>
+          <AnimatedText
+            className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
+            delay={0.5}
+          >
             Long-awaited exquisite fashion brand line inspired and designed by
             Pavel Arakelian. Flavored with unique music vibes. Jack Daniels
             edition. For real fans and jazz connoisseurs only!
-          </p>
+          </AnimatedText>
         </div>
-        <img
+        <AnimatedImage
           src={merchandiseImage}
           alt="Pavel Arakelian - jazz"
           className="md:flex hidden w-[300px] h-[245px] shrink-0"
+          delay={0.5}
+          margin="0px 0px -20% 0px"
         />
       </div>
-      <div className="mt-[30px] sm:mt-[50px] max-w-[950px] xl:max-w-[1400px] md:self-center w-full">
+      <AnimatedContent
+        className="mt-[30px] sm:mt-[50px] max-w-[950px] xl:max-w-[1400px] md:self-center w-full"
+        margin="0px 0px -20% 0px"
+      >
         {isMerchandisesPresent ? (
           <MerchandiseCarousel
             merchandises={merchandises}
@@ -63,7 +77,7 @@ const MerchandiseSection: React.FC = () => {
             title="Merchandise not available"
           />
         )}
-      </div>
+      </AnimatedContent>
       <MerchandiseModal
         merchandises={merchandises}
         isLoading={isMerchandisesLoading}

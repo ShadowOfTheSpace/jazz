@@ -1,3 +1,10 @@
+export {
+  AnimatedContent,
+  AnimatedHighlightedText,
+  AnimatedImage,
+  AnimatedText,
+  AnimatedTitle,
+} from "./animated-components/animated-components";
 export { App } from "./app/app";
 export { Button } from "./button/button";
 export { Carousel } from "./carousel/carousel";
