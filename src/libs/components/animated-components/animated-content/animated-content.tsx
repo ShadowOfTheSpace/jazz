@@ -18,11 +18,14 @@ const AnimatedContent: React.FC<Properties> = ({
 }) => {
   return (
     <motion.div
-      initial={{ y: "20%", opacity: 0 }}
+      initial={{ y: "var(--content-y-offset)", opacity: 0 }}
       transition={{ delay, duration }}
       viewport={{ once: true, margin }}
       whileInView={{ y: 0, opacity: 1 }}
-      className={cn(className, )}
+      className={cn(
+        className,
+        "[--content-y-offset:10%] md:[--content-y-offset:20%]"
+      )}
     >
       {children}
     </motion.div>
