@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from "react";
 import heroAudio from "~assets/audio/pavel-audio.mp3";
 import heroImage from "~assets/images/hero-image.png";
 import { Animated, Button, Link } from "~components/components";
+import pdf from "/files/Pavel_Arakelian_press_portrait.pdf";
 
 const HeroSection: React.FC = () => {
   const [isAudioPlay, setIsAudioPlay] = useState<boolean>(false);
@@ -78,10 +79,10 @@ const HeroSection: React.FC = () => {
         />
         <Link
           className="flex justify-center items-center border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent px-[15px] sm:px-[32px] py-[5px] sm:py-[10px] rounded-[40px] font-bold font-inter text-[16px] text-jz-main sm:text-[18px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors"
-          href="https://www.last.fm/music/Pavel+Arakelian"
+          href={pdf}
           isOpenInNewPage
         >
-          Read more
+          Grab Intro
         </Link>
         <audio preload="none" className="hidden" ref={audioRef}>
           <source src={heroAudio} />
