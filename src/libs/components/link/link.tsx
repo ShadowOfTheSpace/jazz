@@ -7,6 +7,7 @@ type Properties = {
   isOpenInNewPage?: boolean;
   onClick?: () => void;
   title?: string;
+  isDefaultLink?: boolean;
 };
 
 const Link: React.FC<Properties> = ({
@@ -16,12 +17,13 @@ const Link: React.FC<Properties> = ({
   isOpenInNewPage = false,
   onClick,
   title,
+  isDefaultLink,
 }) => {
-  const isLinkHasHashtag = href.includes("#");
+  const isUseDefaultLink = href.includes("#") || isDefaultLink;
 
   return (
     <>
-      {isLinkHasHashtag ? (
+      {isUseDefaultLink ? (
         <a
           className={className}
           href={href}
