@@ -80,6 +80,7 @@ const HeroSection: React.FC = () => {
         <Link
           className="flex justify-center items-center border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent px-[15px] sm:px-[32px] py-[5px] sm:py-[10px] rounded-[40px] font-bold font-inter text-[16px] text-jz-main sm:text-[18px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors"
           href={pdf}
+          isDefaultLink
           isOpenInNewPage
         >
           Grab Intro
