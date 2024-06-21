@@ -18,7 +18,7 @@ const GallerySection: React.FC = () => {
   useEffect(() => {
     const updateOrder = () => {
       const isMobile = window.innerWidth < 768;
-      const newOrder = isMobile ? [2, 1, 4, 5, 3] : [1, 2, 3, 5, 4];
+      const newOrder = isMobile ? [2, 1, 3, 5, 4] : [1, 2, 3, 5, 4];
       setOrder(newOrder);
     };
 
