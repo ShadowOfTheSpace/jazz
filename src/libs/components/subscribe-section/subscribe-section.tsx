@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { Button, Input } from "~components/components";
 import { useAppForm } from "~hooks/hooks";
+import { cn } from "~utils/utils";
 import { emailValidationSchema } from "~validation-schemas/validation-schemas";
 import { SUBSCRIPTION_URL } from "./libs/constants/constants";
 
@@ -29,7 +30,7 @@ const SubscribeSection: React.FC = () => {
   );
 
   return (
-    <section id="subscription" className="flex justify-center overflow-hidden">
+    <section id="subscription" className="flex justify-center">
       <AnimatePresence mode="popLayout">
         {!isSubscribed && (
           <motion.div
@@ -38,21 +39,31 @@ const SubscribeSection: React.FC = () => {
             initial={{ opacity: 1 }}
           >
             <motion.h3
-              className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]"
-              initial={{ x: "-20%", opacity: 0 }}
+              className={cn(
+                "font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
+                "[--subtitle-x-offset:-10px] md:[--subtitle-x-offset:-20px]"
+              )}
+              initial={{ x: "var(--subtitle-x-offset)", opacity: 0 }}
               transition={{ duration: 1 }}
-              viewport={{ once: true, margin: "0px 0px -20% 0px" }}
+              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
               whileInView={{ x: 0, opacity: 1 }}
             >
               Subscribe to secret updates
             </motion.h3>
             <motion.form
-              className="flex md:w-[400px] lg:w-[500px]"
+              className={cn(
+                "flex md:w-[400px] lg:w-[500px]",
+                "[--form-x-offset:0] md:[--form-x-offset:20px] [--form-y-offset:16px] md:[--form-y-offset:0]"
+              )}
               onSubmit={handleSubmit(handleSubscribe)}
-              initial={{ x: "20%", opacity: 0 }}
+              initial={{
+                x: "var(--form-x-offset)",
+                y: "var(--form-y-offset)",
+                opacity: 0,
+              }}
               transition={{ duration: 1 }}
-              viewport={{ once: true, margin: "0px 0px -20% 0px" }}
-              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+              whileInView={{ x: 0, y: 0, opacity: 1 }}
             >
               <Input
                 className="sm:px-[20px] border-r-0 rounded-r-none h-full"
