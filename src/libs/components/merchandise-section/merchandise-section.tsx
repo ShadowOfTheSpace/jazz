@@ -47,7 +47,7 @@ const MerchandiseSection: React.FC = () => {
           </AnimatedTitle>
           <AnimatedText
             className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
-            delay={0.5}
+            delay={0.3}
           >
             Long-awaited exquisite fashion brand line inspired and designed by
             Pavel Arakelian. Flavored with unique music vibes. Jack Daniels
@@ -58,12 +58,13 @@ const MerchandiseSection: React.FC = () => {
           src={merchandiseImage}
           alt="Pavel Arakelian - jazz"
           className="md:flex hidden w-[300px] h-[245px] shrink-0"
-          delay={0.5}
+          delay={0.3}
           margin="0px 0px -20% 0px"
         />
       </div>
       <AnimatedContent
         className="mt-[30px] sm:mt-[50px] max-w-[950px] xl:max-w-[1400px] md:self-center w-full"
+        delay={0.5}
         margin="0px 0px -20% 0px"
       >
         {isMerchandisesPresent ? (
