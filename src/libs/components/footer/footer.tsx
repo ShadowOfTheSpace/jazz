@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               className="flex flex-col gap-y-[10px] md:order-4 w-max sm:w-[157px] md:w-max"
             >
               <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
-                Contact with us
+                Contact us
               </h3>
               <Link
                 className="border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent px-[15px] sm:px-[32px] py-[5px] sm:py-[10px] rounded-[40px] font-bold font-inter text-[14px] text-center text-jz-main lg:text-[16px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors shrink-0"

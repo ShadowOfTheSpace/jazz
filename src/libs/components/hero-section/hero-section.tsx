@@ -44,8 +44,8 @@ const HeroSection: React.FC = () => {
               delay={1.3}
             >
               Met Pavel Arakelian and The Outsiders at a secret jam session or
-              at a crowdy performance? Have a cooperation proposal, idea for
-              collaboration, look for an opportunity to make your event
+              at a crowdy performance? Have a cooperation proposal or an idea
+              for collaboration? Look for an opportunity to make your event
               unforgettable or just want to keep your promise to share a glass
               of bourbon with Pavel?{" "}
               <Link

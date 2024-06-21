@@ -45,7 +45,7 @@ const ContactForm: React.FC<Properties> = ({ afterSubmit }) => {
         control={control}
         errors={errors}
         name="fullName"
-        placeholder="Full name"
+        placeholder="Name"
         className="rounded-[8px] h-[35px] md:h-[54px]"
         hasLabel
       />
