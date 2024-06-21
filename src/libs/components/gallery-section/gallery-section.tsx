@@ -5,7 +5,7 @@ import galleryImage2 from "~assets/images/gallery-image-2.webp";
 import galleryImage3 from "~assets/images/gallery-image-3.webp";
 import galleryImage4 from "~assets/images/gallery-image-4.webp";
 import galleryImage5 from "~assets/images/gallery-image-5.webp";
-import { AnimatedTitle } from "~components/components";
+import { Animated } from "~components/components";
 import { GalleryImage } from "./libs/components/components";
 
 const GallerySection: React.FC = () => {
@@ -35,9 +35,9 @@ const GallerySection: React.FC = () => {
       id="gallery"
       className="flex flex-col gap-y-[8px] sm:gap-y-[16px] xl:gap-y-[32px] px-[16px] sm:px-[32px] w-full max-w-[1400px] self-center"
     >
-      <AnimatedTitle className="font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
+      <Animated.Title className="font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
         Welcome to Jazz Brilliance
-      </AnimatedTitle>
+      </Animated.Title>
       <div
         className="gap-[16px] xl:gap-[32px] grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-2"
         ref={imageContainerReference}

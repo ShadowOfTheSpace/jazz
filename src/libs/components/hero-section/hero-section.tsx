@@ -1,15 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import heroAudio from "~assets/audio/pavel-audio.mp3";
 import heroImage from "~assets/images/hero-image.png";
-import {
-  AnimatedContent,
-  AnimatedHighlightedText,
-  AnimatedImage,
-  AnimatedText,
-  AnimatedTitle,
-  Button,
-  Link,
-} from "~components/components";
+import { Animated, Button, Link } from "~components/components";
 
 const HeroSection: React.FC = () => {
   const [isAudioPlay, setIsAudioPlay] = useState<boolean>(false);
@@ -30,24 +22,24 @@ const HeroSection: React.FC = () => {
     <section className="flex flex-col gap-y-[16px] sm:gap-y-[36px] xl:mt-[80px] w-full max-w-[1400px] self-center">
       <div className="relative flex xl:flex-row flex-col gap-[8px] sm:gap-[24px] bg-[url('/src/assets/images/notes-hero-background.svg')] px-[16px] sm:px-[32px]">
         <div className="xl:flex flex-col gap-y-[36px] p-[8px] xl:basis-[688px] basis-[600px] contents shrink-0">
-          <AnimatedTitle
+          <Animated.Title
             className="order-2 font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-tight tracking-[0.05em]"
             duration={0.7}
           >
             Thinking Jazz –{" "}
-            <AnimatedHighlightedText className="text-jz-gold" delay={0.6}>
+            <Animated.HighlightedText className="text-jz-gold" delay={0.6}>
               Meaning
-            </AnimatedHighlightedText>
+            </Animated.HighlightedText>
             <br />
-            <AnimatedHighlightedText
+            <Animated.HighlightedText
               className="font-kaushan text-jz-gold capitalize"
               delay={1}
             >
               Pavel Arakelian
-            </AnimatedHighlightedText>
-          </AnimatedTitle>
+            </Animated.HighlightedText>
+          </Animated.Title>
           <div className="flex order-3">
-            <AnimatedText
+            <Animated.Text
               className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
               delay={1.3}
             >
@@ -62,11 +54,11 @@ const HeroSection: React.FC = () => {
               >
                 Say HI now!
               </Link>
-            </AnimatedText>
+            </Animated.Text>
           </div>
         </div>
         <div className="order-1 xl:self-end mb-[5px] sm:mb-0 self-center lg:self-start">
-          <AnimatedImage
+          <Animated.Image
             src={heroImage}
             alt="Pavel Arakelian portrait"
             className="aspect-[624/377] object-contain"
@@ -74,7 +66,7 @@ const HeroSection: React.FC = () => {
           />
         </div>
       </div>
-      <AnimatedContent
+      <Animated.Content
         className="flex items-center gap-[20px] sm:gap-[36px] px-[16px] sm:px-[32px]"
         delay={2}
       >
@@ -94,7 +86,7 @@ const HeroSection: React.FC = () => {
         <audio preload="none" className="hidden" ref={audioRef}>
           <source src={heroAudio} />
         </audio>
-      </AnimatedContent>
+      </Animated.Content>
     </section>
   );
 };
