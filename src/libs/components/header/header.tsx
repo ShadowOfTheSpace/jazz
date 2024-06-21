@@ -36,6 +36,12 @@ const Header: React.FC = () => {
         <Link href={AppRoute.ROOT} className="shrink-0">
           <Logo />
         </Link>
+        <Link
+          href="#contacts"
+          className="inline lg:hidden mr-[50px] ml-auto font-inter text-jz-gold has-hover:hover:text-jz-gold/75 no-hover:active:text-jz-gold/75 transition-colors"
+        >
+          Contacts
+        </Link>
         <RemoveScroll forwardProps enabled={isScrollLock}>
           <motion.div
             variants={{
