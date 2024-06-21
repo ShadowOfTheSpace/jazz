@@ -19,6 +19,7 @@ type Properties = {
   isLoading?: boolean;
   opts?: Parameters<typeof useEmblaCarousel>[0];
   plugins?: Parameters<typeof useEmblaCarousel>[1];
+  setApi?: (api: ReturnType<typeof useEmblaCarousel>[1]) => void;
 };
 
 const Carousel: React.FC<Properties> & {
@@ -27,7 +28,7 @@ const Carousel: React.FC<Properties> & {
   Content: typeof CarouselContent;
   Dots: typeof CarouselDots;
   Item: typeof CarouselItem;
-} = ({ children, className, isLoading = false, opts, plugins }) => {
+} = ({ children, className, isLoading = false, opts, plugins, setApi }) => {
   const [carouselReference, api] = useEmblaCarousel(
     {
       ...opts,
@@ -66,6 +67,12 @@ const Carousel: React.FC<Properties> & {
   );
 
   useEffect(() => {
+    if (api && setApi) {
+      setApi(api);
+    }
+  }, [api, setApi]);
+
+  useEffect(() => {
     if (!api) {
       return;
     }
@@ -90,6 +97,7 @@ const Carousel: React.FC<Properties> & {
         scrollNext,
         scrollPrevious,
         scrollTo,
+        setApi,
       }}
     >
       <div

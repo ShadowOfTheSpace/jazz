@@ -10,6 +10,7 @@ type Properties = {
   scrollPrevious: () => void;
   scrollNext: () => void;
   scrollTo: (index: number) => void;
+  setApi?: (api: ReturnType<typeof useEmblaCarousel>[1]) => void;
 };
 
 const CarouselContext = createContext<Properties | null>(null);
