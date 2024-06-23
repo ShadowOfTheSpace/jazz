@@ -24,7 +24,7 @@ const ContactModal: React.FC = () => {
   return (
     <Modal isOpen={isContactUrl} onClose={handleModalClose}>
       <AnimatePresence mode="wait">
-        {!isContactSent ? (
+        {isContactSent ? (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
