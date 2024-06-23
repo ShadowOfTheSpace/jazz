@@ -29,7 +29,7 @@ const CheckoutPreview: React.FC = () => {
         animate={{ opacity: 1 }}
         className="p-[16px] sm:p-[32px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)]"
       >
-        <div className="flex items-center w-full h-full lg:h-[590px] *:grow">
+        <div className="flex items-center px-[20px] sm:px-[24px] lg:h-[min(590px,calc(100vh-64px-50px))] w-full *:grow overflow-y-scroll">
           <Placeholder
             description="But you can change it!"
             title="Cart is empty"
@@ -45,10 +45,10 @@ const CheckoutPreview: React.FC = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="p-[16px] sm:p-[32px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)]"
+          className="p-[16px] sm:p-[32px] pt-[60px] lg:pt-[32px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)]"
           key="placeholder"
         >
-          <div className="flex items-center w-full h-full lg:h-[590px] *:grow">
+          <div className="flex items-center px-[20px] sm:px-[24px] lg:h-[min(590px,calc(100vh-64px-50px))] w-full *:grow overflow-y-scroll">
             <Placeholder
               description="We will contact with you soon"
               title="Order completed"
@@ -58,11 +58,11 @@ const CheckoutPreview: React.FC = () => {
       ) : (
         <motion.div
           exit={{ opacity: 0 }}
-          className="p-[16px] sm:p-[32px] pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)] text-jz-white"
+          className="p-[16px] sm:p-[32px] pt-[60px] sm:pt-[60px] lg:pt-[30px] w-screen lg:w-[min(1240px,calc(100vw-50px))] h-[100dvh] lg:h-auto lg:max-h-[calc(100dvh-50px)] text-jz-white overflow-y-auto"
           key="checkout-form"
         >
           <div className="flex lg:flex-row flex-col gap-[20px] sm:gap-[30px] -mr-[10px] lg:-mr-[5px] pr-[10px] lg:pr-[5px] h-full overflow-y-auto">
-            <div className="flex flex-col -mr-[10px] pr-[10px] divide-y divide-jz-light-gray lg:w-[50%] max-w-full lg:h-[590px] lg:overflow-y-scroll lg:aspect-square w-[min(600px,100%)] self-center">
+            <div className="flex flex-col -mr-[10px] pr-[10px] divide-y divide-jz-light-gray lg:w-[50%] max-w-full lg:h-[590px] lg:overflow-y-scroll lg:aspect-square w-[min(600px,100%)] self-center shrink-0">
               <AnimatePresence>
                 {cartItems.map((cartItem, index) => {
                   return (

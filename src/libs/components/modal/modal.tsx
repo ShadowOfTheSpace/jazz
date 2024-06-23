@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { RemoveScroll } from "react-remove-scroll";
-import { useHandleEscPress } from "~hooks/hooks";
 import { Button } from "~components/components";
+import { useHandleEscPress } from "~hooks/hooks";
 
 type Properties = {
   isOpen: boolean;
@@ -20,7 +20,7 @@ const Modal: React.FC<Properties> = ({ children, isOpen, onClose }) => {
             <motion.dialog
               aria-modal
               open={isOpen}
-              className="top-[50%] z-30 fixed bg-jz-gray lg:rounded-[10px] translate-y-[-50%] overflow-hidden"
+              className="top-[50%] z-30 fixed bg-jz-gray lg:rounded-[10px] translate-y-[-50%]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
