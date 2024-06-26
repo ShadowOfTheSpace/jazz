@@ -1,7 +1,7 @@
-import { IconName } from "~/libs/types/types";
-import { cn } from "~utils/utils";
-import { Icon } from "~components/components";
 import { AnimatePresence, motion } from "framer-motion";
+import { Icon } from "~components/components";
+import { IconName } from "~types/types";
+import { cn } from "~utils/utils";
 
 type Properties = {
   className?: string;

@@ -18,7 +18,7 @@ import TinderIcon from "~assets/icons/tinder.svg?react";
 import VinylIcon from "~assets/icons/vinyl.svg?react";
 import YouTubeIcon from "~assets/icons/youtube.svg?react";
 
-import { IconName } from "~/libs/types/types";
+import { IconName } from "~types/types";
 
 const iconNameToSvg: Record<
   IconName,

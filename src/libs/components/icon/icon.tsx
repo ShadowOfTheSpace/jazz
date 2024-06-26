@@ -1,4 +1,4 @@
-import { IconName } from "~/libs/types/types";
+import { IconName } from "~types/types";
 import { iconNameToSvg } from "./libs/maps/maps";
 
 type Properties = {

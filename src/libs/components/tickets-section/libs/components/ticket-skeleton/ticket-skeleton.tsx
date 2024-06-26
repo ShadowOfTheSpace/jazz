@@ -1,4 +1,4 @@
-import { Skeleton } from "~/libs/components/components";
+import { Skeleton } from "~components/components";
 
 const TicketSkeleton: React.FC = () => {
   return (

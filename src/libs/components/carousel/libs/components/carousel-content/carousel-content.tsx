@@ -1,6 +1,6 @@
+import { cn } from "~utils/utils";
 import { useCarousel } from "../../hooks/use-carousel/use-carousel";
 import { CarouselItem } from "../components";
-import { cn } from "~/libs/utils/utils";
 
 type Properties = {
   children: React.ReactNode;
