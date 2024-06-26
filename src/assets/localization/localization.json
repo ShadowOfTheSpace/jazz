@@ -1,0 +1,250 @@
+{
+  "Events": {
+    "eng": "Events",
+    "ukr": "Події"
+  },
+  "News": {
+    "eng": "News",
+    "ukr": "Новини"
+  },
+  "Merch": {
+    "eng": "Merch",
+    "ukr": "Мерч"
+  },
+  "Gallery": {
+    "eng": "Gallery",
+    "ukr": "Галерея"
+  },
+  "Support": {
+    "eng": "Support",
+    "ukr": "Підтримка"
+  },
+  "Contacts": {
+    "eng": "Contacts",
+    "ukr": "Контакти"
+  },
+  "Thinking Jazz": {
+    "eng": "Thinking Jazz",
+    "ukr": "Якщо Джаз"
+  },
+  "Meaning": {
+    "eng": "Meaning",
+    "ukr": "то це"
+  },
+  "Pavel Arakelian": {
+    "eng": "Pavel Arakelian",
+    "ukr": "Павел Аракелян"
+  },
+  "Hero text": {
+    "eng": "Met Pavel Arakelian and The Outsiders at a secret jam session or at a crowdy performance? Have a cooperation proposal or an idea for collaboration? Look for an opportunity to make your event unforgettable or just want to keep your promise to share a glass of bourbon with Pavel?",
+    "ukr": "Зустрілися з Павелом Аракеляном і The Outsiders на таємному джем-сейшні чи на масовому виступі? Маєте пропозицію чи ідею щодо співпраці? Шукаєте можливість зробити свою подію незабутньою чи просто хочете стримати обіцянку випити з Павелом келих бурбону?"
+  },
+  "Say HI now": {
+    "eng": "Say HI now!",
+    "ukr": "Не зволікай, привітайся!"
+  },
+  "Play": {
+    "eng": "Play",
+    "ukr": "Відтворити"
+  },
+  "Pause": {
+    "eng": "Pause",
+    "ukr": "Зупинити"
+  },
+  "Grab Intro": {
+    "eng": "Grab Intro",
+    "ukr": "Дізнатися більше"
+  },
+  "Upcoming Events": {
+    "eng": "Upcoming Events",
+    "ukr": "Майбутні події"
+  },
+  "Tickets not available": {
+    "eng": "Tickets not available",
+    "ukr": "Квитків немає в наявності"
+  },
+  "Tickets placeholder text": {
+    "eng": "We apologize, but there are currently no tickets available for purchase. Please check back later for updates or subscribe to our newsletter to be the first to know when tickets go on sale.",
+    "ukr": "Приносимо свої вибачення, але квитків наразі немає в наявності. Перегляньте оновлення пізніше або підпишіться на нашу розсилку, щоб першими знати, коли квитки надійдуть у продаж."
+  },
+  "Tickets": {
+    "eng": "Tickets",
+    "ukr": "Квитки"
+  },
+  "Previous slide": {
+    "eng": "Previous slide",
+    "ukr": "Попередній слайд"
+  },
+  "Next slide": {
+    "eng": "Next slide",
+    "ukr": "Наступний слайд"
+  },
+  "Slide": {
+    "eng": "Slide",
+    "ukr": "Слайд"
+  },
+  "Life Vibes": {
+    "eng": "Life Vibes",
+    "ukr": "Моменти з життя"
+  },
+  "Exclusive Merch": {
+    "eng": "Exclusive Merch",
+    "ukr": "Ексклюзивний мерч"
+  },
+  "Merch text": {
+    "eng": "Long-awaited exquisite fashion brand line inspired and designed by Pavel Arakelian. Flavored with unique music vibes. Jack Daniels edition. For real fans and jazz connoisseurs only!",
+    "ukr": "Довгоочікувана вишукана лінійка модного бренду, натхненна та розроблена Павелом Аракеляном. Наповнений унікальними музичними барвами. Jack Daniels edition. Лише для справжніх шанувальників і поціновувачів джазу!"
+  },
+  "Merchandise not available": {
+    "eng": "Merchandise not available",
+    "ukr": "Мерчу немає в наявності"
+  },
+  "Merch placeholder text": {
+    "eng": "We apologize, but there are currently no merchandise available for purchase. Please check back later for updates or subscribe to our newsletter to be the first to know when merchandise go on sale.",
+    "ukr": "Ми приносимо свої вибачення, але товарів наразі немає в наявності. Перегляньте оновлення пізніше або підпишіться на нашу розсилку, щоб першими знати, коли товари надійдуть у продаж."
+  },
+  "Order now": {
+    "eng": "Order now",
+    "ukr": "Замовити зараз"
+  },
+  "Open Cart": {
+    "eng": "Open Cart",
+    "ukr": "Відкрити кошик"
+  },
+  "Cart is empty": {
+    "eng": "Cart is empty",
+    "ukr": "Кошик порожній"
+  },
+  "But you can change it!": {
+    "eng": "But you can change it!",
+    "ukr": "Але Ви можете це змінити!"
+  },
+  "Close": {
+    "eng": "Close",
+    "ukr": "Закрити"
+  },
+  "Sizes": {
+    "eng": "Sizes",
+    "ukr": "Розміри"
+  },
+  "Quantity": {
+    "eng": "Quantity",
+    "ukr": "Кількість"
+  },
+  "Add to cart": {
+    "eng": "Add to cart",
+    "ukr": "Додати до кошика"
+  },
+  "Not available": {
+    "eng": "Not available",
+    "ukr": "Не в наявності"
+  },
+  "Size": {
+    "eng": "Size",
+    "ukr": "Розмір"
+  },
+  "Price": {
+    "eng": "Price",
+    "ukr": "Ціна"
+  },
+  "Remove": {
+    "eng": "Remove",
+    "ukr": "Видалити"
+  },
+  "Full name": {
+    "eng": "Full name",
+    "ukr": "Ім’я та прізвище"
+  },
+  "Phone": {
+    "eng": "Phone",
+    "ukr": "Номер телефону"
+  },
+  "Shipping address": {
+    "eng": "Shipping address",
+    "ukr": "Адреса доставки"
+  },
+  "Additional comments": {
+    "eng": "Additional comments",
+    "ukr": "Додаткові коментарі"
+  },
+  "Total price": {
+    "eng": "Total price",
+    "ukr": "Загальна ціна"
+  },
+  "Order": {
+    "eng": "Order",
+    "ukr": "Замовити"
+  },
+  "Order completed": {
+    "eng": "Order completed",
+    "ukr": "Замовлення надіслано"
+  },
+  "Welcome to Jazz Brilliance": {
+    "eng": "Welcome to Jazz Brilliance",
+    "ukr": "Ласкаво просимо до Вишуканого Джазу"
+  },
+  "Subscribe to secret updates": {
+    "eng": "Subscribe to secret updates",
+    "ukr": "Підписуйтесь на секретні оновлення"
+  },
+  "Subscribe": {
+    "eng": "Subscribe",
+    "ukr": "Підписатися"
+  },
+  "Thank you for subscribing": {
+    "eng": "Thank you for subscribing to our newsletters",
+    "ukr": "Дякуємо за підписку на нашу розсилку"
+  },
+  "Navigation": {
+    "eng": "Navigation",
+    "ukr": "Навігація"
+  },
+  "Support Pavel on": {
+    "eng": "Support Pavel on",
+    "ukr": "Підтримайте Павела на"
+  },
+  "Contact us": {
+    "eng": "Contact us",
+    "ukr": "Зв’яжіться з нами"
+  },
+  "Contact": {
+    "eng": "Contact",
+    "ukr": "Зв’язатися"
+  },
+  "Name": {
+    "eng": "Name",
+    "ukr": "Ім'я"
+  },
+  "Send": {
+    "eng": "Send",
+    "ukr": "Надіслати"
+  },
+  "We will be in touch soon": {
+    "eng": "We will be in touch soon!",
+    "ukr": "Ми зв'яжемося найближчим часом!"
+  },
+  "Contact sent": {
+    "eng": "Contact sent",
+    "ukr": "Контакт надіслано"
+  },
+  "We will contact with you soon": {
+    "eng": "We will contact with you soon",
+    "ukr": "Ми зв'яжемося з Вами якнайшвидше"
+  },
+  "Pavel's Instagram": {
+    "eng": "Pavel's Instagram",
+    "ukr": "Інстаграм Павела"
+  },
+  "Pavel's Facebook": {
+    "eng": "Pavel's Facebook",
+    "ukr": "Фейсбук Павела"
+  },
+  "Pavel's YouTube": {
+    "eng": "Pavel's YouTube",
+    "ukr": "Ютуб Павела"
+  },
+  "Pavel's Tinder": {
+    "eng": "Pavel's Tinder",
+    "ukr": "Тіндер Павела"
+  }
+}

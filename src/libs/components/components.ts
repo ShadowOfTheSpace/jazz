@@ -1,4 +1,5 @@
 export { Animated } from "./animated/animated";
+export { AppLanguageContext } from "./app-language-context/app-language-context";
 export { App } from "./app/app";
 export { Button } from "./button/button";
 export { Carousel } from "./carousel/carousel";

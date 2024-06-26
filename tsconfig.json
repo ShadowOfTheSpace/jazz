@@ -29,6 +29,7 @@
       "~enums/*": ["./src/libs/enums/*"],
       "~helpers/*": ["./src/libs/helpers/*"],
       "~hooks/*": ["./src/libs/hooks/*"],
+      "~maps/*": ["./src/libs/maps/*"],
       "~modules/*": ["./src/libs/modules/*"],
       "~types/*": ["./src/libs/types/*"],
       "~utils/*": ["./src/libs/utils/*"],
