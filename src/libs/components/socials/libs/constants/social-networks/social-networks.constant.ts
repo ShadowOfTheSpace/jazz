@@ -1,6 +1,4 @@
-import { SocialNetwork } from "../../types/types";
-
-const SOCIAL_NETWORKS: SocialNetwork[] = [
+const SOCIAL_NETWORKS = [
   {
     href: "https://www.instagram.com/pavelarakelian",
     icon: "instagram",
@@ -21,6 +19,6 @@ const SOCIAL_NETWORKS: SocialNetwork[] = [
     icon: "tinder",
     title: "Pavel's Tinder",
   },
-];
+] as const;
 
 export { SOCIAL_NETWORKS };
