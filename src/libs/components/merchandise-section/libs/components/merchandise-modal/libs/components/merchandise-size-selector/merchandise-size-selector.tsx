@@ -1,7 +1,8 @@
-import { Link } from "~components/components";
-import { cn } from "~utils/utils";
-import { SIZES } from "~constants/constants";
 import { useLocation } from "react-router-dom";
+import { Link } from "~components/components";
+import { SIZES } from "~constants/constants";
+import { useLanguageContext } from "~hooks/hooks";
+import { cn } from "~utils/utils";
 
 type Properties = {
   selectedSize: string;
@@ -12,11 +13,15 @@ const MerchandiseSizeSelector: React.FC<Properties> = ({
   selectedSize,
   availableSizes,
 }) => {
+  const { translate } = useLanguageContext();
+
   const { pathname } = useLocation();
 
   return (
     <div className="flex flex-col gap-y-[10px]">
-      <h4 className="text-[16px] text-jz-light-gray sm:text-[20px] leading-none">Sizes</h4>
+      <h4 className="text-[16px] text-jz-light-gray sm:text-[20px] leading-none">
+        {translate("Sizes")}
+      </h4>
       <div className="flex flex-wrap -ml-[10px]">
         {SIZES.map((size, index) => {
           const isAvailable = availableSizes.includes(size);

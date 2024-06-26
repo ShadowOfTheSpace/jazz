@@ -4,7 +4,7 @@ import defaultImage from "~assets/images/default-item-image.png";
 import { Button, Image } from "~components/components";
 import { SIZES } from "~constants/constants";
 import { AppRoute } from "~enums/enums";
-import { useCartContext } from "~hooks/hooks";
+import { useCartContext, useLanguageContext } from "~hooks/hooks";
 import { Merchandise } from "~types/types";
 import { MerchandiseItemsCount, MerchandiseSizeSelector } from "../components";
 
@@ -19,6 +19,8 @@ const ItemPreview: React.FC<Properties> = ({
   isLoading,
   merchandiseId,
 }) => {
+  const { translate } = useLanguageContext();
+
   const navigate = useNavigate();
 
   const { pathname } = useLocation();
@@ -123,7 +125,11 @@ const ItemPreview: React.FC<Properties> = ({
               €{merchandiseById?.price}
             </h3>
             <Button
-              label={isAvailable ? "Add to cart" : "Not available"}
+              label={
+                isAvailable
+                  ? translate("Add to cart")
+                  : translate("Not available")
+              }
               isDisabled={!isAvailable}
               className="w-full sm:w-[max(170px,50%)] text-nowrap self-end"
               onClick={handleAddItemToCart}

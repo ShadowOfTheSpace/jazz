@@ -4,9 +4,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Modal, Placeholder } from "~components/components";
 import { AppRoute } from "~enums/enums";
 import { checkIfPathMatchingPattern } from "~helpers/helpers";
+import { useLanguageContext } from "~hooks/hooks";
 import { ContactForm } from "./libs/components/components";
 
 const ContactModal: React.FC = () => {
+  const { translate } = useLanguageContext();
+
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -33,8 +36,8 @@ const ContactModal: React.FC = () => {
           >
             <div className="flex items-center px-[20px] sm:px-[24px] lg:h-[min(513px,calc(100vh-64px-50px))] w-full lg:w-[598px] h-full overflow-y-scroll *:grow">
               <Placeholder
-                description="We will contact with you soon"
-                title="Contact sent"
+                description={translate("We will contact with you soon")}
+                title={translate("Contact sent")}
               />
             </div>
           </motion.div>
@@ -46,7 +49,7 @@ const ContactModal: React.FC = () => {
           >
             <div className="flex flex-col gap-y-[25px] m-[16px] sm:m-[32px] mt-[60px] sm:mt-[60px] mr-[20px] sm:mr-[20px] lg:mr-[30px] pr-[10px] sm:pr-[25px] lg:pr-[30px] w-full lg:w-[600px] overflow-y-auto">
               <h3 className="font-bold font-karantina text-[26px] text-jz-white lg:text-[32px] tracking-[0.05em]">
-                We will be in touch soon!
+                {translate("We will be in touch soon")}
               </h3>
               <ContactForm afterSubmit={handleAfterSubmit} />
             </div>

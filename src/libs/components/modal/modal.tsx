@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { RemoveScroll } from "react-remove-scroll";
 import { Button } from "~components/components";
-import { useHandleEscPress } from "~hooks/hooks";
+import { useHandleEscPress, useLanguageContext } from "~hooks/hooks";
 
 type Properties = {
   isOpen: boolean;
@@ -10,6 +10,8 @@ type Properties = {
 };
 
 const Modal: React.FC<Properties> = ({ children, isOpen, onClose }) => {
+  const { translate } = useLanguageContext();
+
   useHandleEscPress({ onEscPress: onClose });
 
   return (
@@ -29,7 +31,7 @@ const Modal: React.FC<Properties> = ({ children, isOpen, onClose }) => {
                 iconName="close"
                 className="top-[20px] lg:top-[30px] right-[20px] lg:right-[30px] z-10 absolute flex border-0 bg-transparent text-jz-white size-auto"
                 onClick={onClose}
-                title="Close"
+                title={translate("Close")}
               />
               <>{children}</>
             </motion.dialog>

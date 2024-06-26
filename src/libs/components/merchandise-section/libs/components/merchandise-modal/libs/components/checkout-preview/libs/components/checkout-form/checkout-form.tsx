@@ -1,10 +1,10 @@
 import emailjs from "@emailjs/browser";
 
-import { useAppForm } from "~hooks/hooks";
-import { type CartItem, type OrderInfo } from "~types/types";
-import { Button, Input } from "~components/components";
-import { orderInfoValidationSchema } from "~validation-schemas/validation-schemas";
 import { useCallback, useState } from "react";
+import { Button, Input } from "~components/components";
+import { useAppForm, useLanguageContext } from "~hooks/hooks";
+import { type CartItem, type OrderInfo } from "~types/types";
+import { orderInfoValidationSchema } from "~validation-schemas/validation-schemas";
 
 type Properties = {
   afterSubmit: () => void;
@@ -17,6 +17,8 @@ const CheckoutForm: React.FC<Properties> = ({
   cartItems,
   totalPrice,
 }) => {
+  const { translate } = useLanguageContext();
+
   const { control, errors, handleSubmit } = useAppForm<OrderInfo>({
     defaultValues: {
       comments: "",
@@ -74,7 +76,7 @@ const CheckoutForm: React.FC<Properties> = ({
         control={control}
         errors={errors}
         name="fullName"
-        placeholder="Full name"
+        placeholder={translate("Full name")}
         className="rounded-[8px] h-[35px] md:h-[54px]"
         hasLabel
       />
@@ -91,7 +93,7 @@ const CheckoutForm: React.FC<Properties> = ({
         control={control}
         errors={errors}
         name="phoneNumber"
-        placeholder="Phone"
+        placeholder={translate("Phone")}
         className="rounded-[8px] h-[35px] md:h-[54px]"
         hasLabel
       />
@@ -99,7 +101,7 @@ const CheckoutForm: React.FC<Properties> = ({
         control={control}
         errors={errors}
         name="shippingAddress"
-        placeholder="Shipping address"
+        placeholder={translate("Shipping address")}
         className="rounded-[8px] h-[35px] md:h-[54px]"
         hasLabel
       />
@@ -107,17 +109,17 @@ const CheckoutForm: React.FC<Properties> = ({
         control={control}
         errors={errors}
         name="comments"
-        placeholder="Additional comments"
+        placeholder={translate("Additional comments")}
         rows={3}
         hasLabel
       />
       <div className="flex flex-col gap-y-[10px] w-full self-start">
         <p className="text-[18px] md:text-[22px]">
-          Total price:
+          {translate("Total price")}:
           <span className="font-bold text-jz-gold">⠀€{totalPrice}</span>
         </p>
         <Button
-          label="Order"
+          label={translate("Order")}
           className="mt-auto"
           type="submit"
           isLoading={isOrderSending}

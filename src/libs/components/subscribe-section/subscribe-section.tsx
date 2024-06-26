@@ -1,12 +1,14 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { Button, Input } from "~components/components";
-import { useAppForm } from "~hooks/hooks";
+import { useAppForm, useLanguageContext } from "~hooks/hooks";
 import { cn } from "~utils/utils";
 import { emailValidationSchema } from "~validation-schemas/validation-schemas";
 import { SUBSCRIPTION_URL } from "./libs/constants/constants";
 
 const SubscribeSection: React.FC = () => {
+  const { translate } = useLanguageContext();
+
   const [subscriptionInProgress, setSubscriptionInProgress] =
     useState<boolean>(false);
   const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
@@ -48,7 +50,7 @@ const SubscribeSection: React.FC = () => {
               viewport={{ once: true, margin: "0px 0px -10% 0px" }}
               whileInView={{ x: 0, opacity: 1 }}
             >
-              Subscribe to secret updates
+              {translate("Subscribe to secret updates")}
             </motion.h3>
             <motion.form
               className={cn(
@@ -77,7 +79,7 @@ const SubscribeSection: React.FC = () => {
                 className="rounded-l-none text-[14px] sm:text-[14px] lg:text-[16px]"
                 isDisabled={subscriptionInProgress}
                 isLoading={subscriptionInProgress}
-                label="Subscribe"
+                label={translate("Subscribe")}
                 type="submit"
               />
             </motion.form>
@@ -91,7 +93,7 @@ const SubscribeSection: React.FC = () => {
           initial={{ opacity: 0 }}
         >
           <h3 className="font-bold font-karantina text-[26px] text-balance text-center lg:text-[32px] tracking-[0.05em]">
-            Thank you for subscribing to our newsletters{" "}
+            {translate("Thank you for subscribing")}{" "}
             <span className="text-jz-gold">❤</span>
           </h3>
         </motion.div>

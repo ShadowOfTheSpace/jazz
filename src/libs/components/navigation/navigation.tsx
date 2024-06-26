@@ -1,6 +1,7 @@
-import { Link } from "~/libs/components/components";
+import { Link } from "~components/components";
+import { useLanguageContext } from "~hooks/hooks";
+import { cn } from "~utils/utils";
 import { NAVIGATION_ITEMS } from "./libs/constants/constants";
-import { cn } from "~/libs/utils/utils";
 
 type Properties = {
   className?: string;
@@ -15,6 +16,8 @@ const Navigation: React.FC<Properties> = ({
   itemClassName,
   onClick,
 }) => {
+  const { translate } = useLanguageContext();
+
   return (
     <nav>
       <ul
@@ -38,7 +41,7 @@ const Navigation: React.FC<Properties> = ({
                 title={navigationItem.label}
                 onClick={onClick}
               >
-                {navigationItem.label}
+                {translate(navigationItem.label)}
               </Link>
             </li>
           );

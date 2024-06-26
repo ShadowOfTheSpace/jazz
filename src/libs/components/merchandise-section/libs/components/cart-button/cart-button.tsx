@@ -3,9 +3,11 @@ import { useLocation } from "react-router-dom";
 import { Icon, Link } from "~components/components";
 import { AppRoute } from "~enums/enums";
 import { checkIfPathMatchingPattern } from "~helpers/helpers";
-import { useCartContext } from "~hooks/hooks";
+import { useCartContext, useLanguageContext } from "~hooks/hooks";
 
 const CartButton: React.FC = () => {
+  const { translate } = useLanguageContext();
+
   const { cartItems } = useCartContext();
 
   const { pathname } = useLocation();
@@ -46,7 +48,7 @@ const CartButton: React.FC = () => {
           <Link
             className="flex justify-center items-center border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-jz-main no-hover:active:bg-jz-main shadow-jz-main p-[5px] sm:p-[10px] rounded-full text-jz-main has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors animate-bounce size-[50px] sm:[--cart-button-position] shadow-lg"
             href={AppRoute.CHECKOUT}
-            title="Open Cart"
+            title={translate("Open Cart")}
           >
             <Icon name="cart" />
           </Link>

@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
+import merchandiseImage from "~assets/images/jazz-merchandise.png";
+import { useLanguageContext } from "~hooks/hooks";
 import { getMerchandise } from "~modules/merchandise/merchandise";
 import { Merchandise } from "~types/types";
 import { Animated, Placeholder } from "../components";
@@ -8,9 +10,9 @@ import {
   MerchandiseModal,
 } from "./libs/components/components";
 
-import merchandiseImage from "~assets/images/jazz-merchandise.png";
-
 const MerchandiseSection: React.FC = () => {
+  const { translate } = useLanguageContext();
+
   const [isMerchandisesLoading, setIsMerchandisesLoading] =
     useState<boolean>(true);
   const [merchandises, setMerchandises] = useState<Merchandise[]>([]);
@@ -37,15 +39,13 @@ const MerchandiseSection: React.FC = () => {
       <div className="flex justify-between items-center gap-x-[50px]">
         <div className="flex flex-col gap-y-[16px] lg:gap-y-[36px] md:max-w-[50%]">
           <Animated.Title className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
-            Exclusive Merch
+            {translate("Exclusive Merch")}
           </Animated.Title>
           <Animated.Text
             className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
             delay={0.3}
           >
-            Long-awaited exquisite fashion brand line inspired and designed by
-            Pavel Arakelian. Flavored with unique music vibes. Jack Daniels
-            edition. For real fans and jazz connoisseurs only!
+            {translate("Merch text")}
           </Animated.Text>
         </div>
         <Animated.Image
@@ -68,8 +68,8 @@ const MerchandiseSection: React.FC = () => {
           />
         ) : (
           <Placeholder
-            description="We apologize, but there are currently no merchandise available for purchase. Please check back later for updates or subscribe to our newsletter to be the first to know when merchandise go on sale."
-            title="Merchandise not available"
+            description={translate("Merch placeholder text")}
+            title={translate("Merchandise not available")}
           />
         )}
       </Animated.Content>

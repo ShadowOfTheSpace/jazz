@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useCallback, useState } from "react";
 import { Button, Input } from "~components/components";
-import { useAppForm } from "~hooks/hooks";
+import { useAppForm, useLanguageContext } from "~hooks/hooks";
 import { Contact } from "~types/types";
 import { contactValidationSchema } from "~validation-schemas/validation-schemas";
 
@@ -10,6 +10,8 @@ type Properties = {
 };
 
 const ContactForm: React.FC<Properties> = ({ afterSubmit }) => {
+  const { translate } = useLanguageContext();
+
   const { control, errors, handleSubmit } = useAppForm<Contact>({
     defaultValues: { comments: "", email: "", fullName: "", phoneNumber: "" },
     validationSchema: contactValidationSchema,
@@ -45,7 +47,7 @@ const ContactForm: React.FC<Properties> = ({ afterSubmit }) => {
         control={control}
         errors={errors}
         name="fullName"
-        placeholder="Name"
+        placeholder={translate("Name")}
         className="rounded-[8px] h-[35px] md:h-[54px]"
         hasLabel
       />
@@ -62,7 +64,7 @@ const ContactForm: React.FC<Properties> = ({ afterSubmit }) => {
         control={control}
         errors={errors}
         name="phoneNumber"
-        placeholder="Phone"
+        placeholder={translate("Phone")}
         className="rounded-[8px] h-[35px] md:h-[54px]"
         hasLabel
       />
@@ -70,13 +72,13 @@ const ContactForm: React.FC<Properties> = ({ afterSubmit }) => {
         control={control}
         errors={errors}
         name="comments"
-        placeholder="Additional comments"
+        placeholder={translate("Additional comments")}
         rows={3}
         hasLabel
       />
       <Button
         className="w-full sm:w-max"
-        label="Send"
+        label={translate("Send")}
         type="submit"
         isLoading={isContactSending}
         isDisabled={isContactSending}

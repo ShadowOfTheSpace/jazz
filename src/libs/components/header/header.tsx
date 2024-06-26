@@ -4,9 +4,11 @@ import { RemoveScroll } from "react-remove-scroll";
 import Logo from "~assets/images/logo.svg?react";
 import { Button, Link, Navigation, Socials } from "~components/components";
 import { AppRoute } from "~enums/enums";
-import { useScrollLock } from "~hooks/hooks";
+import { useLanguageContext, useScrollLock } from "~hooks/hooks";
 
 const Header: React.FC = () => {
+  const { translate } = useLanguageContext();
+
   const { handleScrollLock, handleScrollUnlock, isScrollLock } =
     useScrollLock();
 
@@ -40,7 +42,7 @@ const Header: React.FC = () => {
           href="#contacts"
           className="inline lg:hidden mr-[50px] ml-auto font-inter text-jz-gold has-hover:hover:text-jz-gold/75 no-hover:active:text-jz-gold/75 transition-colors"
         >
-          Contacts
+          {translate("Contacts")}
         </Link>
         <RemoveScroll forwardProps enabled={isScrollLock}>
           <motion.div

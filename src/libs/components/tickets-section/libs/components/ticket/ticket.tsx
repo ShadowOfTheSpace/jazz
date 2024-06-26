@@ -1,5 +1,6 @@
 import defaultImage from "~assets/images/default-item-image.png";
 import { Image, Link } from "~components/components";
+import { useLanguageContext } from "~hooks/hooks";
 import { type Ticket as TTicket } from "~types/types";
 
 type Properties = {
@@ -7,6 +8,8 @@ type Properties = {
 };
 
 const Ticket: React.FC<Properties> = ({ ticket }) => {
+  const { translate } = useLanguageContext();
+
   const { city, country, date, place, ticketUrl, time, title, imageUrl } =
     ticket;
 
@@ -46,7 +49,7 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
           className="border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent mt-[20px] sm:mt-auto px-[30px] py-[8px] rounded-[40px] w-full sm:w-max font-bold font-inter text-[16px] text-center text-jz-gray sm:text-[18px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors"
           isOpenInNewPage
         >
-          Tickets
+          {translate("Tickets")}
         </Link>
       </div>
     </div>

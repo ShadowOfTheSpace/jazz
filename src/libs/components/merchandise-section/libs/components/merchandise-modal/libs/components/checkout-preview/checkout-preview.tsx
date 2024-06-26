@@ -1,10 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { Placeholder } from "~components/components";
-import { useCartContext } from "~hooks/hooks";
+import { useCartContext, useLanguageContext } from "~hooks/hooks";
 import { CartItem, CheckoutForm } from "./libs/components/components";
 
 const CheckoutPreview: React.FC = () => {
+  const { translate } = useLanguageContext();
+
   const { cartItems, removeItemFromCart, clearCart } = useCartContext();
 
   const [isOrderCompleted, setIsOrderCompleted] = useState<boolean>(false);
@@ -31,8 +33,8 @@ const CheckoutPreview: React.FC = () => {
       >
         <div className="flex items-center px-[20px] sm:px-[24px] lg:h-[min(590px,calc(100vh-64px-50px))] w-full *:grow overflow-y-scroll">
           <Placeholder
-            description="But you can change it!"
-            title="Cart is empty"
+            description={translate("But you can change it!")}
+            title={translate("Cart is empty")}
           />
         </div>
       </motion.div>
@@ -50,8 +52,8 @@ const CheckoutPreview: React.FC = () => {
         >
           <div className="flex items-center px-[20px] sm:px-[24px] lg:h-[min(590px,calc(100vh-64px-50px))] w-full *:grow overflow-y-scroll">
             <Placeholder
-              description="We will contact with you soon"
-              title="Order completed"
+              description={translate("We will contact with you soon")}
+              title={translate("Order completed")}
             />
           </div>
         </motion.div>

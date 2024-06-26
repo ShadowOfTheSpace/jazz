@@ -1,8 +1,9 @@
 import { EmblaCarouselType } from "embla-carousel";
 import { useCallback, useEffect, useState } from "react";
-import { useCarousel } from "../../hooks/use-carousel/use-carousel";
 import { Button, Skeleton } from "~components/components";
+import { useLanguageContext } from "~hooks/hooks";
 import { cn } from "~utils/utils";
+import { useCarousel } from "../../hooks/use-carousel/use-carousel";
 
 type Properties = {
   activeDotClassName?: string;
@@ -15,6 +16,8 @@ const CarouselDots: React.FC<Properties> = ({
   className,
   dotClassName,
 }) => {
+  const { translate } = useLanguageContext();
+
   const { api, isLoading, scrollTo } = useCarousel();
   const [slides, setSlides] = useState<number[]>([]);
   const [selectedSlide, setSelectedSlide] = useState(0);
@@ -65,7 +68,7 @@ const CarouselDots: React.FC<Properties> = ({
                 className={cn(dotClassName, isActive && activeDotClassName)}
                 key={index}
                 onClick={handleDotClick(index)}
-                title={`Slide ${index + 1}`}
+                title={`${translate("Slide")} ${index + 1}`}
               />
             );
           })}

@@ -1,3 +1,4 @@
+import { useLanguageContext } from "~hooks/hooks";
 import { cn } from "~utils/utils";
 import { Icon, Link } from "../components";
 import { SOCIAL_NETWORKS } from "./libs/constants/constants";
@@ -8,6 +9,8 @@ type Properties = {
 };
 
 const Socials: React.FC<Properties> = ({ className, iconClassName }) => {
+  const { translate } = useLanguageContext();
+
   return (
     <div className={cn("flex items-center gap-[16px]", className)}>
       {SOCIAL_NETWORKS.map((socialNetwork) => {
@@ -16,7 +19,7 @@ const Socials: React.FC<Properties> = ({ className, iconClassName }) => {
             href={socialNetwork.href}
             isOpenInNewPage
             key={socialNetwork.title}
-            title={socialNetwork.title}
+            title={translate(socialNetwork.title)}
           >
             <Icon
               className={cn(

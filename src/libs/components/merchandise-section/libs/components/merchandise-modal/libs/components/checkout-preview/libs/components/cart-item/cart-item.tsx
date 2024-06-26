@@ -1,8 +1,9 @@
 import { useCallback } from "react";
-import { cn } from "~/libs/utils/utils";
 import defaultImage from "~assets/images/default-item-image.png";
 import { Button, Image } from "~components/components";
+import { useLanguageContext } from "~hooks/hooks";
 import { type CartItem as TCartItem } from "~types/types";
+import { cn } from "~utils/utils";
 
 type Properties = {
   cartItem: TCartItem;
@@ -10,6 +11,8 @@ type Properties = {
 };
 
 const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
+  const { translate } = useLanguageContext();
+
   const { imageUrl, price, quantity, selectedSize, title } = cartItem;
 
   const handleDeleteItem = useCallback(() => {
@@ -39,19 +42,22 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
           {title}
         </h3>
         <p className={cn("text-jz-light-gray", !selectedSize && "opacity-0")}>
-          Size:⠀<span className="font-bold text-jz-gold">{selectedSize}</span>
+          {translate("Size")}:⠀
+          <span className="font-bold text-jz-gold">{selectedSize}</span>
         </p>
         <p className="text-jz-light-gray">
-          Quantity:⠀<span className="font-bold text-jz-gold">{quantity}</span>
+          {translate("Quantity")}:⠀
+          <span className="font-bold text-jz-gold">{quantity}</span>
         </p>
         <p className="text-jz-light-gray">
-          Price:⠀<span className="font-bold text-jz-gold">€{price}</span>
+          {translate("Price")}:⠀
+          <span className="font-bold text-jz-gold">€{price}</span>
         </p>
       </div>
       <Button
         iconName="trash"
         className="border-0 bg-transparent ml-auto h-max text-jz-light-gray self-center"
-        title="Remove"
+        title={translate("Remove")}
         onClick={handleDeleteItem}
       />
     </div>

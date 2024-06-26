@@ -1,5 +1,6 @@
 import defaultImage from "~assets/images/default-item-image.png";
 import { Image, Link } from "~components/components";
+import { useLanguageContext } from "~hooks/hooks";
 import { type Merchandise as TMerchandise } from "~types/types";
 
 type Properties = {
@@ -7,6 +8,8 @@ type Properties = {
 };
 
 const Merchandise: React.FC<Properties> = ({ merchandise }) => {
+  const { translate } = useLanguageContext();
+
   const { id, imageUrl, price, title } = merchandise;
 
   return (
@@ -37,7 +40,7 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
         className="border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent mt-[16px] sm:mt-[32px] py-[8px] rounded-[40px] font-bold font-inter text-[16px] text-center text-jz-main sm:text-[20px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors grow"
         href={`/products/${id}`}
       >
-        Order now
+        {translate("Order now")}
       </Link>
     </div>
   );
