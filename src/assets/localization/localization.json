@@ -246,5 +246,61 @@
   "Pavel's Tinder": {
     "eng": "Pavel's Tinder",
     "ukr": "Тіндер Павела"
+  },
+  "Email is required.": {
+    "eng": "Email is required.",
+    "ukr": "Email обов’язковий."
+  },
+  "Email is not valid.": {
+    "eng": "Email is not valid.",
+    "ukr": "Email введено неправильно."
+  },
+  "Full name is required.": {
+    "eng": "Full name is required.",
+    "ukr": "Ім’я та прізвище обов’язкові."
+  },
+  "Too short full name.": {
+    "eng": "Too short full name.",
+    "ukr": "Занадто короткі ім’я та прізвище."
+  },
+  "Too long full name.": {
+    "eng": "Too long full name.",
+    "ukr": "Занадто довгі ім’я та прізвище."
+  },
+  "Phone number is required.": {
+    "eng": "Phone number is required.",
+    "ukr": "Номер телефону обов'язковий."
+  },
+  "Phone number is not valid.": {
+    "eng": "Phone number is not valid.",
+    "ukr": "Номер телефону введено неправильно."
+  },
+  "Country code is missing.": {
+    "eng": "Country code is missing.",
+    "ukr": "Код країни пропущено."
+  },
+  "Shipping address is required.": {
+    "eng": "Shipping address is required.",
+    "ukr": "Адреса доставки обов’язкова."
+  },
+  "Too long shipping address.": {
+    "eng": "Too long shipping address.",
+    "ukr": "Занадто довга адреса доставки."
+  },
+  "Max comments length is 300 symbols.": {
+    "eng": "Max comments length is 300 symbols.",
+    "ukr": "Максимальна довжина коментарів – 300 символів."
+  },
+  "Name is required.": {
+    "eng": "Name is required.",
+    "ukr": "Ім’я обов’язкове."
+  },
+  "Too short name.": {
+    "eng": "Too short name.",
+    "ukr": "Занадто коротке ім’я."
+  },
+  "Too long name.": {
+    "eng": "Too long name.",
+    "ukr": "Занадто довге ім’я."
   }
 }

@@ -5,6 +5,8 @@ import {
   type FieldPath,
   type FieldValues,
 } from "react-hook-form";
+import type localization from "~assets/localization/localization.json";
+import { useLanguageContext } from "~hooks/hooks";
 import { cn } from "~utils/utils";
 
 type Properties<T extends FieldValues> = {
@@ -30,6 +32,8 @@ const Input = <T extends FieldValues>({
   rows,
   type = "text",
 }: Properties<T>): JSX.Element => {
+  const { translate } = useLanguageContext();
+
   const { field } = useController({ control, name });
 
   const error = errors[name]?.message;
@@ -77,7 +81,7 @@ const Input = <T extends FieldValues>({
       )}
       {hasError && (
         <span className="top-full left-[20px] absolute mt-[5px] font-bold font-inter text-[10px] text-jz-red md:text-[12px] leading-3 tracking-[0.05em]">
-          {error as string}
+          {translate(error as keyof typeof localization)}
         </span>
       )}
     </div>

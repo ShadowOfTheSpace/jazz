@@ -10,12 +10,13 @@ const contact = z.object({
   fullName: z
     .string()
     .trim()
-    .min(1, "Full name is required.")
-    .min(4, "Too short full name.")
-    .max(50, "Too long full name."),
+    .min(1, "Name is required.")
+    .min(2, "Too short name.")
+    .max(25, "Too long name."),
   phoneNumber: z
     .string()
     .trim()
+    .min(1, "Phone number is required.")
     .regex(/^\+([1-9]{1}[0-9]{0,2})/, "Country code is missing.")
     .regex(
       /^\+([1-9]{1}[0-9]{0,2})\s?([0-9]{7,14})$/,

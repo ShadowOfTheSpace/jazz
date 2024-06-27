@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import localization from "~assets/localization/localization.json";
+import type localization from "~assets/localization/localization.json";
 import { type appLanguageToLocalizationKey } from "~maps/maps";
 
 type Properties = {
