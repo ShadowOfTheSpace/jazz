@@ -38,6 +38,8 @@ export default {
       kameron: ["Kameron"],
       karantina: ["Karantina"],
       kaushan: ["Kaushan Script"],
+      oswald: ["Oswald"],
+      marck: ["Marck Script"],
     },
   },
   plugins: [],

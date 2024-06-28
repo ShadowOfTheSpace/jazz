@@ -44,6 +44,27 @@
   src: url("/fonts/kaushan-script/KaushanScript-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/oswald/Oswald-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/oswald/Oswald-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Marck Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/marck-script/MarckScript-Regular.ttf") format("truetype");
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 20px;
@@ -57,7 +78,7 @@ html {
 }
 
 body {
-  font-family: "Kameron";
+  font-family: "Inter";
   font-size: 20px;
   color: white;
   background-color: #0d0d0d;
