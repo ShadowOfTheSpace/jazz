@@ -63,6 +63,10 @@ body {
   background-color: #0d0d0d;
 }
 
+*::selection {
+  background-color: #473108;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -94,7 +98,7 @@ input:-internal-autofill-selected:active {
   text-decoration-color: white;
   fill: white;
   -webkit-text-fill-color: white;
-  border-color: #B57400;
+  border-color: #b57400;
   caret-color: white;
 }
 
