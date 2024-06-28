@@ -37,7 +37,7 @@ const ContactModal: React.FC = () => {
           >
             <div className="flex items-center px-[20px] sm:px-[24px] lg:h-[min(513px,calc(100vh-64px-50px))] w-full lg:w-[598px] h-full overflow-y-scroll *:grow">
               <Placeholder
-                description={translate("We will contact with you soon")}
+                description={translate("We will contact you soon")}
                 title={translate("Contact sent")}
               />
             </div>
