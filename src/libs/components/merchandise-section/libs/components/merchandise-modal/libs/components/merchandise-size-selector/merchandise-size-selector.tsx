@@ -13,13 +13,19 @@ const MerchandiseSizeSelector: React.FC<Properties> = ({
   selectedSize,
   availableSizes,
 }) => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const { pathname } = useLocation();
 
   return (
     <div className="flex flex-col gap-y-[10px]">
-      <h4 className="text-[16px] text-jz-light-gray sm:text-[20px] leading-none">
+      <h4
+        className={cn(
+          "text-[16px] text-jz-light-gray sm:text-[20px] leading-none",
+          appLanguage === "eng" && "font-kameron  tracking-[0.05em]",
+          appLanguage === "ukr" && "font-inter"
+        )}
+      >
         {translate("Sizes")}
       </h4>
       <div className="flex flex-wrap -ml-[10px]">

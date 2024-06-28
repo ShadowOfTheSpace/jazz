@@ -2,10 +2,11 @@ import Logo from "~assets/images/logo.svg?react";
 import { Link, Navigation, Socials } from "~components/components";
 import { AppRoute } from "~enums/enums";
 import { useLanguageContext } from "~hooks/hooks";
+import { cn } from "~utils/utils";
 import { ContactModal, DonationPlatforms } from "./libs/components/components";
 
 const Footer: React.FC = () => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   return (
     <footer className="flex flex-col items-center bg-jz-gray mt-[32px] w-full">
@@ -13,17 +14,37 @@ const Footer: React.FC = () => {
         <div className="flex md:flex-row flex-col justify-between gap-[32px] p-[16px] sm:p-[32px] w-full max-w-[1400px]">
           <div className="flex justify-between gap-x-[32px] md:contents">
             <div className="flex flex-col gap-y-[10px] md:order-2">
-              <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
+              <h3
+                className={cn(
+                  "font-bold",
+                  appLanguage === "eng" &&
+                    "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
+                  appLanguage === "ukr" &&
+                    "font-oswald text-[24px] lg:text-[28px]"
+                )}
+              >
                 {translate("Navigation")}
               </h3>
               <Navigation
                 className="lg:flex-col gap-y-[5px] lg:gap-y-[10px]"
                 displayVariant="grid"
-                itemClassName="text-[16px] lg:text-[20px] font-kameron text-jz-light-gray"
+                itemClassName={cn(
+                  "text-[16px] lg:text-[20px] text-jz-light-gray",
+                  appLanguage === "eng" && "font-kameron",
+                  appLanguage === "ukr" && "font-inter"
+                )}
               />
             </div>
             <div id="support" className="flex flex-col gap-y-[10px] md:order-3">
-              <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
+              <h3
+                className={cn(
+                  "font-bold",
+                  appLanguage === "eng" &&
+                    "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
+                  appLanguage === "ukr" &&
+                    "font-oswald text-[24px] lg:text-[28px]"
+                )}
+              >
                 {translate("Support Pavel on")}
               </h3>
               <DonationPlatforms />
@@ -32,9 +53,21 @@ const Footer: React.FC = () => {
           <div className="sm:flex sm:flex-row-reverse sm:justify-between contents md:contents">
             <div
               id="contacts"
-              className="flex flex-col gap-y-[10px] md:order-4 w-max sm:w-[157px] md:w-max"
+              className={cn(
+                "flex flex-col gap-y-[10px] md:order-4 w-max md:w-max",
+                appLanguage === "eng" && "sm:w-[157px]",
+                appLanguage === "ukr" && "sm:w-[226px]"
+              )}
             >
-              <h3 className="font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]">
+              <h3
+                className={cn(
+                  "font-bold",
+                  appLanguage === "eng" &&
+                    "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
+                  appLanguage === "ukr" &&
+                    "font-oswald text-[24px] lg:text-[28px]"
+                )}
+              >
                 {translate("Contact us")}
               </h3>
               <Link

@@ -25,7 +25,7 @@ const Navigation: React.FC<Properties> = ({
           "gap-[24px] font-inter",
           displayVariant === "flex"
             ? "flex lg:flex-row flex-col"
-            : "grid sm:grid-cols-2 grid-cols-1",
+            : "grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 grid-cols-1",
           className
         )}
       >

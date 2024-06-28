@@ -3,10 +3,11 @@ import heroAudio from "~assets/audio/pavel-audio.mp3";
 import heroImage from "~assets/images/hero-image.png";
 import { Animated, Button, Link } from "~components/components";
 import { useLanguageContext } from "~hooks/hooks";
+import { cn } from "~utils/utils";
 import pdf from "/files/Pavel_Arakelian_press_portrait.pdf";
 
 const HeroSection: React.FC = () => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const [isAudioPlay, setIsAudioPlay] = useState<boolean>(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -27,7 +28,13 @@ const HeroSection: React.FC = () => {
       <div className="relative flex xl:flex-row flex-col gap-[8px] sm:gap-[24px] bg-[url('/src/assets/images/notes-hero-background.svg')] px-[16px] sm:px-[32px]">
         <div className="xl:flex flex-col gap-y-[36px] p-[8px] xl:basis-[688px] basis-[600px] contents shrink-0">
           <Animated.Title
-            className="order-2 font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-tight tracking-[0.05em]"
+            className={cn(
+              "order-2 text-[32px] leading-tight",
+              appLanguage === "eng" &&
+                "font-karantina sm:text-[70px] xl:text-[80px] tracking-[0.05em]",
+              appLanguage === "ukr" &&
+                "font-oswald sm:text-[60px] xl:text-[75px]"
+            )}
             duration={0.7}
           >
             {translate("Thinking Jazz")} –{" "}
@@ -36,7 +43,11 @@ const HeroSection: React.FC = () => {
             </Animated.HighlightedText>
             <br />
             <Animated.HighlightedText
-              className="font-kaushan text-jz-gold capitalize"
+              className={cn(
+                "text-jz-gold capitalize",
+                appLanguage === "eng" && "font-kaushan",
+                appLanguage === "ukr" && "font-marck"
+              )}
               delay={1}
             >
               {translate("Pavel Arakelian")}
@@ -44,12 +55,22 @@ const HeroSection: React.FC = () => {
           </Animated.Title>
           <div className="flex order-3">
             <Animated.Text
-              className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
+              className={cn(
+                "text-[14px] text-balance sm:text-[18px] xl:text-[20px]",
+                appLanguage === "eng" && "font-kameron tracking-[0.05em]",
+                appLanguage === "ukr" && "font-inter"
+              )}
               delay={1.3}
             >
               {translate("Hero text")}{" "}
               <Link
-                className="order-4 font-bold font-kaushan text-[14px] text-jz-gold sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
+                className={cn(
+                  "order-4 font-bold text-jz-gold sm:text-[18px] xl:text-[20px]",
+                  appLanguage === "eng" &&
+                    "font-kaushan text-[14px] sm:text-[18px] xl:text-[20px] tracking-[0.05em]",
+                  appLanguage === "ukr" &&
+                    "font-marck text-[20px] sm:text-[24px] xl:text-[26px]"
+                )}
                 href="#contacts"
               >
                 {translate("Say HI now")}

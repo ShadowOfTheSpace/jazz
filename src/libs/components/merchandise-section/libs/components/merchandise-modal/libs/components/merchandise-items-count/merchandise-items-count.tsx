@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { Button } from "~components/components";
 import { useLanguageContext } from "~hooks/hooks";
+import { cn } from "~utils/utils";
 
 type Properties = {
   count: number;
@@ -15,7 +16,7 @@ const MerchandiseItemsCount: React.FC<Properties> = ({
   max,
   min,
 }) => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const handleIncreaseCount = useCallback(() => {
     if (count + 1 <= max) {
@@ -41,7 +42,13 @@ const MerchandiseItemsCount: React.FC<Properties> = ({
 
   return (
     <div className="flex flex-col gap-y-[10px]">
-      <h4 className="text-[16px] text-jz-light-gray sm:text-[20px] leading-none">
+      <h4
+        className={cn(
+          "text-[16px] text-jz-light-gray sm:text-[20px] leading-none",
+          appLanguage === "eng" && "font-kameron",
+          appLanguage === "ukr" && "font-inter"
+        )}
+      >
         {translate("Quantity")}
       </h4>
       <div className="flex items-center">

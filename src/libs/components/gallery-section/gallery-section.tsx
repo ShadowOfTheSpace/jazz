@@ -7,10 +7,11 @@ import galleryImage4 from "~assets/images/gallery-image-4.webp";
 import galleryImage5 from "~assets/images/gallery-image-5.webp";
 import { Animated } from "~components/components";
 import { useLanguageContext } from "~hooks/hooks";
+import { cn } from "~utils/utils";
 import { GalleryImage } from "./libs/components/components";
 
 const GallerySection: React.FC = () => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const imageContainerReference = useRef<HTMLDivElement | null>(null);
 
@@ -38,7 +39,14 @@ const GallerySection: React.FC = () => {
       id="gallery"
       className="flex flex-col gap-y-[8px] sm:gap-y-[16px] xl:gap-y-[32px] px-[16px] sm:px-[32px] w-full max-w-[1400px] self-center"
     >
-      <Animated.Title className="font-karantina text-[32px] sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
+      <Animated.Title
+        className={cn(
+          "text-[32px] leading-none",
+          appLanguage === "eng" &&
+            "font-karantina sm:text-[70px] xl:text-[80px] tracking-[0.05em]",
+          appLanguage === "ukr" && "font-oswald sm:text-[60px] xl:text-[75px]"
+        )}
+      >
         {translate("Welcome to Jazz Brilliance")}
       </Animated.Title>
       <div

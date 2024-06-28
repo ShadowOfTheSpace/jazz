@@ -11,7 +11,7 @@ type Properties = {
 };
 
 const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const { imageUrl, price, quantity, selectedSize, title } = cartItem;
 
@@ -36,20 +36,43 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
       )}
       <div className="flex flex-col justify-between text-[14px] md:text-[16px] leading-4 overflow-hidden">
         <h3
-          className="font-bold font-kaushan text-[18px] text-jz-gold md:text-[20px] truncate"
+          className={cn(
+            "font-bold text-[18px] text-jz-gold md:text-[20px] truncate",
+            appLanguage === "eng" && "font-kaushan",
+            appLanguage === "ukr" && "font-marck"
+          )}
           title={title}
         >
           {title}
         </h3>
-        <p className={cn("text-jz-light-gray", !selectedSize && "opacity-0")}>
+        <p
+          className={cn(
+            "text-jz-light-gray",
+            !selectedSize && "opacity-0",
+            appLanguage === "eng" && "font-kameron",
+            appLanguage === "ukr" && "font-inter"
+          )}
+        >
           {translate("Size")}:⠀
           <span className="font-bold text-jz-gold">{selectedSize}</span>
         </p>
-        <p className="text-jz-light-gray">
+        <p
+          className={cn(
+            "text-jz-light-gray",
+            appLanguage === "eng" && "font-kameron",
+            appLanguage === "ukr" && "font-inter"
+          )}
+        >
           {translate("Quantity")}:⠀
           <span className="font-bold text-jz-gold">{quantity}</span>
         </p>
-        <p className="text-jz-light-gray">
+        <p
+          className={cn(
+            "text-jz-light-gray",
+            appLanguage === "eng" && "font-kameron",
+            appLanguage === "ukr" && "font-inter"
+          )}
+        >
           {translate("Price")}:⠀
           <span className="font-bold text-jz-gold">€{price}</span>
         </p>

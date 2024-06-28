@@ -2,13 +2,14 @@ import defaultImage from "~assets/images/default-item-image.png";
 import { Image, Link } from "~components/components";
 import { useLanguageContext } from "~hooks/hooks";
 import { type Ticket as TTicket } from "~types/types";
+import { cn } from "~utils/utils";
 
 type Properties = {
   ticket: TTicket;
 };
 
 const Ticket: React.FC<Properties> = ({ ticket }) => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const { city, country, date, place, ticketUrl, time, title, imageUrl } =
     ticket;
@@ -30,18 +31,43 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
       )}
       <div className="flex flex-col overflow-hidden select-none grow">
         <h3
-          className="mb-2 line-clamp-2 h-[calc(1.25*1em*2)] font-bold font-kaushan text-[26px] text-jz-gold sm:text-[32px] leading-tight"
+          className={cn(
+            "mb-2 line-clamp-2 h-[calc(1.25*1em*2)] font-bold text-[26px] text-jz-gold sm:text-[32px] leading-tight",
+            appLanguage === "eng" && "font-kaushan",
+            appLanguage === "ukr" && "font-marck"
+          )}
           title={title}
         >
           {title}
         </h3>
-        <p className="text-[16px] sm:text-[20px]" title={`${city}, ${country}`}>
+        <p
+          className={cn(
+            "text-[16px] sm:text-[20px]",
+            appLanguage === "eng" && "font-kameron",
+            appLanguage === "ukr" && "font-inter"
+          )}
+          title={`${city}, ${country}`}
+        >
           {city}, {country}
         </p>
-        <p className="text-[16px] sm:text-[20px] truncate" title={place}>
+        <p
+          className={cn(
+            "text-[16px] sm:text-[20px] truncate",
+            appLanguage === "eng" && "font-kameron",
+            appLanguage === "ukr" && "font-inter"
+          )}
+          title={place}
+        >
           {place}
         </p>
-        <p className="text-[16px] sm:text-[20px]" title={`${date}⠀–⠀${time}`}>
+        <p
+          className={cn(
+            "text-[16px] sm:text-[20px]",
+            appLanguage === "eng" && "font-kameron",
+            appLanguage === "ukr" && "font-inter"
+          )}
+          title={`${date}⠀–⠀${time}`}
+        >
           {date}⠀–⠀{time}
         </p>
         <Link

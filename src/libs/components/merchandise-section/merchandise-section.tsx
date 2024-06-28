@@ -3,6 +3,7 @@ import merchandiseImage from "~assets/images/jazz-merchandise.png";
 import { useLanguageContext } from "~hooks/hooks";
 import { getMerchandise } from "~modules/merchandise/merchandise";
 import { Merchandise } from "~types/types";
+import { cn } from "~utils/utils";
 import { Animated, Placeholder } from "../components";
 import {
   CartButton,
@@ -11,7 +12,7 @@ import {
 } from "./libs/components/components";
 
 const MerchandiseSection: React.FC = () => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const [isMerchandisesLoading, setIsMerchandisesLoading] =
     useState<boolean>(true);
@@ -38,11 +39,23 @@ const MerchandiseSection: React.FC = () => {
     >
       <div className="flex justify-between items-center gap-x-[50px]">
         <div className="flex flex-col gap-y-[16px] lg:gap-y-[36px] md:max-w-[50%]">
-          <Animated.Title className="font-karantina text-[32px] text-balance sm:text-[70px] xl:text-[80px] leading-none tracking-[0.05em]">
+          <Animated.Title
+            className={cn(
+              "text-[32px] text-balance leading-none",
+              appLanguage === "eng" &&
+                "font-karantina sm:text-[70px] xl:text-[80px] tracking-[0.05em]",
+              appLanguage === "ukr" &&
+                "font-oswald sm:text-[60px] xl:text-[75px]"
+            )}
+          >
             {translate("Exclusive Merch")}
           </Animated.Title>
           <Animated.Text
-            className="text-[14px] text-balance sm:text-[18px] xl:text-[20px] tracking-[0.05em]"
+            className={cn(
+              "text-[14px] text-balance sm:text-[18px] xl:text-[20px]",
+              appLanguage === "eng" && "font-kameron tracking-[0.05em]",
+              appLanguage === "ukr" && "font-inter"
+            )}
             delay={0.3}
           >
             {translate("Merch text")}

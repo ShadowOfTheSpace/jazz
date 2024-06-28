@@ -2,13 +2,14 @@ import defaultImage from "~assets/images/default-item-image.png";
 import { Image, Link } from "~components/components";
 import { useLanguageContext } from "~hooks/hooks";
 import { type Merchandise as TMerchandise } from "~types/types";
+import { cn } from "~utils/utils";
 
 type Properties = {
   merchandise: TMerchandise;
 };
 
 const Merchandise: React.FC<Properties> = ({ merchandise }) => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const { id, imageUrl, price, title } = merchandise;
 
@@ -28,12 +29,22 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
         />
       )}
       <h2
-        className="line-clamp-2 h-[calc(1.25*1em*2)] font-bold font-kaushan text-[26px] text-jz-gold sm:text-[32px] leading-tight"
+        className={cn(
+          "line-clamp-2 h-[calc(1.25*1em*2)] font-bold text-[26px] text-jz-gold sm:text-[32px] leading-tight",
+          appLanguage === "eng" && "font-kaushan tracking-[0.05em]",
+          appLanguage === "ukr" && "font-marck"
+        )}
         title={title}
       >
         {title}
       </h2>
-      <h3 className="font-bold text-[20px] text-end text-jz-light-gray sm:text-[26px]">
+      <h3
+        className={cn(
+          "font-bold text-[20px] text-end text-jz-light-gray sm:text-[26px]",
+          appLanguage === "eng" && "font-kameron",
+          appLanguage === "ukr" && "font-inter"
+        )}
+      >
         €{price}
       </h3>
       <Link

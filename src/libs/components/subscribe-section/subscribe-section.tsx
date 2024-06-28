@@ -7,7 +7,7 @@ import { emailValidationSchema } from "~validation-schemas/validation-schemas";
 import { SUBSCRIPTION_URL } from "./libs/constants/constants";
 
 const SubscribeSection: React.FC = () => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const [subscriptionInProgress, setSubscriptionInProgress] =
     useState<boolean>(false);
@@ -42,8 +42,12 @@ const SubscribeSection: React.FC = () => {
           >
             <motion.h3
               className={cn(
-                "font-bold font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
-                "[--subtitle-x-offset:-10px] md:[--subtitle-x-offset:-20px]"
+                "font-bold",
+                "[--subtitle-x-offset:-10px] md:[--subtitle-x-offset:-20px]",
+                appLanguage === "eng" &&
+                  "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
+                appLanguage === "ukr" &&
+                  "font-oswald text-[24px] lg:text-[28px]"
               )}
               initial={{ x: "var(--subtitle-x-offset)", opacity: 0 }}
               transition={{ duration: 1 }}
@@ -92,7 +96,14 @@ const SubscribeSection: React.FC = () => {
           className="flex justify-center items-center px-[16px] sm:px-[32px] h-[84px] sm:h-[94px] md:h-[45px] lg:h-[48px] xl:h-[54px]"
           initial={{ opacity: 0 }}
         >
-          <h3 className="font-bold font-karantina text-[26px] text-balance text-center lg:text-[32px] tracking-[0.05em]">
+          <h3
+            className={cn(
+              "font-bold text-balance text-center",
+              appLanguage === "eng" &&
+                "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
+              appLanguage === "ukr" && "font-oswald text-[24px] lg:text-[28px]"
+            )}
+          >
             {translate("Thank you for subscribing")}{" "}
             <span className="text-jz-gold">❤</span>
           </h3>

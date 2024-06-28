@@ -6,6 +6,7 @@ import { SIZES } from "~constants/constants";
 import { AppRoute } from "~enums/enums";
 import { useCartContext, useLanguageContext } from "~hooks/hooks";
 import { Merchandise } from "~types/types";
+import { cn } from "~utils/utils";
 import { MerchandiseItemsCount, MerchandiseSizeSelector } from "../components";
 
 type Properties = {
@@ -19,7 +20,7 @@ const ItemPreview: React.FC<Properties> = ({
   isLoading,
   merchandiseId,
 }) => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const navigate = useNavigate();
 
@@ -121,7 +122,13 @@ const ItemPreview: React.FC<Properties> = ({
             max={99}
           />
           <div className="flex flex-col gap-y-[10px] lg:gap-y-[20px] mt-auto sm:mt-0">
-            <h3 className="mr-[20px] font-bold text-[22px] text-end sm:text-[28px] self-end">
+            <h3
+              className={cn(
+                "mr-[20px] font-bold text-[22px] text-end sm:text-[28px] self-end",
+                appLanguage === "eng" && "font-kameron",
+                appLanguage === "ukr" && "font-inter"
+              )}
+            >
               €{merchandiseById?.price}
             </h3>
             <Button
@@ -131,7 +138,11 @@ const ItemPreview: React.FC<Properties> = ({
                   : translate("Not available")
               }
               isDisabled={!isAvailable}
-              className="w-full sm:w-[max(170px,50%)] text-nowrap self-end"
+              className={cn(
+                "w-full text-nowrap self-end",
+                appLanguage === "eng" && "sm:w-[max(170px,50%)]",
+                appLanguage === "ukr" && "sm:w-[max(240px,50%)]"
+              )}
               onClick={handleAddItemToCart}
             />
           </div>

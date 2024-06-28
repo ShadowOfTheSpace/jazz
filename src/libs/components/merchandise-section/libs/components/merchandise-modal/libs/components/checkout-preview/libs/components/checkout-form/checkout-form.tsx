@@ -4,6 +4,7 @@ import { useCallback, useState } from "react";
 import { Button, Input } from "~components/components";
 import { useAppForm, useLanguageContext } from "~hooks/hooks";
 import { type CartItem, type OrderInfo } from "~types/types";
+import { cn } from "~utils/utils";
 import { orderInfoValidationSchema } from "~validation-schemas/validation-schemas";
 
 type Properties = {
@@ -17,7 +18,7 @@ const CheckoutForm: React.FC<Properties> = ({
   cartItems,
   totalPrice,
 }) => {
-  const { translate } = useLanguageContext();
+  const { appLanguage, translate } = useLanguageContext();
 
   const { control, errors, handleSubmit } = useAppForm<OrderInfo>({
     defaultValues: {
@@ -114,7 +115,13 @@ const CheckoutForm: React.FC<Properties> = ({
         hasLabel
       />
       <div className="flex flex-col gap-y-[10px] w-full self-start">
-        <p className="text-[18px] md:text-[22px]">
+        <p
+          className={cn(
+            "text-[18px] md:text-[22px]",
+            appLanguage === "eng" && "font-kameron",
+            appLanguage === "ukr" && "font-inter"
+          )}
+        >
           {translate("Total price")}:
           <span className="font-bold text-jz-gold">⠀€{totalPrice}</span>
         </p>
