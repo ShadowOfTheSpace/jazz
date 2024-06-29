@@ -47,6 +47,8 @@ const SubscribeSection: React.FC = () => {
                 appLanguage === "eng" &&
                   "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
                 appLanguage === "ukr" &&
+                  "font-oswald text-[24px] lg:text-[28px]",
+                appLanguage === "blr" &&
                   "font-oswald text-[24px] lg:text-[28px]"
               )}
               initial={{ x: "var(--subtitle-x-offset)", opacity: 0 }}
@@ -101,7 +103,8 @@ const SubscribeSection: React.FC = () => {
               "font-bold text-balance text-center",
               appLanguage === "eng" &&
                 "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
-              appLanguage === "ukr" && "font-oswald text-[24px] lg:text-[28px]"
+              appLanguage === "ukr" && "font-oswald text-[24px] lg:text-[28px]",
+              appLanguage === "blr" && "font-oswald text-[24px] lg:text-[28px]"
             )}
           >
             {translate("Thank you for subscribing")}{" "}

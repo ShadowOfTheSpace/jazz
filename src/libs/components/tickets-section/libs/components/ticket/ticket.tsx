@@ -34,7 +34,8 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
           className={cn(
             "mb-2 line-clamp-2 h-[calc(1.25*1em*2)] font-bold text-[26px] text-jz-gold sm:text-[32px] leading-tight",
             appLanguage === "eng" && "font-kaushan",
-            appLanguage === "ukr" && "font-marck"
+            appLanguage === "ukr" && "font-marck",
+            appLanguage === "blr" && "font-marck"
           )}
           title={title}
         >
@@ -44,7 +45,8 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
           className={cn(
             "text-[16px] sm:text-[20px]",
             appLanguage === "eng" && "font-kameron",
-            appLanguage === "ukr" && "font-inter"
+            appLanguage === "ukr" && "font-inter",
+            appLanguage === "blr" && "font-inter"
           )}
           title={`${city}, ${country}`}
         >
@@ -54,7 +56,8 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
           className={cn(
             "text-[16px] sm:text-[20px] truncate",
             appLanguage === "eng" && "font-kameron",
-            appLanguage === "ukr" && "font-inter"
+            appLanguage === "ukr" && "font-inter",
+            appLanguage === "blr" && "font-inter"
           )}
           title={place}
         >
@@ -64,7 +67,8 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
           className={cn(
             "text-[16px] sm:text-[20px]",
             appLanguage === "eng" && "font-kameron",
-            appLanguage === "ukr" && "font-inter"
+            appLanguage === "ukr" && "font-inter",
+            appLanguage === "blr" && "font-inter"
           )}
           title={`${date}⠀–⠀${time}`}
         >

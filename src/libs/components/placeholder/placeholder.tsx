@@ -16,7 +16,8 @@ const Placeholder: React.FC<Properties> = ({ description, title }) => {
           "text-[32px] text-jz-gold sm:text-[60px]",
           appLanguage === "eng" &&
             "font-karantina capitalize tracking-[0.05em]",
-          appLanguage === "ukr" && "font-oswald"
+          appLanguage === "ukr" && "font-oswald",
+          appLanguage === "blr" && "font-oswald"
         )}
       >
         {title}
@@ -25,7 +26,8 @@ const Placeholder: React.FC<Properties> = ({ description, title }) => {
         className={cn(
           "text-[14px] text-balance text-center text-jz-light-gray sm:text-[24px]",
           appLanguage === "eng" && "font-kameron",
-          appLanguage === "ukr" && "font-inter"
+          appLanguage === "ukr" && "font-inter",
+          appLanguage === "blr" && "font-inter"
         )}
       >
         {description}

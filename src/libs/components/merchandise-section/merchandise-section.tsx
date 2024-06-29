@@ -45,6 +45,8 @@ const MerchandiseSection: React.FC = () => {
               appLanguage === "eng" &&
                 "font-karantina sm:text-[70px] xl:text-[80px] tracking-[0.05em]",
               appLanguage === "ukr" &&
+                "font-oswald sm:text-[60px] xl:text-[75px]",
+              appLanguage === "blr" &&
                 "font-oswald sm:text-[60px] xl:text-[75px]"
             )}
           >
@@ -54,7 +56,8 @@ const MerchandiseSection: React.FC = () => {
             className={cn(
               "text-[14px] text-balance sm:text-[18px] xl:text-[20px]",
               appLanguage === "eng" && "font-kameron tracking-[0.05em]",
-              appLanguage === "ukr" && "font-inter"
+              appLanguage === "ukr" && "font-inter",
+              appLanguage === "blr" && "font-inter"
             )}
             delay={0.3}
           >

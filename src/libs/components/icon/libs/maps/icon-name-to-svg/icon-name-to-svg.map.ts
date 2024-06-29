@@ -5,6 +5,7 @@ import CartIcon from "~assets/icons/cart.svg?react";
 import CloseIcon from "~assets/icons/close.svg?react";
 import DonationAlertsIcon from "~assets/icons/donation-alerts.svg?react";
 import FacebookIcon from "~assets/icons/facebook.svg?react";
+import flagBlrIcon from "~assets/icons/flag-blr.svg?react";
 import flagGbrIcon from "~assets/icons/flag-gbr.svg?react";
 import flagUkrIcon from "~assets/icons/flag-ukr.svg?react";
 import InstagramIcon from "~assets/icons/instagram.svg?react";
@@ -32,6 +33,7 @@ const iconNameToSvg: Record<
   close: CloseIcon,
   donationAlerts: DonationAlertsIcon,
   facebook: FacebookIcon,
+  flagBlr: flagBlrIcon,
   flagGbr: flagGbrIcon,
   flagUkr: flagUkrIcon,
   instagram: InstagramIcon,

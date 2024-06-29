@@ -1,306 +1,382 @@
 {
   "Events": {
     "eng": "Events",
-    "ukr": "Події"
+    "ukr": "Події",
+    "blr": "Падзеі"
   },
   "News": {
     "eng": "News",
-    "ukr": "Новини"
+    "ukr": "Новини",
+    "blr": "Навіны"
   },
   "Merch": {
     "eng": "Merch",
-    "ukr": "Мерч"
+    "ukr": "Мерч",
+    "blr": "Мерч"
   },
   "Gallery": {
     "eng": "Gallery",
-    "ukr": "Галерея"
+    "ukr": "Галерея",
+    "blr": "Галерэя"
   },
   "Support": {
     "eng": "Support",
-    "ukr": "Підтримка"
+    "ukr": "Підтримка",
+    "blr": "Падтрымка"
   },
   "Contacts": {
     "eng": "Contacts",
-    "ukr": "Контакти"
+    "ukr": "Контакти",
+    "blr": "Кантакты"
   },
   "Thinking Jazz": {
     "eng": "Thinking Jazz",
-    "ukr": "У Думках Джаз"
+    "ukr": "У Думках Джаз",
+    "blr": "У Думках Джаз"
   },
   "Meaning": {
     "eng": "Meaning",
-    "ukr": "Поруч"
+    "ukr": "Поруч",
+    "blr": "Побач"
   },
   "Pavel Arakelian": {
     "eng": "Pavel Arakelian",
-    "ukr": "Павло Аракелян"
+    "ukr": "Павло Аракелян",
+    "blr": "Павел Аракелян"
   },
   "Hero text": {
     "eng": "Met Pavel Arakelian and The Outsiders at a secret jam session or at a crowdy performance? Have a cooperation proposal or an idea for collaboration? Look for an opportunity to make your event unforgettable or just want to keep your promise to share a glass of bourbon with Pavel?",
-    "ukr": "Зустрілися з Павлом Аракеляном і The Outsiders на таємному джем-сейшні чи на масовому виступі? Маєте пропозицію чи ідею щодо співпраці? Шукаєте можливість зробити свою подію незабутньою чи просто хочете стримати обіцянку випити з Павлом келих бурбону?"
+    "ukr": "Зустрілися з Павлом Аракеляном і The Outsiders на таємному джем-сейшні чи на масовому виступі? Маєте пропозицію чи ідею щодо співпраці? Шукаєте можливість зробити свою подію незабутньою чи просто хочете стримати обіцянку випити з Павлом келих бурбону?",
+    "blr": "Сустрэлі Паўла Аракеляна і яго бэнд The Outsiders на сакрэтным джэм-сэйшане альбо падчас солд-аўт выступу? Маеце прапанову для супрацы альбо ідэю для сумеснай рэалізацыі? Шукаеце магчымасць зрабіць Вашую падзею незабыўнай альбо папросту жадаеце выканаць дадзенае абяцанне падзяліць келішак бурбону з Паўлам?"
   },
   "Say HI now": {
     "eng": "Say HI now!",
-    "ukr": "Не зволікай, привітайся!"
+    "ukr": "Не зволікай, привітайся!",
+    "blr": "Вітаймася!"
   },
   "Play": {
     "eng": "Play",
-    "ukr": "Відтворити"
+    "ukr": "Відтворити",
+    "blr": "Граць"
   },
   "Pause": {
     "eng": "Pause",
-    "ukr": "Зупинити"
+    "ukr": "Зупинити",
+    "blr": "Прыпыніць"
   },
   "Grab Intro": {
     "eng": "Grab Intro",
-    "ukr": "Флеш-інтро"
+    "ukr": "Флеш-intro",
+    "blr": "Флэш-intro"
   },
   "Upcoming Events": {
     "eng": "Upcoming Events",
-    "ukr": "Майбутні події"
+    "ukr": "Майбутні події",
+    "blr": "Бліжэйшыя падзеі"
   },
   "Tickets not available": {
     "eng": "Tickets not available",
-    "ukr": "Квитків немає в наявності"
+    "ukr": "Квитків немає в наявності",
+    "blr": "Квіткоў няма"
   },
   "Tickets placeholder text": {
     "eng": "We apologize, but there are currently no tickets available for purchase. Please check back later for updates or subscribe to our newsletter to be the first to know when tickets go on sale.",
-    "ukr": "Приносимо свої вибачення, але квитків наразі немає в наявності. Перегляньте оновлення пізніше або підпишіться на нашу розсилку, щоб першими знати, коли квитки надійдуть у продаж."
+    "ukr": "Приносимо свої вибачення, але квитків наразі немає в наявності. Перегляньте оновлення пізніше або підпишіться на нашу розсилку, щоб першими знати, коли квитки надійдуть у продаж.",
+    "blr": "Выбачаемся, на дадзены момант квіткоў у продажы няма. Калі ласка, спраўдзіце пазней альбо падпішыцеся на нашую рассылку, каб першымі даведацца пра пачатак продажу квіткоў."
   },
   "Tickets": {
     "eng": "Tickets",
-    "ukr": "Квитки"
+    "ukr": "Квитки",
+    "blr": "Квіткі"
   },
   "Previous slide": {
     "eng": "Previous slide",
-    "ukr": "Попередній слайд"
+    "ukr": "Попередній слайд",
+    "blr": "Папярэдні слайд"
   },
   "Next slide": {
     "eng": "Next slide",
-    "ukr": "Наступний слайд"
+    "ukr": "Наступний слайд",
+    "blr": "Наступны слайд"
   },
   "Slide": {
     "eng": "Slide",
-    "ukr": "Слайд"
+    "ukr": "Слайд",
+    "blr": "Слайд"
   },
   "Life Vibes": {
     "eng": "Life Vibes",
-    "ukr": "Моменти з життя"
+    "ukr": "Моменти з життя",
+    "blr": "Жыццярыс"
   },
   "Exclusive Merch": {
     "eng": "Exclusive Merch",
-    "ukr": "Ексклюзивний мерч"
+    "ukr": "Ексклюзивний мерч",
+    "blr": "Эксклюзіўны мерч"
   },
   "Merch text": {
     "eng": "Long-awaited exquisite fashion brand line inspired and designed by Pavel Arakelian. Flavored with unique music vibes. Jack Daniels edition. For real fans and jazz connoisseurs only!",
-    "ukr": "Довгоочікувана вишукана лінійка модного бренду, натхненна та розроблена Павлом Аракеляном. Наповнений унікальними музичними барвами. Серія Jack Daniels. Лише для справжніх шанувальників і поціновувачів джазу!"
+    "ukr": "Довгоочікувана вишукана лінійка модного бренду, натхненна та розроблена Павлом Аракеляном. Наповнений унікальними музичними барвами. Серія Jack Daniels. Лише для справжніх шанувальників і поціновувачів джазу!",
+    "blr": "Доўгачаканая вытанчаная модная брэнд-лінія, натхнёная і здызайнаваная Паўлам Аракелянам. З густам унікальных музычных вайбаў. Серыя Jack Daniels. Толькі для сапраўдных фанаў і знаўцаў джазу!"
   },
   "Merchandise not available": {
     "eng": "Merchandise not available",
-    "ukr": "Мерчу немає в наявності"
+    "ukr": "Мерчу немає в наявності",
+    "blr": "Мерчу няма ў наяўнасці"
   },
   "Merch placeholder text": {
     "eng": "We apologize, but there are currently no merchandise available for purchase. Please check back later for updates or subscribe to our newsletter to be the first to know when merchandise go on sale.",
-    "ukr": "Ми приносимо свої вибачення, але товарів наразі немає в наявності. Перегляньте оновлення пізніше або підпишіться на нашу розсилку, щоб першими знати, коли товари надійдуть у продаж."
+    "ukr": "Ми приносимо свої вибачення, але товарів наразі немає в наявності. Перегляньте оновлення пізніше або підпишіться на нашу розсилку, щоб першими знати, коли товари надійдуть у продаж.",
+    "blr": "Выбачаемся, на дадзены момант мерчу у продажы няма. Калі ласка, спраўдзіце пазней альбо падпішыцеся на нашую рассылку, каб першымі даведацца пра пачатак продажу мерчу."
   },
   "Order now": {
     "eng": "Order now",
-    "ukr": "Замовити зараз"
+    "ukr": "Замовити зараз",
+    "blr": "Замоў зараз"
   },
   "Open Cart": {
     "eng": "Open Cart",
-    "ukr": "Відкрити кошик"
+    "ukr": "Відкрити кошик",
+    "blr": "Адчыніць кошык"
   },
   "Cart is empty": {
     "eng": "Cart is empty",
-    "ukr": "Кошик порожній"
+    "ukr": "Кошик порожній",
+    "blr": "Кошык пусты"
   },
   "But you can change it!": {
     "eng": "But you can change it!",
-    "ukr": "Але Ви можете це змінити!"
+    "ukr": "Але Ви можете це змінити!",
+    "blr": "Можна хутка змяніць!"
   },
   "Close": {
     "eng": "Close",
-    "ukr": "Закрити"
+    "ukr": "Закрити",
+    "blr": "Зачыніць"
   },
   "Sizes": {
     "eng": "Sizes",
-    "ukr": "Розміри"
+    "ukr": "Розміри",
+    "blr": "Памеры"
   },
   "Quantity": {
     "eng": "Quantity",
-    "ukr": "Кількість"
+    "ukr": "Кількість",
+    "blr": "Колькасць"
   },
   "Add to cart": {
     "eng": "Add to cart",
-    "ukr": "Додати до кошика"
+    "ukr": "Додати до кошика",
+    "blr": "Дадаць у кошык"
   },
   "Not available": {
     "eng": "Not available",
-    "ukr": "Не в наявності"
+    "ukr": "Не в наявності",
+    "blr": "Няма ў наяўнасці"
   },
   "Size": {
     "eng": "Size",
-    "ukr": "Розмір"
+    "ukr": "Розмір",
+    "blr": "Памер"
   },
   "Price": {
     "eng": "Price",
-    "ukr": "Ціна"
+    "ukr": "Ціна",
+    "blr": "Цана"
   },
   "Remove": {
     "eng": "Remove",
-    "ukr": "Видалити"
+    "ukr": "Видалити",
+    "blr": "Выдаліць"
   },
   "Full name": {
     "eng": "Full name",
-    "ukr": "Ім’я та прізвище"
+    "ukr": "Ім’я та прізвище",
+    "blr": "Поўнае імя"
   },
   "Phone": {
     "eng": "Phone",
-    "ukr": "Номер телефону"
+    "ukr": "Номер телефону",
+    "blr": "Тэлефон"
   },
   "Shipping address": {
     "eng": "Shipping address",
-    "ukr": "Адреса доставки"
+    "ukr": "Адреса доставки",
+    "blr": "Адрас дастаўкі"
   },
   "Additional comments": {
     "eng": "Additional comments",
-    "ukr": "Додаткові коментарі"
+    "ukr": "Додаткові коментарі",
+    "blr": "Дадатковыя каменты"
   },
   "Total price": {
     "eng": "Total price",
-    "ukr": "Загальна ціна"
+    "ukr": "Загальна ціна",
+    "blr": "Агульная цана"
   },
   "Order": {
     "eng": "Order",
-    "ukr": "Замовити"
+    "ukr": "Замовити",
+    "blr": "Замова"
   },
   "Order completed": {
     "eng": "Order completed",
-    "ukr": "Замовлення надіслано"
+    "ukr": "Замовлення надіслано",
+    "blr": "Замова завершаная"
   },
   "Welcome to Jazz Brilliance": {
     "eng": "Welcome to Jazz Brilliance",
-    "ukr": "Ласкаво просимо до Джазу"
+    "ukr": "Ласкаво просимо до Джазу",
+    "blr": "Вітаем у Сусвеце Джазу"
   },
   "Subscribe to secret updates": {
     "eng": "Subscribe to secret updates",
-    "ukr": "Підписуйтесь на секретні оновлення"
+    "ukr": "Підписуйтесь на секретні оновлення",
+    "blr": "Падпішыся на сакрэтныя абвесткі"
   },
   "Subscribe": {
     "eng": "Subscribe",
-    "ukr": "Підписатися"
+    "ukr": "Підписатися",
+    "blr": "Падпіска"
   },
   "Thank you for subscribing": {
     "eng": "Thank you for subscribing to our newsletters",
-    "ukr": "Дякуємо за підписку на нашу розсилку"
+    "ukr": "Дякуємо за підписку на нашу розсилку",
+    "blr": "Дзякуй за падпіску на нашыя абвесткі"
   },
   "Navigation": {
     "eng": "Navigation",
-    "ukr": "Навігація"
+    "ukr": "Навігація",
+    "blr": "Навігацыя"
   },
   "Support Pavel on": {
     "eng": "Support Pavel on",
-    "ukr": "Підтримайте Павла на"
+    "ukr": "Підтримайте Павла на",
+    "blr": "Падтрымай Паўла тут"
   },
   "Contact us": {
     "eng": "Contact us",
-    "ukr": "Зв’яжіться з нами"
+    "ukr": "Зворотній зв'язок",
+    "blr": "Зваротная сувязь"
   },
   "Contact": {
     "eng": "Contact",
-    "ukr": "Зв’язатися"
+    "ukr": "Зв’язатися",
+    "blr": "Кантакт"
   },
   "Name": {
     "eng": "Name",
-    "ukr": "Ім'я"
+    "ukr": "Ім'я",
+    "blr": "Імя"
   },
   "Send": {
     "eng": "Send",
-    "ukr": "Надіслати"
+    "ukr": "Надіслати",
+    "blr": "Даслаць"
   },
   "We will be in touch soon": {
     "eng": "We will be in touch soon!",
-    "ukr": "Ми зв'яжемося найближчим часом!"
+    "ukr": "Ми зв'яжемося найближчим часом!",
+    "blr": "Мы хутка звяжамся з Вамі!"
   },
   "Contact sent": {
     "eng": "Contact sent",
-    "ukr": "Контакт надіслано"
+    "ukr": "Контакт надіслано",
+    "blr": "Кантакт дасланы"
   },
   "We will contact you soon": {
     "eng": "We will contact you soon",
-    "ukr": "Ми зв'яжемося з Вами якнайшвидше"
+    "ukr": "Ми зв'яжемося з Вами якнайшвидше",
+    "blr": "Мы хутка Вам адкажам"
   },
   "Pavel's Instagram": {
     "eng": "Pavel's Instagram",
-    "ukr": "Інстаграм Павла"
+    "ukr": "Інстаграм Павла",
+    "blr": "Інстаграм Паўла"
   },
   "Pavel's Facebook": {
     "eng": "Pavel's Facebook",
-    "ukr": "Фейсбук Павла"
+    "ukr": "Фейсбук Павла",
+    "blr": "Фэйсбук Паўла"
   },
   "Pavel's YouTube": {
     "eng": "Pavel's YouTube",
-    "ukr": "Ютуб Павла"
+    "ukr": "Ютуб Павла",
+    "blr": "Ютуб Паўла"
   },
   "Pavel's Tinder": {
     "eng": "Pavel's Tinder",
-    "ukr": "Тіндер Павла"
+    "ukr": "Тіндер Павла",
+    "blr": "Тындар Паўла"
   },
   "Email is required.": {
     "eng": "Email is required.",
-    "ukr": "Email обов’язковий."
+    "ukr": "Email обов’язковий.",
+    "blr": "Патрэбны email."
   },
   "Email is not valid.": {
     "eng": "Email is not valid.",
-    "ukr": "Email введено неправильно."
+    "ukr": "Email введено неправильно.",
+    "blr": "Email несапраўдны."
   },
   "Full name is required.": {
     "eng": "Full name is required.",
-    "ukr": "Ім’я та прізвище обов’язкові."
+    "ukr": "Ім’я та прізвище обов’язкові.",
+    "blr": "Патрэбнае поўнае імя."
   },
   "Too short full name.": {
     "eng": "Too short full name.",
-    "ukr": "Занадто короткі ім’я та прізвище."
+    "ukr": "Занадто короткі ім’я та прізвище.",
+    "blr": "Закароткае поўнае імя."
   },
   "Too long full name.": {
     "eng": "Too long full name.",
-    "ukr": "Занадто довгі ім’я та прізвище."
+    "ukr": "Занадто довгі ім’я та прізвище.",
+    "blr": "Задоўгае поўнае імя."
   },
   "Phone number is required.": {
     "eng": "Phone number is required.",
-    "ukr": "Номер телефону обов'язковий."
+    "ukr": "Номер телефону обов'язковий.",
+    "blr": "Патрэбны нумар тэлефона."
   },
   "Phone number is not valid.": {
     "eng": "Phone number is not valid.",
-    "ukr": "Номер телефону введено неправильно."
+    "ukr": "Номер телефону введено неправильно.",
+    "blr": "Нумар тэлефона несапраўдны."
   },
   "Country code is missing.": {
     "eng": "Country code is missing.",
-    "ukr": "Код країни пропущено."
+    "ukr": "Код країни пропущено.",
+    "blr": "Не хапае коду краіны."
   },
   "Shipping address is required.": {
     "eng": "Shipping address is required.",
-    "ukr": "Адреса доставки обов’язкова."
+    "ukr": "Адреса доставки обов’язкова.",
+    "blr": "Патрэбная адрэса дастаўкі."
   },
   "Too long shipping address.": {
     "eng": "Too long shipping address.",
-    "ukr": "Занадто довга адреса доставки."
+    "ukr": "Занадто довга адреса доставки.",
+    "blr": "Задоўгая адрэса дастаўкі."
   },
   "Max comments length is 300 symbols.": {
     "eng": "Max comments length is 300 symbols.",
-    "ukr": "Максимальна довжина коментарів – 300 символів."
+    "ukr": "Максимальна довжина коментарів – 300 символів.",
+    "blr": "Максімальная даўжыня камэнту 300 сімвалаў."
   },
   "Name is required.": {
     "eng": "Name is required.",
-    "ukr": "Ім’я обов’язкове."
+    "ukr": "Ім’я обов’язкове.",
+    "blr": "Патрэбнае імя."
   },
   "Too short name.": {
     "eng": "Too short name.",
-    "ukr": "Занадто коротке ім’я."
+    "ukr": "Занадто коротке ім’я.",
+    "blr": "Закароткае імя."
   },
   "Too long name.": {
     "eng": "Too long name.",
-    "ukr": "Занадто довге ім’я."
+    "ukr": "Занадто довге ім’я.",
+    "blr": "Задоўгае імя."
   }
 }

@@ -15,7 +15,8 @@ const DonationPlatforms: React.FC = () => {
               className={cn(
                 "flex items-center gap-[10px] max-w-max text-[16px] text-jz-light-gray lg:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors",
                 appLanguage === "eng" && "font-kameron",
-                appLanguage === "ukr" && "font-inter"
+                appLanguage === "ukr" && "font-inter",
+                appLanguage === "blr" && "font-inter"
               )}
               href={platform.href}
               isOpenInNewPage

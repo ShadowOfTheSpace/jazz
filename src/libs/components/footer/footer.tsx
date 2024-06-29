@@ -20,6 +20,8 @@ const Footer: React.FC = () => {
                   appLanguage === "eng" &&
                     "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
                   appLanguage === "ukr" &&
+                    "font-oswald text-[24px] lg:text-[28px]",
+                  appLanguage === "blr" &&
                     "font-oswald text-[24px] lg:text-[28px]"
                 )}
               >
@@ -31,7 +33,8 @@ const Footer: React.FC = () => {
                 itemClassName={cn(
                   "text-[16px] lg:text-[20px] text-jz-light-gray",
                   appLanguage === "eng" && "font-kameron",
-                  appLanguage === "ukr" && "font-inter"
+                  appLanguage === "ukr" && "font-inter",
+                  appLanguage === "blr" && "font-inter"
                 )}
               />
             </div>
@@ -42,6 +45,8 @@ const Footer: React.FC = () => {
                   appLanguage === "eng" &&
                     "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
                   appLanguage === "ukr" &&
+                    "font-oswald text-[24px] lg:text-[28px]",
+                  appLanguage === "blr" &&
                     "font-oswald text-[24px] lg:text-[28px]"
                 )}
               >
@@ -56,7 +61,8 @@ const Footer: React.FC = () => {
               className={cn(
                 "flex flex-col gap-y-[10px] md:order-4 w-max md:w-max",
                 appLanguage === "eng" && "sm:w-[157px]",
-                appLanguage === "ukr" && "sm:w-[226px]"
+                appLanguage === "ukr" && "sm:w-[226px]",
+                appLanguage === "blr" && "sm:w-[220px]"
               )}
             >
               <h3
@@ -65,6 +71,8 @@ const Footer: React.FC = () => {
                   appLanguage === "eng" &&
                     "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
                   appLanguage === "ukr" &&
+                    "font-oswald text-[24px] lg:text-[28px]",
+                  appLanguage === "blr" &&
                     "font-oswald text-[24px] lg:text-[28px]"
                 )}
               >

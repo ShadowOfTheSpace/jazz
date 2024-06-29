@@ -12,6 +12,11 @@ const LANGUAGES = [
     icon: "flagUkr",
     name: AppLanguage.UKR,
   },
+  {
+    code: appLanguageToLocalizationKey[AppLanguage.BLR],
+    icon: "flagBlr",
+    name: AppLanguage.BLR,
+  },
 ] as const;
 
 export { LANGUAGES };
