@@ -5,6 +5,8 @@ type IconName =
   | "close"
   | "donationAlerts"
   | "facebook"
+  | "flagUA"
+  | "flagUK"
   | "instagram"
   | "leftArrow"
   | "minus"

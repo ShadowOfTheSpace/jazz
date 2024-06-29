@@ -5,6 +5,7 @@ import Logo from "~assets/images/logo.svg?react";
 import { Button, Link, Navigation, Socials } from "~components/components";
 import { AppRoute } from "~enums/enums";
 import { useLanguageContext, useScrollLock } from "~hooks/hooks";
+import { LanguageSelector } from "./libs/components/components";
 
 const Header: React.FC = () => {
   const { translate } = useLanguageContext();
@@ -65,9 +66,10 @@ const Header: React.FC = () => {
               iconName="close"
               onClick={handleSidebarClose}
             />
-            <div className="flex lg:flex-row flex-col justify-between gap-[24px] lg:m-0 mt-[120px] mb-[36px] px-[20px] lg:px-0 w-full max-w-[764px] lg-[150px]">
+            <div className="relative flex lg:flex-row flex-col justify-between lg:items-center gap-[24px] lg:m-0 mt-[120px] mb-[36px] px-[20px] lg:px-0 w-full max-w-max lg-[150px]">
               <Navigation onClick={handleSidebarClose} />
               <Socials />
+              <LanguageSelector isOpen={isSidebarShown} />
             </div>
           </motion.div>
         </RemoveScroll>

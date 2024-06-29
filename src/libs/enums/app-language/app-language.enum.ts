@@ -1,6 +1,6 @@
 const AppLanguage = {
   ENG: "English",
-  UKR: "Ukrainian",
+  UKR: "Українська",
 } as const;
 
 export { AppLanguage };
