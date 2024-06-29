@@ -5,8 +5,8 @@ import CartIcon from "~assets/icons/cart.svg?react";
 import CloseIcon from "~assets/icons/close.svg?react";
 import DonationAlertsIcon from "~assets/icons/donation-alerts.svg?react";
 import FacebookIcon from "~assets/icons/facebook.svg?react";
-import flagUAIcon from "~assets/icons/flag-ua.svg?react";
-import flagUKIcon from "~assets/icons/flag-uk.svg?react";
+import flagGbrIcon from "~assets/icons/flag-gbr.svg?react";
+import flagUkrIcon from "~assets/icons/flag-ukr.svg?react";
 import InstagramIcon from "~assets/icons/instagram.svg?react";
 import LeftArrowIcon from "~assets/icons/left-arrow.svg?react";
 import MinusIcon from "~assets/icons/minus.svg?react";
@@ -32,8 +32,8 @@ const iconNameToSvg: Record<
   close: CloseIcon,
   donationAlerts: DonationAlertsIcon,
   facebook: FacebookIcon,
-  flagUA: flagUAIcon,
-  flagUK: flagUKIcon,
+  flagGbr: flagGbrIcon,
+  flagUkr: flagUkrIcon,
   instagram: InstagramIcon,
   leftArrow: LeftArrowIcon,
   minus: MinusIcon,

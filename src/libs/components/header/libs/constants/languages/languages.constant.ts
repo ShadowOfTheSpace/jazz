@@ -4,12 +4,12 @@ import { appLanguageToLocalizationKey } from "~maps/maps";
 const LANGUAGES = [
   {
     code: appLanguageToLocalizationKey[AppLanguage.ENG],
-    icon: "flagUK",
+    icon: "flagGbr",
     name: AppLanguage.ENG,
   },
   {
     code: appLanguageToLocalizationKey[AppLanguage.UKR],
-    icon: "flagUA",
+    icon: "flagUkr",
     name: AppLanguage.UKR,
   },
 ] as const;
