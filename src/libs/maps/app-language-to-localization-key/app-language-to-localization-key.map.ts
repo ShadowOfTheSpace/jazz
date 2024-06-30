@@ -1,9 +1,9 @@
 import { AppLanguage } from "~enums/enums";
 
 const appLanguageToLocalizationKey = {
-  [AppLanguage.BLR]: "blr",
-  [AppLanguage.ENG]: "eng",
-  [AppLanguage.UKR]: "ukr",
+  [AppLanguage.BY]: "by",
+  [AppLanguage.EN]: "en",
+  [AppLanguage.UA]: "ua",
 } as const;
 
 export { appLanguageToLocalizationKey };

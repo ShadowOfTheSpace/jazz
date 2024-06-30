@@ -38,9 +38,9 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
         <h3
           className={cn(
             "font-bold text-[18px] text-jz-gold md:text-[20px] truncate",
-            appLanguage === "eng" && "font-kaushan",
-            appLanguage === "ukr" && "font-marck",
-            appLanguage === "blr" && "font-marck"
+            appLanguage === "en" && "font-kaushan",
+            appLanguage === "ua" && "font-marck",
+            appLanguage === "by" && "font-marck"
           )}
           title={title}
         >
@@ -50,9 +50,9 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
           className={cn(
             "text-jz-light-gray",
             !selectedSize && "opacity-0",
-            appLanguage === "eng" && "font-kameron",
-            appLanguage === "ukr" && "font-inter",
-            appLanguage === "blr" && "font-inter"
+            appLanguage === "en" && "font-kameron",
+            appLanguage === "ua" && "font-inter",
+            appLanguage === "by" && "font-inter"
           )}
         >
           {translate("Size")}:⠀
@@ -61,9 +61,9 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
         <p
           className={cn(
             "text-jz-light-gray",
-            appLanguage === "eng" && "font-kameron",
-            appLanguage === "ukr" && "font-inter",
-            appLanguage === "blr" && "font-inter"
+            appLanguage === "en" && "font-kameron",
+            appLanguage === "ua" && "font-inter",
+            appLanguage === "by" && "font-inter"
           )}
         >
           {translate("Quantity")}:⠀
@@ -72,9 +72,9 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
         <p
           className={cn(
             "text-jz-light-gray",
-            appLanguage === "eng" && "font-kameron",
-            appLanguage === "ukr" && "font-inter",
-            appLanguage === "blr" && "font-inter"
+            appLanguage === "en" && "font-kameron",
+            appLanguage === "ua" && "font-inter",
+            appLanguage === "by" && "font-inter"
           )}
         >
           {translate("Price")}:⠀

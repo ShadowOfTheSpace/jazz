@@ -3,19 +3,19 @@ import { appLanguageToLocalizationKey } from "~maps/maps";
 
 const LANGUAGES = [
   {
-    code: appLanguageToLocalizationKey[AppLanguage.ENG],
-    icon: "flagGbr",
-    name: AppLanguage.ENG,
+    code: appLanguageToLocalizationKey[AppLanguage.EN],
+    icon: "flagGB",
+    name: AppLanguage.EN,
   },
   {
-    code: appLanguageToLocalizationKey[AppLanguage.UKR],
-    icon: "flagUkr",
-    name: AppLanguage.UKR,
+    code: appLanguageToLocalizationKey[AppLanguage.UA],
+    icon: "flagUA",
+    name: AppLanguage.UA,
   },
   {
-    code: appLanguageToLocalizationKey[AppLanguage.BLR],
-    icon: "flagBlr",
-    name: AppLanguage.BLR,
+    code: appLanguageToLocalizationKey[AppLanguage.BY],
+    icon: "flagBY",
+    name: AppLanguage.BY,
   },
 ] as const;
 

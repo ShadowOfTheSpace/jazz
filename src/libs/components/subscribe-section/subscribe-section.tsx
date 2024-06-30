@@ -44,12 +44,11 @@ const SubscribeSection: React.FC = () => {
               className={cn(
                 "font-bold",
                 "[--subtitle-x-offset:-10px] md:[--subtitle-x-offset:-20px]",
-                appLanguage === "eng" &&
+                appLanguage === "en" &&
                   "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
-                appLanguage === "ukr" &&
+                appLanguage === "ua" &&
                   "font-oswald text-[24px] lg:text-[28px]",
-                appLanguage === "blr" &&
-                  "font-oswald text-[24px] lg:text-[28px]"
+                appLanguage === "by" && "font-oswald text-[24px] lg:text-[28px]"
               )}
               initial={{ x: "var(--subtitle-x-offset)", opacity: 0 }}
               transition={{ duration: 1 }}
@@ -101,10 +100,10 @@ const SubscribeSection: React.FC = () => {
           <h3
             className={cn(
               "font-bold text-balance text-center",
-              appLanguage === "eng" &&
+              appLanguage === "en" &&
                 "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
-              appLanguage === "ukr" && "font-oswald text-[24px] lg:text-[28px]",
-              appLanguage === "blr" && "font-oswald text-[24px] lg:text-[28px]"
+              appLanguage === "ua" && "font-oswald text-[24px] lg:text-[28px]",
+              appLanguage === "by" && "font-oswald text-[24px] lg:text-[28px]"
             )}
           >
             {translate("Thank you for subscribing")}{" "}

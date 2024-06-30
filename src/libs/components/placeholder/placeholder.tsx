@@ -14,10 +14,9 @@ const Placeholder: React.FC<Properties> = ({ description, title }) => {
       <h1
         className={cn(
           "text-[32px] text-jz-gold sm:text-[60px]",
-          appLanguage === "eng" &&
-            "font-karantina capitalize tracking-[0.05em]",
-          appLanguage === "ukr" && "font-oswald",
-          appLanguage === "blr" && "font-oswald"
+          appLanguage === "en" && "font-karantina capitalize tracking-[0.05em]",
+          appLanguage === "ua" && "font-oswald",
+          appLanguage === "by" && "font-oswald"
         )}
       >
         {title}
@@ -25,9 +24,9 @@ const Placeholder: React.FC<Properties> = ({ description, title }) => {
       <p
         className={cn(
           "text-[14px] text-balance text-center text-jz-light-gray sm:text-[24px]",
-          appLanguage === "eng" && "font-kameron",
-          appLanguage === "ukr" && "font-inter",
-          appLanguage === "blr" && "font-inter"
+          appLanguage === "en" && "font-kameron",
+          appLanguage === "ua" && "font-inter",
+          appLanguage === "by" && "font-inter"
         )}
       >
         {description}

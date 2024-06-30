@@ -17,11 +17,11 @@ const Footer: React.FC = () => {
               <h3
                 className={cn(
                   "font-bold",
-                  appLanguage === "eng" &&
+                  appLanguage === "en" &&
                     "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
-                  appLanguage === "ukr" &&
+                  appLanguage === "ua" &&
                     "font-oswald text-[24px] lg:text-[28px]",
-                  appLanguage === "blr" &&
+                  appLanguage === "by" &&
                     "font-oswald text-[24px] lg:text-[28px]"
                 )}
               >
@@ -32,9 +32,9 @@ const Footer: React.FC = () => {
                 displayVariant="grid"
                 itemClassName={cn(
                   "text-[16px] lg:text-[20px] text-jz-light-gray",
-                  appLanguage === "eng" && "font-kameron",
-                  appLanguage === "ukr" && "font-inter",
-                  appLanguage === "blr" && "font-inter"
+                  appLanguage === "en" && "font-kameron",
+                  appLanguage === "ua" && "font-inter",
+                  appLanguage === "by" && "font-inter"
                 )}
               />
             </div>
@@ -42,11 +42,11 @@ const Footer: React.FC = () => {
               <h3
                 className={cn(
                   "font-bold",
-                  appLanguage === "eng" &&
+                  appLanguage === "en" &&
                     "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
-                  appLanguage === "ukr" &&
+                  appLanguage === "ua" &&
                     "font-oswald text-[24px] lg:text-[28px]",
-                  appLanguage === "blr" &&
+                  appLanguage === "by" &&
                     "font-oswald text-[24px] lg:text-[28px]"
                 )}
               >
@@ -60,19 +60,19 @@ const Footer: React.FC = () => {
               id="contacts"
               className={cn(
                 "flex flex-col gap-y-[10px] md:order-4 w-max md:w-max",
-                appLanguage === "eng" && "sm:w-[157px]",
-                appLanguage === "ukr" && "sm:w-[226px]",
-                appLanguage === "blr" && "sm:w-[220px]"
+                appLanguage === "en" && "sm:w-[157px]",
+                appLanguage === "ua" && "sm:w-[226px]",
+                appLanguage === "by" && "sm:w-[220px]"
               )}
             >
               <h3
                 className={cn(
                   "font-bold",
-                  appLanguage === "eng" &&
+                  appLanguage === "en" &&
                     "font-karantina text-[26px] lg:text-[32px] tracking-[0.05em]",
-                  appLanguage === "ukr" &&
+                  appLanguage === "ua" &&
                     "font-oswald text-[24px] lg:text-[28px]",
-                  appLanguage === "blr" &&
+                  appLanguage === "by" &&
                     "font-oswald text-[24px] lg:text-[28px]"
                 )}
               >

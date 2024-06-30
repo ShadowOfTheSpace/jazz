@@ -6,9 +6,9 @@ const appLanguageToIconName: Record<
   (typeof appLanguageToLocalizationKey)[keyof typeof appLanguageToLocalizationKey],
   IconName
 > = {
-  [appLanguageToLocalizationKey[AppLanguage.BLR]]: "flagBlr",
-  [appLanguageToLocalizationKey[AppLanguage.ENG]]: "flagGbr",
-  [appLanguageToLocalizationKey[AppLanguage.UKR]]: "flagUkr",
+  [appLanguageToLocalizationKey[AppLanguage.BY]]: "flagBY",
+  [appLanguageToLocalizationKey[AppLanguage.EN]]: "flagGB",
+  [appLanguageToLocalizationKey[AppLanguage.UA]]: "flagUA",
 };
 
 export { appLanguageToIconName };

@@ -1,7 +1,7 @@
 const AppLanguage = {
-  BLR: "Беларуская",
-  ENG: "English",
-  UKR: "Українська",
+  BY: "Беларуская",
+  EN: "English",
+  UA: "Українська",
 } as const;
 
 export { AppLanguage };

@@ -33,10 +33,10 @@ const TicketsSection: React.FC = () => {
       <Animated.Title
         className={cn(
           "text-[32px] text-balance leading-none",
-          appLanguage === "eng" &&
+          appLanguage === "en" &&
             "font-karantina sm:text-[70px] xl:text-[80px] tracking-[0.05em]",
-          appLanguage === "ukr" && "font-oswald sm:text-[60px] xl:text-[75px]",
-          appLanguage === "blr" && "font-oswald sm:text-[60px] xl:text-[75px]"
+          appLanguage === "ua" && "font-oswald sm:text-[60px] xl:text-[75px]",
+          appLanguage === "by" && "font-oswald sm:text-[60px] xl:text-[75px]"
         )}
       >
         {translate("Upcoming Events")}

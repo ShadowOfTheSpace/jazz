@@ -22,9 +22,9 @@ const MerchandiseSizeSelector: React.FC<Properties> = ({
       <h4
         className={cn(
           "text-[16px] text-jz-light-gray sm:text-[20px] leading-none",
-          appLanguage === "eng" && "font-kameron  tracking-[0.05em]",
-          appLanguage === "ukr" && "font-inter",
-          appLanguage === "blr" && "font-inter"
+          appLanguage === "en" && "font-kameron  tracking-[0.05em]",
+          appLanguage === "ua" && "font-inter",
+          appLanguage === "by" && "font-inter"
         )}
       >
         {translate("Sizes")}

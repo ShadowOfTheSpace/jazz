@@ -42,11 +42,11 @@ const MerchandiseSection: React.FC = () => {
           <Animated.Title
             className={cn(
               "text-[32px] text-balance leading-none",
-              appLanguage === "eng" &&
+              appLanguage === "en" &&
                 "font-karantina sm:text-[70px] xl:text-[80px] tracking-[0.05em]",
-              appLanguage === "ukr" &&
+              appLanguage === "ua" &&
                 "font-oswald sm:text-[60px] xl:text-[75px]",
-              appLanguage === "blr" &&
+              appLanguage === "by" &&
                 "font-oswald sm:text-[60px] xl:text-[75px]"
             )}
           >
@@ -55,9 +55,9 @@ const MerchandiseSection: React.FC = () => {
           <Animated.Text
             className={cn(
               "text-[14px] text-balance sm:text-[18px] xl:text-[20px]",
-              appLanguage === "eng" && "font-kameron tracking-[0.05em]",
-              appLanguage === "ukr" && "font-inter",
-              appLanguage === "blr" && "font-inter"
+              appLanguage === "en" && "font-kameron tracking-[0.05em]",
+              appLanguage === "ua" && "font-inter",
+              appLanguage === "by" && "font-inter"
             )}
             delay={0.3}
           >

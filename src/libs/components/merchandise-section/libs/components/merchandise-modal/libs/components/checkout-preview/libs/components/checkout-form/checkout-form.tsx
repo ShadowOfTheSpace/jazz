@@ -118,9 +118,9 @@ const CheckoutForm: React.FC<Properties> = ({
         <p
           className={cn(
             "text-[18px] md:text-[22px]",
-            appLanguage === "eng" && "font-kameron",
-            appLanguage === "ukr" && "font-inter",
-            appLanguage === "blr" && "font-inter"
+            appLanguage === "en" && "font-kameron",
+            appLanguage === "ua" && "font-inter",
+            appLanguage === "by" && "font-inter"
           )}
         >
           {translate("Total price")}:

@@ -52,9 +52,9 @@ const ContactModal: React.FC = () => {
               <h3
                 className={cn(
                   "font-bold text-[26px] text-jz-white lg:text-[32px]",
-                  appLanguage === "eng" && "font-karantina tracking-[0.05em]",
-                  appLanguage === "ukr" && "font-oswald",
-                  appLanguage === "blr" && "font-oswald"
+                  appLanguage === "en" && "font-karantina tracking-[0.05em]",
+                  appLanguage === "ua" && "font-oswald",
+                  appLanguage === "by" && "font-oswald"
                 )}
               >
                 {translate("We will be in touch soon")}

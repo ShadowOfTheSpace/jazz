@@ -125,9 +125,9 @@ const ItemPreview: React.FC<Properties> = ({
             <h3
               className={cn(
                 "mr-[20px] font-bold text-[22px] text-end sm:text-[28px] self-end",
-                appLanguage === "eng" && "font-kameron",
-                appLanguage === "ukr" && "font-inter",
-                appLanguage === "blr" && "font-inter"
+                appLanguage === "en" && "font-kameron",
+                appLanguage === "ua" && "font-inter",
+                appLanguage === "by" && "font-inter"
               )}
             >
               €{merchandiseById?.price}
@@ -141,9 +141,9 @@ const ItemPreview: React.FC<Properties> = ({
               isDisabled={!isAvailable}
               className={cn(
                 "w-full text-nowrap self-end",
-                appLanguage === "eng" && "sm:w-[max(170px,50%)]",
-                appLanguage === "ukr" && "sm:w-[max(240px,50%)]",
-                appLanguage === "blr" && "sm:w-[max(230px,50%)]"
+                appLanguage === "en" && "sm:w-[max(170px,50%)]",
+                appLanguage === "ua" && "sm:w-[max(240px,50%)]",
+                appLanguage === "by" && "sm:w-[max(230px,50%)]"
               )}
               onClick={handleAddItemToCart}
             />

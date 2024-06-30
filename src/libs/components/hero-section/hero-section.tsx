@@ -30,11 +30,11 @@ const HeroSection: React.FC = () => {
           <Animated.Title
             className={cn(
               "order-2 text-[32px] leading-tight",
-              appLanguage === "eng" &&
+              appLanguage === "en" &&
                 "font-karantina sm:text-[70px] xl:text-[80px] tracking-[0.05em]",
-              appLanguage === "ukr" &&
+              appLanguage === "ua" &&
                 "font-oswald sm:text-[60px] xl:text-[75px]",
-              appLanguage === "blr" &&
+              appLanguage === "by" &&
                 "font-oswald sm:text-[60px] xl:text-[75px]"
             )}
             duration={0.7}
@@ -47,9 +47,9 @@ const HeroSection: React.FC = () => {
             <Animated.HighlightedText
               className={cn(
                 "text-jz-gold capitalize",
-                appLanguage === "eng" && "font-kaushan",
-                appLanguage === "ukr" && "font-marck",
-                appLanguage === "blr" && "font-marck"
+                appLanguage === "en" && "font-kaushan",
+                appLanguage === "ua" && "font-marck",
+                appLanguage === "by" && "font-marck"
               )}
               delay={1}
             >
@@ -60,9 +60,9 @@ const HeroSection: React.FC = () => {
             <Animated.Text
               className={cn(
                 "text-[14px] text-balance sm:text-[18px] xl:text-[20px]",
-                appLanguage === "eng" && "font-kameron tracking-[0.05em]",
-                appLanguage === "ukr" && "font-inter",
-                appLanguage === "blr" && "font-inter"
+                appLanguage === "en" && "font-kameron tracking-[0.05em]",
+                appLanguage === "ua" && "font-inter",
+                appLanguage === "by" && "font-inter"
               )}
               delay={1.3}
             >
@@ -70,11 +70,11 @@ const HeroSection: React.FC = () => {
               <Link
                 className={cn(
                   "order-4 font-bold text-jz-gold sm:text-[18px] xl:text-[20px]",
-                  appLanguage === "eng" &&
+                  appLanguage === "en" &&
                     "font-kaushan text-[14px] sm:text-[18px] xl:text-[20px] tracking-[0.05em]",
-                  appLanguage === "ukr" &&
+                  appLanguage === "ua" &&
                     "font-marck text-[20px] sm:text-[24px] xl:text-[26px]",
-                  appLanguage === "blr" &&
+                  appLanguage === "by" &&
                     "font-marck text-[20px] sm:text-[24px] xl:text-[26px]"
                 )}
                 href="#contacts"
