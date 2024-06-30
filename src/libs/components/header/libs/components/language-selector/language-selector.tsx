@@ -53,7 +53,7 @@ const LanguageSelector: React.FC<Properties> = ({ isOpen }) => {
       setAppLanguage(
         isSelectedLanguageValid
           ? (selectedLanguage as (typeof appLanguageToLocalizationKey)[keyof typeof appLanguageToLocalizationKey])
-          : appLanguageToLocalizationKey[AppLanguage.ENG]
+          : appLanguageToLocalizationKey[AppLanguage.EN]
       );
 
       toggleLanguageSelector();

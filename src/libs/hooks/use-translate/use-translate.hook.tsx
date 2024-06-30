@@ -26,7 +26,7 @@ const useTranslate = () => {
   >(
     isLanguageFromStorageValid
       ? languageFromStorage.language
-      : appLanguageToLocalizationKey[AppLanguage.ENG]
+      : appLanguageToLocalizationKey[AppLanguage.EN]
   );
 
   const setAppLanguage = useCallback(
@@ -45,7 +45,7 @@ const useTranslate = () => {
 
       return textTranslation
         ? textTranslation[appLanguage] ??
-            textTranslation[appLanguageToLocalizationKey[AppLanguage.ENG]] ??
+            textTranslation[appLanguageToLocalizationKey[AppLanguage.EN]] ??
             textKey
         : textKey;
     },
