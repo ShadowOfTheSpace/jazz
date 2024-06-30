@@ -13,7 +13,7 @@ type Properties = {
 };
 
 const LanguageSelector: React.FC<Properties> = ({ isOpen }) => {
-  const { appLanguage, setAppLanguage } = useLanguageContext();
+  const { appLanguage, setAppLanguage, translate } = useLanguageContext();
 
   const [isLanguageSelectorShown, setIsLanguageSelectorShown] =
     useState<boolean>(false);
@@ -67,6 +67,7 @@ const LanguageSelector: React.FC<Properties> = ({ isOpen }) => {
         iconName={appLanguageToIconName[appLanguage]}
         className="lg:flex hidden bg-transparent border-transparent rounded-[2px]"
         onClick={toggleLanguageSelector}
+        title={translate("Select language")}
       />
       <AnimatePresence>
         {(isLanguageSelectorShown || isOpen) && (
