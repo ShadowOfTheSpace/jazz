@@ -38,7 +38,6 @@ const Navigation: React.FC<Properties> = ({
                   itemClassName
                 )}
                 href={navigationItem.href}
-                title={navigationItem.label}
                 onClick={onClick}
               >
                 {translate(navigationItem.label)}
