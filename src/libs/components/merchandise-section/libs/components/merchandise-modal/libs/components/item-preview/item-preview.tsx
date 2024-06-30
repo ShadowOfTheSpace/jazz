@@ -127,7 +127,8 @@ const ItemPreview: React.FC<Properties> = ({
                 "mr-[20px] font-bold text-[22px] text-end sm:text-[28px] self-end",
                 appLanguage === "en" && "font-kameron",
                 appLanguage === "ua" && "font-inter",
-                appLanguage === "by" && "font-inter"
+                appLanguage === "by" && "font-inter",
+                appLanguage === "lt" && "font-inter"
               )}
             >
               €{merchandiseById?.price}
@@ -143,7 +144,8 @@ const ItemPreview: React.FC<Properties> = ({
                 "w-full text-nowrap self-end",
                 appLanguage === "en" && "sm:w-[max(170px,50%)]",
                 appLanguage === "ua" && "sm:w-[max(240px,50%)]",
-                appLanguage === "by" && "sm:w-[max(230px,50%)]"
+                appLanguage === "by" && "sm:w-[max(230px,50%)]",
+                appLanguage === "lt" && "sm:w-[max(170px,50%)]"
               )}
               onClick={handleAddItemToCart}
             />

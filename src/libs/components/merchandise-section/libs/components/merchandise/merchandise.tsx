@@ -33,7 +33,8 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
           "line-clamp-2 h-[calc(1.25*1em*2)] font-bold text-[26px] text-jz-gold sm:text-[32px] leading-tight",
           appLanguage === "en" && "font-kaushan tracking-[0.05em]",
           appLanguage === "ua" && "font-marck",
-          appLanguage === "by" && "font-marck"
+          appLanguage === "by" && "font-marck",
+          appLanguage === "lt" && "font-marck"
         )}
         title={title}
       >
@@ -44,7 +45,8 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
           "font-bold text-[20px] text-end text-jz-light-gray sm:text-[26px]",
           appLanguage === "en" && "font-kameron",
           appLanguage === "ua" && "font-inter",
-          appLanguage === "by" && "font-inter"
+          appLanguage === "by" && "font-inter",
+          appLanguage === "lt" && "font-inter"
         )}
       >
         €{price}

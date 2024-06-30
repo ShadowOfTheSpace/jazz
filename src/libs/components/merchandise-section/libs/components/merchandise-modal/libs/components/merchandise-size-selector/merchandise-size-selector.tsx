@@ -24,7 +24,8 @@ const MerchandiseSizeSelector: React.FC<Properties> = ({
           "text-[16px] text-jz-light-gray sm:text-[20px] leading-none",
           appLanguage === "en" && "font-kameron  tracking-[0.05em]",
           appLanguage === "ua" && "font-inter",
-          appLanguage === "by" && "font-inter"
+          appLanguage === "by" && "font-inter",
+          appLanguage === "lt" && "font-inter"
         )}
       >
         {translate("Sizes")}

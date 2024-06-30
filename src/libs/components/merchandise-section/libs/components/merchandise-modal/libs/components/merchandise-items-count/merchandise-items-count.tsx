@@ -47,7 +47,8 @@ const MerchandiseItemsCount: React.FC<Properties> = ({
           "text-[16px] text-jz-light-gray sm:text-[20px] leading-none",
           appLanguage === "en" && "font-kameron",
           appLanguage === "ua" && "font-inter",
-          appLanguage === "by" && "font-inter"
+          appLanguage === "by" && "font-inter",
+          appLanguage === "lt" && "font-inter"
         )}
       >
         {translate("Quantity")}

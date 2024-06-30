@@ -7,6 +7,7 @@ type IconName =
   | "facebook"
   | "flagBY"
   | "flagGB"
+  | "flagLT"
   | "flagUA"
   | "instagram"
   | "leftArrow"

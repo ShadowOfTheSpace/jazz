@@ -17,7 +17,8 @@ const NewsSection: React.FC = () => {
           appLanguage === "en" &&
             "font-karantina sm:text-[70px] xl:text-[80px] tracking-[0.05em]",
           appLanguage === "ua" && "font-oswald sm:text-[60px] xl:text-[75px]",
-          appLanguage === "by" && "font-oswald sm:text-[60px] xl:text-[75px]"
+          appLanguage === "by" && "font-oswald sm:text-[60px] xl:text-[75px]",
+          appLanguage === "lt" && "font-oswald sm:text-[60px] xl:text-[75px]"
         )}
       >
         {translate("Life Vibes")}

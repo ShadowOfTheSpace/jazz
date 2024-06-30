@@ -16,7 +16,8 @@ const Placeholder: React.FC<Properties> = ({ description, title }) => {
           "text-[32px] text-jz-gold sm:text-[60px]",
           appLanguage === "en" && "font-karantina capitalize tracking-[0.05em]",
           appLanguage === "ua" && "font-oswald",
-          appLanguage === "by" && "font-oswald"
+          appLanguage === "by" && "font-oswald",
+          appLanguage === "lt" && "font-oswald"
         )}
       >
         {title}
@@ -26,7 +27,8 @@ const Placeholder: React.FC<Properties> = ({ description, title }) => {
           "text-[14px] text-balance text-center text-jz-light-gray sm:text-[24px]",
           appLanguage === "en" && "font-kameron",
           appLanguage === "ua" && "font-inter",
-          appLanguage === "by" && "font-inter"
+          appLanguage === "by" && "font-inter",
+          appLanguage === "lt" && "font-inter"
         )}
       >
         {description}

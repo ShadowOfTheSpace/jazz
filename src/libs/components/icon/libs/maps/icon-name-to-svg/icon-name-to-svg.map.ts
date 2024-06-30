@@ -7,6 +7,7 @@ import DonationAlertsIcon from "~assets/icons/donation-alerts.svg?react";
 import FacebookIcon from "~assets/icons/facebook.svg?react";
 import flagBYIcon from "~assets/icons/flag-by.svg?react";
 import flagGBIcon from "~assets/icons/flag-gb.svg?react";
+import flagLTIcon from "~assets/icons/flag-lt.svg?react";
 import flagUAIcon from "~assets/icons/flag-ua.svg?react";
 import InstagramIcon from "~assets/icons/instagram.svg?react";
 import LeftArrowIcon from "~assets/icons/left-arrow.svg?react";
@@ -35,6 +36,7 @@ const iconNameToSvg: Record<
   facebook: FacebookIcon,
   flagBY: flagBYIcon,
   flagGB: flagGBIcon,
+  flagLT: flagLTIcon,
   flagUA: flagUAIcon,
   instagram: InstagramIcon,
   leftArrow: LeftArrowIcon,

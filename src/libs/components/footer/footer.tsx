@@ -22,6 +22,8 @@ const Footer: React.FC = () => {
                   appLanguage === "ua" &&
                     "font-oswald text-[24px] lg:text-[28px]",
                   appLanguage === "by" &&
+                    "font-oswald text-[24px] lg:text-[28px]",
+                  appLanguage === "lt" &&
                     "font-oswald text-[24px] lg:text-[28px]"
                 )}
               >
@@ -34,7 +36,8 @@ const Footer: React.FC = () => {
                   "text-[16px] lg:text-[20px] text-jz-light-gray",
                   appLanguage === "en" && "font-kameron",
                   appLanguage === "ua" && "font-inter",
-                  appLanguage === "by" && "font-inter"
+                  appLanguage === "by" && "font-inter",
+                  appLanguage === "lt" && "font-inter"
                 )}
               />
             </div>
@@ -47,6 +50,8 @@ const Footer: React.FC = () => {
                   appLanguage === "ua" &&
                     "font-oswald text-[24px] lg:text-[28px]",
                   appLanguage === "by" &&
+                    "font-oswald text-[24px] lg:text-[28px]",
+                  appLanguage === "lt" &&
                     "font-oswald text-[24px] lg:text-[28px]"
                 )}
               >
@@ -62,7 +67,8 @@ const Footer: React.FC = () => {
                 "flex flex-col gap-y-[10px] md:order-4 w-max md:w-max",
                 appLanguage === "en" && "sm:w-[157px]",
                 appLanguage === "ua" && "sm:w-[226px]",
-                appLanguage === "by" && "sm:w-[220px]"
+                appLanguage === "by" && "sm:w-[220px]",
+                appLanguage === "lt" && "sm:w-[178px]"
               )}
             >
               <h3
@@ -73,6 +79,8 @@ const Footer: React.FC = () => {
                   appLanguage === "ua" &&
                     "font-oswald text-[24px] lg:text-[28px]",
                   appLanguage === "by" &&
+                    "font-oswald text-[24px] lg:text-[28px]",
+                  appLanguage === "lt" &&
                     "font-oswald text-[24px] lg:text-[28px]"
                 )}
               >

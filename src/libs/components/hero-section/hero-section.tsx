@@ -35,6 +35,8 @@ const HeroSection: React.FC = () => {
               appLanguage === "ua" &&
                 "font-oswald sm:text-[60px] xl:text-[75px]",
               appLanguage === "by" &&
+                "font-oswald sm:text-[60px] xl:text-[75px]",
+              appLanguage === "lt" &&
                 "font-oswald sm:text-[60px] xl:text-[75px]"
             )}
             duration={0.7}
@@ -49,7 +51,8 @@ const HeroSection: React.FC = () => {
                 "text-jz-gold capitalize",
                 appLanguage === "en" && "font-kaushan",
                 appLanguage === "ua" && "font-marck",
-                appLanguage === "by" && "font-marck"
+                appLanguage === "by" && "font-marck",
+                appLanguage === "lt" && "font-marck"
               )}
               delay={1}
             >
@@ -62,7 +65,8 @@ const HeroSection: React.FC = () => {
                 "text-[14px] text-balance sm:text-[18px] xl:text-[20px]",
                 appLanguage === "en" && "font-kameron tracking-[0.05em]",
                 appLanguage === "ua" && "font-inter",
-                appLanguage === "by" && "font-inter"
+                appLanguage === "by" && "font-inter",
+                appLanguage === "lt" && "font-inter"
               )}
               delay={1.3}
             >
@@ -75,6 +79,8 @@ const HeroSection: React.FC = () => {
                   appLanguage === "ua" &&
                     "font-marck text-[20px] sm:text-[24px] xl:text-[26px]",
                   appLanguage === "by" &&
+                    "font-marck text-[20px] sm:text-[24px] xl:text-[26px]",
+                  appLanguage === "lt" &&
                     "font-marck text-[20px] sm:text-[24px] xl:text-[26px]"
                 )}
                 href="#contacts"

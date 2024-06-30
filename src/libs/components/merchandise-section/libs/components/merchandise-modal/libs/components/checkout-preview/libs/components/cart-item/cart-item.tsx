@@ -40,7 +40,8 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
             "font-bold text-[18px] text-jz-gold md:text-[20px] truncate",
             appLanguage === "en" && "font-kaushan",
             appLanguage === "ua" && "font-marck",
-            appLanguage === "by" && "font-marck"
+            appLanguage === "by" && "font-marck",
+            appLanguage === "lt" && "font-marck"
           )}
           title={title}
         >
@@ -52,7 +53,8 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
             !selectedSize && "opacity-0",
             appLanguage === "en" && "font-kameron",
             appLanguage === "ua" && "font-inter",
-            appLanguage === "by" && "font-inter"
+            appLanguage === "by" && "font-inter",
+            appLanguage === "lt" && "font-inter"
           )}
         >
           {translate("Size")}:⠀
@@ -63,7 +65,8 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
             "text-jz-light-gray",
             appLanguage === "en" && "font-kameron",
             appLanguage === "ua" && "font-inter",
-            appLanguage === "by" && "font-inter"
+            appLanguage === "by" && "font-inter",
+            appLanguage === "lt" && "font-inter"
           )}
         >
           {translate("Quantity")}:⠀
@@ -74,7 +77,8 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
             "text-jz-light-gray",
             appLanguage === "en" && "font-kameron",
             appLanguage === "ua" && "font-inter",
-            appLanguage === "by" && "font-inter"
+            appLanguage === "by" && "font-inter",
+            appLanguage === "lt" && "font-inter"
           )}
         >
           {translate("Price")}:⠀

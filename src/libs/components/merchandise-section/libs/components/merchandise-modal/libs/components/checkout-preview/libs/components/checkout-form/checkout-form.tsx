@@ -120,7 +120,8 @@ const CheckoutForm: React.FC<Properties> = ({
             "text-[18px] md:text-[22px]",
             appLanguage === "en" && "font-kameron",
             appLanguage === "ua" && "font-inter",
-            appLanguage === "by" && "font-inter"
+            appLanguage === "by" && "font-inter",
+            appLanguage === "lt" && "font-inter"
           )}
         >
           {translate("Total price")}:

@@ -17,6 +17,11 @@ const LANGUAGES = [
     icon: "flagBY",
     name: AppLanguage.BY,
   },
+  {
+    code: appLanguageToLocalizationKey[AppLanguage.LT],
+    icon: "flagLT",
+    name: AppLanguage.LT,
+  },
 ] as const;
 
 export { LANGUAGES };

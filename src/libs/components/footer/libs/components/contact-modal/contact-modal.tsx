@@ -54,7 +54,8 @@ const ContactModal: React.FC = () => {
                   "font-bold text-[26px] text-jz-white lg:text-[32px]",
                   appLanguage === "en" && "font-karantina tracking-[0.05em]",
                   appLanguage === "ua" && "font-oswald",
-                  appLanguage === "by" && "font-oswald"
+                  appLanguage === "by" && "font-oswald",
+                  appLanguage === "lt" && "font-oswald"
                 )}
               >
                 {translate("We will be in touch soon")}

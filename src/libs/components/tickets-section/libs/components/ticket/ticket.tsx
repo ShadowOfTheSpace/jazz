@@ -35,7 +35,8 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
             "mb-2 line-clamp-2 h-[calc(1.25*1em*2)] font-bold text-[26px] text-jz-gold sm:text-[32px] leading-tight",
             appLanguage === "en" && "font-kaushan",
             appLanguage === "ua" && "font-marck",
-            appLanguage === "by" && "font-marck"
+            appLanguage === "by" && "font-marck",
+            appLanguage === "lt" && "font-marck"
           )}
           title={title}
         >
@@ -46,7 +47,8 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
             "text-[16px] sm:text-[20px]",
             appLanguage === "en" && "font-kameron",
             appLanguage === "ua" && "font-inter",
-            appLanguage === "by" && "font-inter"
+            appLanguage === "by" && "font-inter",
+            appLanguage === "lt" && "font-inter"
           )}
           title={`${city}, ${country}`}
         >
@@ -57,7 +59,8 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
             "text-[16px] sm:text-[20px] truncate",
             appLanguage === "en" && "font-kameron",
             appLanguage === "ua" && "font-inter",
-            appLanguage === "by" && "font-inter"
+            appLanguage === "by" && "font-inter",
+            appLanguage === "lt" && "font-inter"
           )}
           title={place}
         >
@@ -68,7 +71,8 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
             "text-[16px] sm:text-[20px]",
             appLanguage === "en" && "font-kameron",
             appLanguage === "ua" && "font-inter",
-            appLanguage === "by" && "font-inter"
+            appLanguage === "by" && "font-inter",
+            appLanguage === "lt" && "font-inter"
           )}
           title={`${date}⠀–⠀${time}`}
         >
