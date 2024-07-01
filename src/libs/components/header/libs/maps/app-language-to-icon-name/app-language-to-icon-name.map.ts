@@ -7,9 +7,9 @@ const appLanguageToIconName: Record<
   IconName
 > = {
   [appLanguageToLocalizationKey[AppLanguage.BY]]: "flagBY",
-  [appLanguageToLocalizationKey[AppLanguage.EN]]: "flagGB",
   [appLanguageToLocalizationKey[AppLanguage.LT]]: "flagLT",
   [appLanguageToLocalizationKey[AppLanguage.UA]]: "flagUA",
+  [appLanguageToLocalizationKey[AppLanguage.EN]]: "flagUS",
 };
 
 export { appLanguageToIconName };
