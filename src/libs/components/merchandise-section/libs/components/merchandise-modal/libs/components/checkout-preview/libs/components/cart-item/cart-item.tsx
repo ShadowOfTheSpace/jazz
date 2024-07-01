@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import defaultImage from "~assets/images/default-item-image.png";
+import defaultImage from "~assets/images/default-merch-image.png";
 import { Button, Image } from "~components/components";
 import { useLanguageContext } from "~hooks/hooks";
 import { type CartItem as TCartItem } from "~types/types";

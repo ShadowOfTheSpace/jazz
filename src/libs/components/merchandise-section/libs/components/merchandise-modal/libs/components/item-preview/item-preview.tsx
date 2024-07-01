@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import defaultImage from "~assets/images/default-item-image.png";
+import defaultImage from "~assets/images/default-merch-image.png";
 import { Button, Image } from "~components/components";
 import { SIZES } from "~constants/constants";
 import { AppRoute } from "~enums/enums";

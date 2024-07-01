@@ -1,4 +1,4 @@
-import defaultImage from "~assets/images/default-item-image.png";
+import defaultImage from "~assets/images/default-merch-image.png";
 import { Image, Link } from "~components/components";
 import { useLanguageContext } from "~hooks/hooks";
 import { type Merchandise as TMerchandise } from "~types/types";
