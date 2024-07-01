@@ -4,7 +4,8 @@ import heroImage from "~assets/images/hero-image.png";
 import { Animated, Button, Link } from "~components/components";
 import { useLanguageContext } from "~hooks/hooks";
 import { cn } from "~utils/utils";
-import pdf from "/files/Pavel_Arakelian_press_portrait.pdf";
+import pdfEN from "/files/Pavel_Arakelian_press_portrait.pdf";
+import pdfLT from "/files/Pavel_Arakelian_The_Outsiders_Press_Portrait_LT.pdf";
 
 const HeroSection: React.FC = () => {
   const { appLanguage, translate } = useLanguageContext();
@@ -111,7 +112,7 @@ const HeroSection: React.FC = () => {
         />
         <Link
           className="flex justify-center items-center border-[2px] border-jz-gold bg-jz-gold has-hover:hover:bg-transparent no-hover:active:bg-transparent px-[15px] sm:px-[32px] py-[5px] sm:py-[10px] rounded-[40px] font-bold font-inter text-[16px] text-jz-main sm:text-[18px] xl:text-[20px] has-hover:hover:text-jz-gold no-hover:active:text-jz-gold transition-colors"
-          href={pdf}
+          href={appLanguage === "lt" ? pdfLT : pdfEN}
           isDefaultLink
           isOpenInNewPage
         >
