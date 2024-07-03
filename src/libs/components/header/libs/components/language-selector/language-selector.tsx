@@ -58,7 +58,7 @@ const LanguageSelector: React.FC<Properties> = ({ isOpen }) => {
 
       toggleLanguageSelector();
     },
-    [appLanguage, setAppLanguage, toggleLanguageSelector]
+    [setAppLanguage, toggleLanguageSelector]
   );
 
   return (
