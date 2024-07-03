@@ -28,11 +28,11 @@ const TicketsSection: React.FC = () => {
   return (
     <section
       id="events"
-      className="flex flex-col gap-y-[16px] lg:gap-y-[36px] px-[16px] sm:px-[32px] w-full max-w-[950px] xl:max-w-[1400px] self-center"
+      className="flex flex-col lg:items-center gap-y-[16px] lg:gap-y-[36px] px-[16px] sm:px-[32px] w-full xl:max-w-[1400px] self-center"
     >
       <Animated.Title
         className={cn(
-          "text-[32px] text-balance leading-none",
+          "text-[32px] text-balance leading-none self-start",
           appLanguage === "en" &&
             "font-karantina sm:text-[70px] xl:text-[80px] tracking-[0.05em]",
           appLanguage === "ua" && "font-oswald sm:text-[60px] xl:text-[75px]",

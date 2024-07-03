@@ -35,7 +35,7 @@ const MerchandiseSection: React.FC = () => {
   return (
     <section
       id="merch"
-      className="flex flex-col px-[16px] sm:px-[32px] max-w-[1400px] md:self-center"
+      className="flex flex-col items-center px-[16px] sm:px-[32px] max-w-[1400px] lg:self-center"
     >
       <div className="flex justify-between items-center gap-x-[50px]">
         <div className="flex flex-col gap-y-[16px] lg:gap-y-[36px] md:max-w-[50%]">
@@ -76,7 +76,7 @@ const MerchandiseSection: React.FC = () => {
         />
       </div>
       <Animated.Content
-        className="mt-[30px] sm:mt-[50px] max-w-[950px] xl:max-w-[1400px] md:self-center w-full"
+        className="mt-[30px] sm:mt-[50px] max-w-[calc(950px-32px-32px)] lg:xl:max-w-[min(calc(100vw-32px-32px),calc(1400px-32px-32px))] md:self-center w-full"
         delay={0.5}
         margin="0px 0px -20% 0px"
       >

@@ -32,7 +32,7 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
       )}
       <h2
         className={cn(
-          "line-clamp-2 h-[calc(1.25*1em*2)] font-bold text-[26px] text-jz-gold sm:text-[32px] leading-tight",
+          "line-clamp-2 h-[calc(1.25*1em*2)] font-bold text-[26px] text-jz-gold sm:text-[32px] leading-tight select-none",
           appLanguage === "en" && "font-kaushan tracking-[0.05em]",
           appLanguage === "ua" && "font-marck",
           appLanguage === "by" && "font-marck",
@@ -44,7 +44,7 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
       </h2>
       <h3
         className={cn(
-          "font-bold text-[20px] text-end text-jz-light-gray sm:text-[26px]",
+          "font-bold text-[20px] text-end text-jz-light-gray sm:text-[26px] select-none",
           appLanguage === "en" && "font-kameron",
           appLanguage === "ua" && "font-inter",
           appLanguage === "by" && "font-inter",

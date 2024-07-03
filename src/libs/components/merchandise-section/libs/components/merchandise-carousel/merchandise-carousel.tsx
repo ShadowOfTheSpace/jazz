@@ -35,7 +35,7 @@ const MerchandiseCarousel: React.FC<Properties> = ({
   }, [carouselApi, isCarouselInView]);
 
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} className="lg:flex lg:justify-center">
       <Carousel
         isLoading={isLoading}
         opts={{
@@ -51,6 +51,7 @@ const MerchandiseCarousel: React.FC<Properties> = ({
             stopOnFocusIn: true,
           }),
         ]}
+        className="w-full max-w-[950px] xl:max-w-max self-center"
         setApi={setCarouselApi}
       >
         <Carousel.Content
@@ -64,7 +65,7 @@ const MerchandiseCarousel: React.FC<Properties> = ({
               <Carousel.Item
                 className={cn(
                   "pl-[30px] basis-full md:basis-1/2 xl:basis-1/3",
-                  !isEnoughMerchandises && "xl:grow-0"
+                  !isEnoughMerchandises && "md:grow-0"
                 )}
                 key={index}
               >
@@ -73,14 +74,14 @@ const MerchandiseCarousel: React.FC<Properties> = ({
             );
           })}
         </Carousel.Content>
-        <Carousel.Controls className="flex flex-wrap justify-center sm:justify-between items-center mt-[20px] min-h-[14px] sm:min-h-[42px]">
+        <Carousel.Controls className="flex flex-wrap justify-center sm:justify-between items-center gap-[10px] mt-[20px] min-h-[14px] sm:min-h-[42px]">
           <div className="sm:flex gap-x-[10px] hidden">
             <Carousel.Button variant="previous" className="size-[42px]" />
             <Carousel.Button variant="next" className="size-[42px]" />
           </div>
           <Carousel.Dots
             activeDotClassName="border-jz-gold has-hover:hover:border-jz-gold bg-jz-gold no-hover:active:bg-jz-gold has-hover:hover:bg-jz-gold"
-            className="flex gap-x-[10px]"
+            className="flex flex-wrap justify-center gap-[10px]"
             dotClassName="border-jz-gold/50 has-hover:hover:border-jz-gold no-hover:active:border-jz-gold bg-transparent size-[14px]"
           />
         </Carousel.Controls>
