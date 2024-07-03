@@ -48,6 +48,10 @@ const ItemPreview: React.FC<Properties> = ({
     }) || !merchandiseById?.sizes
   );
 
+  const titleByLanguage =
+    merchandiseById &&
+    (merchandiseById.title[appLanguage] ?? merchandiseById.title.en);
+
   useEffect(() => {
     if (!isSizeFromQueryValid && sizeFromQuery) {
       navigate(pathname, { replace: true });
@@ -106,8 +110,16 @@ const ItemPreview: React.FC<Properties> = ({
           />
         )}
         <div className="flex flex-col gap-[20px] lg:gap-y-[50px] grow">
-          <h2 className="lg:mt-[50px] lg:mb-auto font-bold font-kaushan text-[26px] text-jz-gold lg:text-[32px]">
-            {merchandiseById?.title}
+          <h2
+            className={cn(
+              "lg:mt-[50px] lg:mb-auto font-bold text-[26px] text-jz-gold lg:text-[32px]",
+              appLanguage === "en" && "font-kaushan",
+              appLanguage === "ua" && "font-marck",
+              appLanguage === "by" && "font-marck",
+              appLanguage === "lt" && "font-marck"
+            )}
+          >
+            {titleByLanguage}
           </h2>
           {merchandiseById?.sizes && (
             <MerchandiseSizeSelector

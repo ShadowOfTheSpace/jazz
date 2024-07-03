@@ -15,6 +15,8 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
 
   const { imageUrl, price, quantity, selectedSize, title } = cartItem;
 
+  const titleByLanguage = title[appLanguage] || title.en;
+
   const handleDeleteItem = useCallback(() => {
     onDeleteItem(cartItem);
   }, [cartItem, onDeleteItem]);
@@ -43,9 +45,9 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
             appLanguage === "by" && "font-marck",
             appLanguage === "lt" && "font-marck"
           )}
-          title={title}
+          title={titleByLanguage}
         >
-          {title}
+          {titleByLanguage}
         </h3>
         <p
           className={cn(

@@ -1,7 +1,7 @@
-import { useCart, useImageCache, useTranslate } from "~hooks/hooks";
+import { useImageCache } from "~hooks/hooks";
 import {
-  AppLanguageContext,
-  CartContext,
+  AppLanguageProvider,
+  CartProvider,
   Footer,
   GallerySection,
   Header,
@@ -12,20 +12,13 @@ import {
   SubscribeSection,
   TicketsSection,
 } from "../components";
-
 const App: React.FC = () => {
   const { getImage, addImage } = useImageCache();
-  const { addItemToCart, cartItems, removeItemFromCart, clearCart } = useCart();
-  const { appLanguage, setAppLanguage, translate } = useTranslate();
 
   return (
-    <AppLanguageContext.Provider
-      value={{ appLanguage, setAppLanguage, translate }}
-    >
-      <ImageCacheContext.Provider value={{ addImage, getImage }}>
-        <CartContext.Provider
-          value={{ addItemToCart, cartItems, removeItemFromCart, clearCart }}
-        >
+    <AppLanguageProvider>
+      <CartProvider>
+        <ImageCacheContext.Provider value={{ addImage, getImage }}>
           <Header />
           <main className="flex flex-col gap-y-[50px] sm:gap-y-[100px] lg:gap-y-[150px] w-full grow">
             <HeroSection />
@@ -36,9 +29,9 @@ const App: React.FC = () => {
             <SubscribeSection />
           </main>
           <Footer />
-        </CartContext.Provider>
-      </ImageCacheContext.Provider>
-    </AppLanguageContext.Provider>
+        </ImageCacheContext.Provider>
+      </CartProvider>
+    </AppLanguageProvider>
   );
 };
 

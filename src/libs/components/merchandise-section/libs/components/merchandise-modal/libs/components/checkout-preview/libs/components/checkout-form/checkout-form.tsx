@@ -53,7 +53,7 @@ const CheckoutForm: React.FC<Properties> = ({
               price,
               quantity,
               selectedSize: selectedSize ?? "–",
-              title,
+              title: title.en,
             };
           }),
           phoneNumber,

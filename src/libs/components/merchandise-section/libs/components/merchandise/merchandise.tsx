@@ -13,6 +13,8 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
 
   const { id, imageUrl, price, title } = merchandise;
 
+  const titleByLanguage = title[appLanguage] || title.en;
+
   return (
     <div className="flex flex-col gap-y-[15px] bg-jz-gray p-[20px] rounded-[10px]">
       {imageUrl ? (
@@ -36,9 +38,9 @@ const Merchandise: React.FC<Properties> = ({ merchandise }) => {
           appLanguage === "by" && "font-marck",
           appLanguage === "lt" && "font-marck"
         )}
-        title={title}
+        title={titleByLanguage}
       >
-        {title}
+        {titleByLanguage}
       </h2>
       <h3
         className={cn(

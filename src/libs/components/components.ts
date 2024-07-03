@@ -1,9 +1,11 @@
 export { Animated } from "./animated/animated";
 export { AppLanguageContext } from "./app-language-context/app-language-context";
+export { AppLanguageProvider } from "./app-language-provider/app-language-provider";
 export { App } from "./app/app";
 export { Button } from "./button/button";
 export { Carousel } from "./carousel/carousel";
 export { CartContext } from "./cart-context/cart-context";
+export { CartProvider } from "./cart-provider/cart-provider";
 export { Footer } from "./footer/footer";
 export { GallerySection } from "./gallery-section/gallery-section";
 export { Header } from "./header/header";

@@ -11,11 +11,16 @@ const merchandiseResponseDtoToMerchandise = (
   return {
     id: merchandiseResponseDto.ID,
     imageUrl: imageId ? `${IMAGE_API_LINK}?id=${imageId}` : "",
-    title: merchandiseResponseDto.Title,
     price: merchandiseResponseDto.Price,
     sizes: merchandiseResponseDto.Sizes
       ? merchandiseResponseDto.Sizes.split(", ")
       : null,
+    title: {
+      by: merchandiseResponseDto.TitleBY,
+      en: merchandiseResponseDto.TitleEN,
+      lt: merchandiseResponseDto.TitleLT,
+      ua: merchandiseResponseDto.TitleUA,
+    },
   };
 };
 

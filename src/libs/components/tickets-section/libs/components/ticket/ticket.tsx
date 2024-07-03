@@ -14,6 +14,11 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
   const { city, country, date, place, ticketUrl, time, title, imageUrl } =
     ticket;
 
+  const titleByLanguage = title[appLanguage] || title.en;
+  const cityByLanguage = city[appLanguage] || city.en;
+  const countryByLanguage = country[appLanguage] || country.en;
+  const placeByLanguage = place[appLanguage] || place.en;
+
   return (
     <div className="flex sm:flex-row flex-col gap-x-[50px] gap-y-[20px] bg-jz-gray p-[20px] rounded-[10px] sm:h-auto">
       {imageUrl ? (
@@ -38,9 +43,9 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
             appLanguage === "by" && "font-marck",
             appLanguage === "lt" && "font-marck"
           )}
-          title={title}
+          title={titleByLanguage}
         >
-          {title}
+          {titleByLanguage}
         </h3>
         <p
           className={cn(
@@ -50,9 +55,9 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
             appLanguage === "by" && "font-inter",
             appLanguage === "lt" && "font-inter"
           )}
-          title={`${city}, ${country}`}
+          title={`${cityByLanguage}, ${countryByLanguage}`}
         >
-          {city}, {country}
+          {cityByLanguage}, {countryByLanguage}
         </p>
         <p
           className={cn(
@@ -62,9 +67,9 @@ const Ticket: React.FC<Properties> = ({ ticket }) => {
             appLanguage === "by" && "font-inter",
             appLanguage === "lt" && "font-inter"
           )}
-          title={place}
+          title={placeByLanguage}
         >
-          {place}
+          {placeByLanguage}
         </p>
         <p
           className={cn(

@@ -1,1 +1,5 @@
-export { getItemFromStorage, setItemToStorage } from "./libs/helpers/helpers";
+export {
+  getItemFromStorage,
+  removeItemFromStorage,
+  setItemToStorage,
+} from "./libs/helpers/helpers";
