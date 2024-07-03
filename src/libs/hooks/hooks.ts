@@ -1,6 +1,7 @@
 export { useAppForm } from "./use-app-form/use-app-form.hook";
 export { useCartContext } from "./use-cart-context/use-cart-context.hook";
 export { useCart } from "./use-cart/use-cart.hook";
+export { useConsentContext } from "./use-consent-context/use-consent-context.hook";
 export { useHandleEscPress } from "./use-handle-esc-press/use-handle-esc-press.hook";
 export { useImageCache } from "./use-image-cache/use-image-cache.hook";
 export { useLanguageContext } from "./use-language-context/use-language-context.hook";

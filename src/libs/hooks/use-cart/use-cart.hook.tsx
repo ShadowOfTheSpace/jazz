@@ -1,9 +1,11 @@
 import { useCallback, useState } from "react";
 import { StorageItemName } from "~enums/enums";
+import { useConsentContext } from "~hooks/hooks";
 import { getItemFromStorage, setItemToStorage } from "~modules/storage/storage";
 import { CartItem } from "~types/types";
 
 const useCart = () => {
+  const { consent } = useConsentContext();
   const [cartItems, setCartItems] = useState<CartItem[]>(
     getItemFromStorage(StorageItemName.CART) ?? []
   );
@@ -26,10 +28,11 @@ const useCart = () => {
           })
         : [...cartItems, cartItem];
 
-      setItemToStorage<CartItem[]>(StorageItemName.CART, updatedItemsInCart);
+      consent &&
+        setItemToStorage<CartItem[]>(StorageItemName.CART, updatedItemsInCart);
       setCartItems(updatedItemsInCart);
     },
-    [cartItems]
+    [cartItems, consent]
   );
 
   const removeItemFromCart = useCallback(
@@ -38,16 +41,16 @@ const useCart = () => {
         return !(cartItem.id === id && cartItem.selectedSize === selectedSize);
       });
 
-      setItemToStorage(StorageItemName.CART, updatedCartItems);
+      consent && setItemToStorage(StorageItemName.CART, updatedCartItems);
       setCartItems(updatedCartItems);
     },
-    [cartItems]
+    [cartItems, consent]
   );
 
   const clearCart = useCallback(() => {
     setCartItems([]);
-    setItemToStorage(StorageItemName.CART, []);
-  }, []);
+    consent && setItemToStorage(StorageItemName.CART, []);
+  }, [consent]);
 
   return { addItemToCart, cartItems, removeItemFromCart, clearCart };
 };

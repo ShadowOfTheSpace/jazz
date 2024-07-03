@@ -1,10 +1,12 @@
 import { useCallback, useState } from "react";
 import localization from "~assets/localization/localization.json";
 import { AppLanguage, StorageItemName } from "~enums/enums";
+import { useConsentContext } from "~hooks/hooks";
 import { appLanguageToLocalizationKey } from "~maps/maps";
 import { getItemFromStorage, setItemToStorage } from "~modules/storage/storage";
 
 const useTranslate = () => {
+  const { consent } = useConsentContext();
   const languageFromStorage = getItemFromStorage<{
     language: (typeof appLanguageToLocalizationKey)[keyof typeof appLanguageToLocalizationKey];
   }>(StorageItemName.LANGUAGE);
@@ -15,7 +17,7 @@ const useTranslate = () => {
       languageFromStorage.language
     );
 
-  if (!isLanguageFromStorageValid) {
+  if (!isLanguageFromStorageValid && consent) {
     setItemToStorage(StorageItemName.LANGUAGE, {
       language: appLanguageToLocalizationKey.English,
     });
@@ -34,9 +36,10 @@ const useTranslate = () => {
       appLanguage: (typeof appLanguageToLocalizationKey)[keyof typeof appLanguageToLocalizationKey]
     ) => {
       setLanguage(appLanguage);
-      setItemToStorage(StorageItemName.LANGUAGE, { language: appLanguage });
+      consent &&
+        setItemToStorage(StorageItemName.LANGUAGE, { language: appLanguage });
     },
-    [appLanguage]
+    [consent]
   );
 
   const translate = useCallback(
