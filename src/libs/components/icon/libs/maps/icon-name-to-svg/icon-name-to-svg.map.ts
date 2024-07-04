@@ -3,7 +3,6 @@ import BurgerIcon from "~assets/icons/burger.svg?react";
 import BuyMeACoffeeIcon from "~assets/icons/buy-me-a-coffee.svg?react";
 import CartIcon from "~assets/icons/cart.svg?react";
 import CloseIcon from "~assets/icons/close.svg?react";
-import DonationAlertsIcon from "~assets/icons/donation-alerts.svg?react";
 import FacebookIcon from "~assets/icons/facebook.svg?react";
 import flagBYIcon from "~assets/icons/flag-by.svg?react";
 import flagLTIcon from "~assets/icons/flag-lt.svg?react";
@@ -32,7 +31,6 @@ const iconNameToSvg: Record<
   buyMeACoffee: BuyMeACoffeeIcon,
   cart: CartIcon,
   close: CloseIcon,
-  donationAlerts: DonationAlertsIcon,
   facebook: FacebookIcon,
   flagBY: flagBYIcon,
   flagLT: flagLTIcon,

@@ -3,7 +3,6 @@ type IconName =
   | "buyMeACoffee"
   | "cart"
   | "close"
-  | "donationAlerts"
   | "facebook"
   | "flagBY"
   | "flagLT"
