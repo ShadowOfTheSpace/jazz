@@ -56,7 +56,7 @@ const MerchandiseCarousel: React.FC<Properties> = ({
       >
         <Carousel.Content
           className="flex -ml-[30px]"
-          skeletonWrapperClassName="pl-[30px] basis-full md:basis-1/2 xl:basis-1/3"
+          skeletonWrapperClassName="pl-[30px] basis-full md:basis-1/2 xl:basis-1/3 w-[calc(100vw-32px-32px)]"
           skeletonItemsCount={3}
           skeletonItem={MerchandiseSkeleton}
         >

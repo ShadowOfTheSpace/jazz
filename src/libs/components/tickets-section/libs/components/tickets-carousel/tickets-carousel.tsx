@@ -19,7 +19,7 @@ const TicketsCarousel: React.FC<Properties> = ({ tickets, isLoading }) => {
     >
       <Carousel.Content
         className="flex -ml-[30px]"
-        skeletonWrapperClassName="pl-[30px] basis-full xl:basis-1/2"
+        skeletonWrapperClassName="pl-[30px] basis-full xl:basis-1/2 w-[calc(100vw-32px-32px)]"
         skeletonItem={TicketSkeleton}
         skeletonItemsCount={2}
       >
