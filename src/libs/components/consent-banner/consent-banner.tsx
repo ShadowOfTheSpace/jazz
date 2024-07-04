@@ -1,12 +1,18 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { Button } from "~components/components";
-import { useConsentContext, useLanguageContext } from "~hooks/hooks";
+import { StorageItemName } from "~enums/enums";
+import {
+  useCartContext,
+  useConsentContext,
+  useLanguageContext,
+} from "~hooks/hooks";
+import { setItemToStorage } from "~modules/storage/storage";
 import { cn } from "~utils/utils";
 
 const ConsentBanner: React.FC = () => {
   const { appLanguage, translate } = useLanguageContext();
-
+  const { cartItems } = useCartContext();
   const { consent, setConsent } = useConsentContext();
 
   const [isBannerOpen, setIsBannerOpen] = useState<boolean>(consent === null);
@@ -17,8 +23,10 @@ const ConsentBanner: React.FC = () => {
 
   const handleAcceptConsent = useCallback(() => {
     setConsent(true);
+    setItemToStorage(StorageItemName.LANGUAGE, { language: appLanguage });
+    setItemToStorage(StorageItemName.CART, cartItems);
     handleBannerClose();
-  }, [setConsent, handleBannerClose]);
+  }, [appLanguage, cartItems, setConsent, handleBannerClose]);
 
   const handleRejectConsent = useCallback(() => {
     setConsent(false);
