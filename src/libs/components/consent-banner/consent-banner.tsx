@@ -54,7 +54,7 @@ const ConsentBanner: React.FC = () => {
           }}
           className={cn(
             "bottom-0 z-[5] fixed flex flex-col gap-y-[15px] sm:border-jz-gold/30 bg-jz-gray m-0 sm:m-[16px] p-[16px] sm:border border-t border-t-jz-gold/30 sm:rounded-[10px] w-full sm:w-[calc(100vw-32px)] md:w-[min(800px,calc(100vw-32px))]",
-            "[--banner-x-offset:0] sm:[--banner-x-offset:-105vw] [--banner-y-offset:-15dvh] sm:[--banner-y-offset:0]"
+            "[--banner-x-offset:0] sm:[--banner-x-offset:-105vw] [--banner-y-offset:-50%] sm:[--banner-y-offset:0]"
           )}
         >
           <Button
