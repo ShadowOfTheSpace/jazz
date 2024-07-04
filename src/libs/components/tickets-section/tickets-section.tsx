@@ -9,21 +9,21 @@ import { TicketsCarousel } from "./libs/components/components";
 const TicketsSection: React.FC = () => {
   const { appLanguage, translate } = useLanguageContext();
 
-  const [isTicketsLoading, setIsTicketsLoading] = useState<boolean>(true);
+  const [areTicketsLoading, setAreTicketsLoading] = useState<boolean>(true);
   const [tickets, setTickets] = useState<Ticket[]>([]);
 
   const handleGetTickets = useCallback(async () => {
     const tickets = await getTickets();
 
     setTickets(tickets);
-    setIsTicketsLoading(false);
+    setAreTicketsLoading(false);
   }, []);
 
   useEffect(() => {
     handleGetTickets();
   }, [handleGetTickets]);
 
-  const isTicketsPresent = tickets.length > 0 || isTicketsLoading;
+  const areTicketsPresent = tickets.length > 0 || areTicketsLoading;
 
   return (
     <section
@@ -43,8 +43,8 @@ const TicketsSection: React.FC = () => {
         {translate("Upcoming Events")}
       </Animated.Title>
       <Animated.Content margin="0px 0px -20% 0px">
-        {isTicketsPresent ? (
-          <TicketsCarousel tickets={tickets} isLoading={isTicketsLoading} />
+        {areTicketsPresent ? (
+          <TicketsCarousel tickets={tickets} isLoading={areTicketsLoading} />
         ) : (
           <Placeholder
             description={translate("Tickets placeholder text")}

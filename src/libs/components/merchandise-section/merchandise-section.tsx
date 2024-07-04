@@ -14,7 +14,7 @@ import {
 const MerchandiseSection: React.FC = () => {
   const { appLanguage, translate } = useLanguageContext();
 
-  const [isMerchandisesLoading, setIsMerchandisesLoading] =
+  const [areMerchandisesLoading, setAreMerchandisesLoading] =
     useState<boolean>(true);
   const [merchandises, setMerchandises] = useState<Merchandise[]>([]);
 
@@ -22,15 +22,15 @@ const MerchandiseSection: React.FC = () => {
     const merchandises = await getMerchandise();
 
     setMerchandises(merchandises);
-    setIsMerchandisesLoading(false);
+    setAreMerchandisesLoading(false);
   }, []);
 
   useEffect(() => {
     handleGetMerchandises();
   }, [handleGetMerchandises]);
 
-  const isMerchandisesPresent =
-    merchandises.length > 0 || isMerchandisesLoading;
+  const areMerchandisesPresent =
+    merchandises.length > 0 || areMerchandisesLoading;
 
   return (
     <section
@@ -80,10 +80,10 @@ const MerchandiseSection: React.FC = () => {
         delay={0.5}
         margin="0px 0px -20% 0px"
       >
-        {isMerchandisesPresent ? (
+        {areMerchandisesPresent ? (
           <MerchandiseCarousel
             merchandises={merchandises}
-            isLoading={isMerchandisesLoading}
+            isLoading={areMerchandisesLoading}
           />
         ) : (
           <Placeholder
@@ -94,7 +94,7 @@ const MerchandiseSection: React.FC = () => {
       </Animated.Content>
       <MerchandiseModal
         merchandises={merchandises}
-        isLoading={isMerchandisesLoading}
+        isLoading={areMerchandisesLoading}
       />
       <CartButton />
     </section>
