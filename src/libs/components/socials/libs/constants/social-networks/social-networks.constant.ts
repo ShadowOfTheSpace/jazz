@@ -15,7 +15,7 @@ const SOCIAL_NETWORKS = [
     title: "Pavel's YouTube",
   },
   {
-    href: "/",
+    href: "https://tinder.com/@pavelarakelian",
     icon: "tinder",
     title: "Pavel's Tinder",
   },
