@@ -42,7 +42,10 @@ const TicketsSection: React.FC = () => {
       >
         {translate("Upcoming Events")}
       </Animated.Title>
-      <Animated.Content margin="0px 0px -20% 0px">
+      <Animated.Content
+        margin="0px 0px -20% 0px"
+        className={cn("xl:w-full", tickets.length === 1 && "w-full")}
+      >
         {areTicketsPresent ? (
           <TicketsCarousel tickets={tickets} isLoading={areTicketsLoading} />
         ) : (

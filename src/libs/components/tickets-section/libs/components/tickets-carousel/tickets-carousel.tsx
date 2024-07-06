@@ -15,7 +15,10 @@ const TicketsCarousel: React.FC<Properties> = ({ tickets, isLoading }) => {
     <Carousel
       isLoading={isLoading}
       opts={{ active: isEnoughTickets, align: "start" }}
-      className="max-w-[950px] xl:max-w-[min(calc(1400px-32px-32px),100vw-32px-32px)]"
+      className={cn(
+        "xl:max-w-[min(calc(1400px-32px-32px),100vw-32px-32px)] max-w-[650px]",
+        isEnoughTickets && "max-w-[950px]"
+      )}
     >
       <Carousel.Content
         className="flex -ml-[30px]"
