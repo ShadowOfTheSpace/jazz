@@ -35,7 +35,13 @@ const MerchandiseCarousel: React.FC<Properties> = ({
   }, [carouselApi, isCarouselInView]);
 
   return (
-    <div ref={containerRef} className="lg:flex lg:justify-center">
+    <div
+      ref={containerRef}
+      className={cn(
+        "lg:flex w-full",
+        merchandises.length > 1 && "lg:justify-center"
+      )}
+    >
       <Carousel
         isLoading={isLoading}
         opts={{
@@ -51,7 +57,7 @@ const MerchandiseCarousel: React.FC<Properties> = ({
             stopOnFocusIn: true,
           }),
         ]}
-        className="w-full max-w-[950px] xl:max-w-max self-center"
+        className="w-full self-center"
         setApi={setCarouselApi}
       >
         <Carousel.Content
