@@ -1,6 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useCallback, useState } from "react";
 import { Button, Input } from "~components/components";
+import { EmailJs } from "~enums/enums";
 import { useAppForm, useLanguageContext } from "~hooks/hooks";
 import { Contact } from "~types/types";
 import { contactValidationSchema } from "~validation-schemas/validation-schemas";
@@ -22,9 +23,9 @@ const ContactForm: React.FC<Properties> = ({ afterSubmit }) => {
   const handleFormSubmit = useCallback(
     ({ comments, email, fullName, phoneNumber }: Contact) => {
       setIsContactSending(true);
-      emailjs.init({ publicKey: "WVSs5dr5Y0wU7GGEC" });
+      emailjs.init({ publicKey: EmailJs.PUBLIC_KEY });
       emailjs
-        .send("service_76783xa", "template_pbq0rak", {
+        .send(EmailJs.SERVICE, EmailJs.CONTACT_TEMPLATE, {
           comments,
           email,
           fullName,

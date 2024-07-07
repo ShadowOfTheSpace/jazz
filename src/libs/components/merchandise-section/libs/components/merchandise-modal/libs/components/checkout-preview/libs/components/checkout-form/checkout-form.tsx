@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
-
 import { useCallback, useState } from "react";
 import { Button, Input } from "~components/components";
+import { EmailJs } from "~enums/enums";
 import { useAppForm, useLanguageContext } from "~hooks/hooks";
 import { type CartItem, type OrderInfo } from "~types/types";
 import { cn } from "~utils/utils";
@@ -42,9 +42,9 @@ const CheckoutForm: React.FC<Properties> = ({
       shippingAddress,
     }: OrderInfo) => {
       setIsOrderIsSending(true);
-      emailjs.init({ publicKey: "WVSs5dr5Y0wU7GGEC" });
+      emailjs.init({ publicKey: EmailJs.PUBLIC_KEY });
       emailjs
-        .send("service_76783xa", "template_f1ym6ht", {
+        .send(EmailJs.SERVICE, EmailJs.CHECKOUT_TEMPLATE, {
           comments,
           email,
           fullName,
