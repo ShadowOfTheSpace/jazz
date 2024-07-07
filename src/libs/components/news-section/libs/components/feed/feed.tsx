@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { Icon } from "~components/components";
 
 type Properties = {
+  feedContainerId: string;
   feedId: string;
 };
 
-const Feed: React.FC<Properties> = ({ feedId }) => {
+const Feed: React.FC<Properties> = ({ feedContainerId, feedId }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   useEffect(() => {
     const script = document.createElement("script");
@@ -28,7 +29,7 @@ const Feed: React.FC<Properties> = ({ feedId }) => {
         {isLoading && (
           <motion.div
             animate={{ opacity: 1 }}
-            className="flex justify-center items-center w-full h-full"
+            className="flex justify-center items-center w-[calc(100%+16px)] sm:w-[calc(100%+32px)] h-full"
             exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
           >
@@ -45,7 +46,7 @@ const Feed: React.FC<Properties> = ({ feedId }) => {
         viewport={{ once: true, margin: "0px 0px -20% 0px" }}
         whileInView={{ opacity: isLoading ? 0 : 1 }}
         data-crt-feed-id={feedId}
-        id="curator-feed-default-feed-layout"
+        id={feedContainerId}
       />
     </>
   );

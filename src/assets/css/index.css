@@ -224,6 +224,53 @@ input:-internal-autofill-previewed {
   opacity: 0.5;
 }
 
+@media screen and (max-width: 640px) {
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram,
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram::after,
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram::before,
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram:focus,
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram:focus-visible {
+    border-left: 16px solid transparent !important;
+    border-bottom: 16px solid transparent !important;
+    outline-color: transparent !important;
+    border-top-color: transparent !important;
+    border-right-color: transparent !important;
+    color: transparent !important;
+  }
+}
+
+*:focus-visible {
+  color: transparent !important;
+}
+
+.crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram[data-post="1"]
+  .crt-grid-post-image {
+  background-image: url("/src/assets/images/default-event-image.png") !important;
+}
+
+@media screen and (min-width: 640px) {
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram,
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram::after,
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram::before,
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram:focus,
+  .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram:focus-visible {
+    border-left: 32px solid transparent !important;
+    border-bottom: 32px solid transparent !important;
+    outline-color: transparent !important;
+    border-top-color: transparent !important;
+    border-right-color: transparent !important;
+    color: transparent !important;
+  }
+}
+
+.crt-feed-window {
+  overflow: visible !important;
+}
+
+.crt-grid-post-image {
+  border-color: red !important;
+}
+
 @media screen and (max-width: 910px) {
   .crt-popup-wrapper .crt-popup .crt-close {
     background-color: #282828 !important;

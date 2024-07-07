@@ -23,8 +23,17 @@ const NewsSection: React.FC = () => {
       >
         {translate("Life Vibes")}
       </Animated.Title>
-      <div className="w-full [@media(max-width:351px)]:aspect-[1/2] [@media(min-width:352px)_and_(max-width:510px)]:aspect-square [@media(min-width:511px)_and_(max-width:703px)]:aspect-[3/2] [@media(min-width:704px)_and_(max-width:863px)]:aspect-[4/2] [@media(min-width:864px)_and_(max-width:1023px)]:aspect-[5/2] [@media(min-width:1024px)_and_(max-width:1183px)]:aspect-[6/2] [@media(min-width:1184px)_and_(max-width:1343px)]:aspect-[7/2] [@media(min-width:1344px)]:aspect-[8/2] overflow-hidden">
-        <Feed feedId="54927234-ba36-4c1c-a0d7-69f248d3b553" />
+      <div className="w-[calc(100%+32px)] [@media(min-width:640px)_and_(max-width:932px)]:aspect-square [@media(min-width:932px)_and_(max-width:1232px)]:aspect-[3/2] [@media(min-width:1232px)]:aspect-[4/2] [@media(min-width:640px)]:block hidden -mb-[32px] -ml-[32px] overflow-hidden">
+        <Feed
+          feedId="54927234-ba36-4c1c-a0d7-69f248d3b553"
+          feedContainerId="curator-feed-desktop"
+        />
+      </div>
+      <div className="[@media(min-width:640px)]:hidden [@media(max-width:336px)]:aspect-[1/2] [@media(min-width:336px)_and_(max-width:496px)]:aspect-square [@media(min-width:496px)_and_(max-width:640px)]:aspect-[3/2] -mb-[16px] -ml-[16px] w-[calc(100%+16px)] overflow-hidden">
+        <Feed
+          feedId="eae2473f-2fc7-4224-bad5-7b60d0dc6702"
+          feedContainerId="curator-feed-mobile"
+        />
       </div>
     </section>
   );
