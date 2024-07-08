@@ -239,10 +239,6 @@ input:-internal-autofill-previewed {
   }
 }
 
-*:focus-visible {
-  color: transparent !important;
-}
-
 .crt-grid-post.crt-post-has-image.crt-post-has-text.crt-no-user-image.crt-post-instagram[data-post="1"]
   .crt-grid-post-image {
   background-image: url("/src/assets/images/default-event-image.png") !important;
