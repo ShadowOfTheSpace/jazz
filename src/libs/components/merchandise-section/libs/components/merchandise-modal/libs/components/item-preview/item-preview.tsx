@@ -50,7 +50,7 @@ const ItemPreview: React.FC<Properties> = ({
 
   const titleByLanguage =
     merchandiseById &&
-    (merchandiseById.title[appLanguage] ?? merchandiseById.title.en);
+    (merchandiseById.title[appLanguage] || merchandiseById.title.en);
 
   useEffect(() => {
     if (!isSizeFromQueryValid && sizeFromQuery) {

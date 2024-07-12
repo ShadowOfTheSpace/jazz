@@ -36,7 +36,7 @@ const CartItem: React.FC<Properties> = ({ cartItem, onDeleteItem }) => {
           src={defaultImage}
         />
       )}
-      <div className="flex flex-col justify-between text-[14px] md:text-[16px] leading-4 overflow-hidden">
+      <div className="flex flex-col justify-between text-[14px] md:text-[16px] overflow-hidden">
         <h3
           className={cn(
             "font-bold text-[18px] text-jz-gold md:text-[20px] truncate",
