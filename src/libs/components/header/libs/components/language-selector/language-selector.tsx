@@ -23,7 +23,11 @@ const LanguageSelector: React.FC<Properties> = ({ isOpen }) => {
     setIsLanguageSelectorShown((isShown) => !isShown);
   }, []);
 
-  useHandleEscPress({ onEscPress: toggleLanguageSelector });
+  const closeLanguageSelector = useCallback(() => {
+    setIsLanguageSelectorShown(false);
+  }, []);
+
+  useHandleEscPress({ onEscPress: closeLanguageSelector });
 
   useEffect(() => {
     if (isLanguageSelectorShown) {
